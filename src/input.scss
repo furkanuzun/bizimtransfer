@@ -1,0 +1,25 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+    font-family: "Raleway", sans-serif;
+}
+
+header {
+    .logo {
+        width: 116px;
+    }
+}
+
+nav {
+    .menu-items {
+        a {
+            font-family: "Raleway";
+            font-style: normal;
+            font-weight: 500;
+            font-size: 13px;
+            line-height: 15px;
+        }
+    }
+}
