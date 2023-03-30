@@ -7,19 +7,45 @@
 }
 
 header {
+    font-family: 'Raleway';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 15px;
     .logo {
         width: 116px;
     }
 }
 
+button {
+    &.primary {
+        @apply flex justify-center items-center py-4 px-8 text-white space-x-2;
+        background: linear-gradient(180deg, #F98F3D 0%, #D76C19 100%);
+        border-radius: 5px;
+
+        * {
+            @apply text-white font-medium;
+        }
+    }
+}
+
 nav {
-    .menu-items {
-        a {
-            font-family: "Raleway";
-            font-style: normal;
+    @apply space-x-6;
+
+    a {
+        font-family: 'Raleway';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 13px;
+        line-height: 15px;
+
+        &.active {
             font-weight: 500;
-            font-size: 13px;
-            line-height: 15px;
+            background: linear-gradient(180deg, #F98F3D 0%, #D76C19 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-fill-color: transparent;
         }
     }
 }

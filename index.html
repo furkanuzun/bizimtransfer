@@ -4,8 +4,173 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="/dist/output.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.4/flowbite.min.css"
+      rel="stylesheet"
+    />
   </head>
   <body>
-    <h1 class="text-3xl font-bold">Hello world!</h1>
+    <header class="container sticky top-0 mx-auto py-0.5 border-b border-black/70 rounded-lg">
+      <div class="flex items-center justify-between p-2">
+        <!-- Logo -->
+        <img src="src/assets/logo.svg" class="logo" alt="bizimtransfer logo" />
+
+        <!-- Nav -->
+        <nav>
+          <a href="" class="active">Home</a>
+          <a href="">About us</a>
+          <a href="">Services</a>
+          <a href="">Travel guide</a>
+          <a href="">Contact us</a>
+        </nav>
+
+        <!-- Lang, Currency, User -->
+        <div class="flex items-center space-x-8">
+          <!-- Lang -->
+          <button
+            id="langDropdownButton"
+            data-dropdown-toggle="langDropdown"
+            class="inline-flex items-center space-x-2"
+            type="button"
+          >
+            <img src="src/assets/english.svg" alt="" />
+            <span>English</span>
+            <svg
+              class="w-4 h-4 ml-2"
+              aria-hidden="true"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M19 9l-7 7-7-7"
+              ></path>
+            </svg>
+          </button>
+
+          <!-- Language dropdown menu -->
+          <div
+            id="langDropdown"
+            class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700 dark:divide-gray-600"
+          >
+            <ul
+              class="py-2 text-sm text-gray-700 dark:text-gray-200"
+              aria-labelledby="langDropdownButton"
+            >
+              <li>
+                <a
+                  href="#"
+                  class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                  >Türkçe</a
+                >
+              </li>
+            </ul>
+          </div>
+          <!-- Currency -->
+          <button
+            id="currencyDropdownButton"
+            data-dropdown-toggle="currencyDropdown"
+            class="inline-flex items-center space-x-2"
+            type="button"
+          >
+            <span>USD</span>
+            <svg
+              class="w-4 h-4 ml-2"
+              aria-hidden="true"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M19 9l-7 7-7-7"
+              ></path>
+            </svg>
+          </button>
+
+          <!-- Currency dropdown menu -->
+          <div
+            id="currencyDropdown"
+            class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700 dark:divide-gray-600"
+          >
+            <ul
+              class="py-2 text-sm text-gray-700 dark:text-gray-200"
+              aria-labelledby="currencyDropdownButton"
+            >
+              <li>
+                <a
+                  href="#"
+                  class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                  >EUR</a
+                >
+              </li>
+            </ul>
+          </div>
+          <!-- User -->
+          <button
+            id="userDropdownButton"
+            data-dropdown-toggle="userDropdown"
+            class="inline-flex items-center space-x-2"
+            type="button"
+          >
+            <img src="src/assets/user.svg" alt="">
+            <svg
+              class="w-4 h-4 ml-2"
+              aria-hidden="true"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M19 9l-7 7-7-7"
+              ></path>
+            </svg>
+          </button>
+
+          <!-- User dropdown menu -->
+          <div
+            id="userDropdown"
+            class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700 dark:divide-gray-600"
+          >
+            <ul
+              class="py-2 text-sm text-gray-700 dark:text-gray-200"
+              aria-labelledby="userDropdownButton"
+            >
+              <li>
+                <a
+                  href="#"
+                  class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                  >Profile settings</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Contact us -->
+        <button class="primary">
+          <img src="src/assets/call.svg" alt="" />
+          <span>+90 (242) 514-13-10</span>
+        </button>
+      </div>
+    </header>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.4/flowbite.min.js"></script>
   </body>
 </html>
