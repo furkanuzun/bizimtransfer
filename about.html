@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="/dist/output.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.4/flowbite.min.css"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Playfair+Display&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Raleway&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- Header start -->
+    <nav
+      class="bg-white dark:bg-gray-900 fixed w-full z-20 top-0 left-0 border-b border-gray-200 dark:border-gray-600"
+    >
+      <div
+        class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4"
+      >
+        <a href="https://flowbite.com/" class="flex items-center">
+          <img src="src/assets/logo.svg" class="h-8 mr-3" alt="Flowbite Logo" />
+        </a>
+        <div class="flex space-x-4 md:order-2">
+          <!-- Lang, Currency, User -->
+          <div class="hidden md:flex items-center space-x-8">
+            <!-- Lang -->
+            <button
+              id="langDropdownButton"
+              data-dropdown-toggle="langDropdown"
+              class="inline-flex items-center space-x-2"
+              type="button"
+            >
+              <img src="src/assets/english.svg" alt="" />
+              <span>English</span>
+              <svg
+                class="w-4 h-4 ml-2"
+                aria-hidden="true"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M19 9l-7 7-7-7"
+                ></path>
+              </svg>
+            </button>
+
+            <!-- Language dropdown menu -->
+            <div
+              id="langDropdown"
+              class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700 dark:divide-gray-600"
+            >
+              <ul
+                class="py-2 text-sm text-gray-700 dark:text-gray-200"
+                aria-labelledby="langDropdownButton"
+              >
+                <li>
+                  <a
+                    href="#"
+                    class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                    >Türkçe</a
+                  >
+                </li>
+              </ul>
+            </div>
+            <!-- Currency -->
+            <button
+              id="currencyDropdownButton"
+              data-dropdown-toggle="currencyDropdown"
+              class="inline-flex items-center space-x-2"
+              type="button"
+            >
+              <span>USD</span>
+              <svg
+                class="w-4 h-4 ml-2"
+                aria-hidden="true"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M19 9l-7 7-7-7"
+                ></path>
+              </svg>
+            </button>
+
+            <!-- Currency dropdown menu -->
+            <div
+              id="currencyDropdown"
+              class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700 dark:divide-gray-600"
+            >
+              <ul
+                class="py-2 text-sm text-gray-700 dark:text-gray-200"
+                aria-labelledby="currencyDropdownButton"
+              >
+                <li>
+                  <a
+                    href="#"
+                    class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                    >EUR</a
+                  >
+                </li>
+              </ul>
+            </div>
+            <!-- User -->
+            <button
+              id="userDropdownButton"
+              data-dropdown-toggle="userDropdown"
+              class="inline-flex items-center space-x-2"
+              type="button"
+            >
+              <img src="src/assets/user.svg" alt="" />
+              <svg
+                class="w-4 h-4 ml-2"
+                aria-hidden="true"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M19 9l-7 7-7-7"
+                ></path>
+              </svg>
+            </button>
+
+            <!-- User dropdown menu -->
+            <div
+              id="userDropdown"
+              class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700 dark:divide-gray-600"
+            >
+              <ul
+                class="py-2 text-sm text-gray-700 dark:text-gray-200"
+                aria-labelledby="userDropdownButton"
+              >
+                <li>
+                  <a
+                    href="#"
+                    class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                    >Profile settings</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Contact us -->
+          <button class="!hidden md:!flex primary">
+            <img src="src/assets/call.svg" alt="" />
+            <span>+90 (242) 514-13-10</span>
+          </button>
+          <button
+            data-collapse-toggle="navbar-sticky"
+            type="button"
+            class="primary !inline-flex items-center !p-3 text-sm text-gray-500 rounded-lg lg:!hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+            aria-controls="navbar-sticky"
+            aria-expanded="false"
+          >
+            <svg
+              class="w-6 h-6"
+              aria-hidden="true"
+              fill="currentColor"
+              viewBox="0 0 20 20"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
+                clip-rule="evenodd"
+              ></path>
+            </svg>
+          </button>
+        </div>
+        <div
+          class="items-center justify-between hidden w-full lg:flex lg:w-auto order-5 lg:order-1"
+          id="navbar-sticky"
+        >
+          <ul
+            class="flex flex-col p-4 lg:p-0 mt-4 space-y-4 lg:!space-y-0 border border-gray-100 rounded-lg bg-gray-50 lg:flex-row lg:space-x-8 lg:mt-0 lg:border-0 lg:!bg-white dark:bg-gray-800 lg:dark:bg-gray-900 dark:border-gray-700"
+          >
+            <li>
+              <a href="#" class="primary" aria-current="page">Home</a>
+            </li>
+            <li>
+              <a href="#">About us</a>
+            </li>
+            <li>
+              <a href="#">Services</a>
+            </li>
+            <li>
+              <a href="#">Travel guide</a>
+            </li>
+            <li>
+              <a href="#">Contact us</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!-- Header end -->
+
+    <section class="container mx-auto flex">
+      <div class="flex-1">
+        <h1 class="font-['Bebas_Neue'] text-[43px] uppercase mt-[150px]">
+          About
+          <span class="font-['Bebas_Neue'] text-[#F98F3D]">BizimTransfer</span>
+        </h1>
+      </div>
+      <div class="flex-1">
+        <p class="mt-[172px] leading-[18.78px] pr-[44px]">
+          Our company provides passenger transportation in Turkey, as well as
+          provides transfer services from airports. And our drivers are trained
+          in safe driving and first aid. Waiting time is not limited, and our
+          drivers speak Russian, English and Turkish.
+        </p>
+      </div>
+    </section>
+    <hr
+      class="container mx-auto h-px my-8 bg-gray-200 border-0 dark:bg-gray-700"
+    />
+
+    <section class="container mx-auto">
+        <div class="mt-[60px] mb-[100px] grid grid-cols-3 gap-5">
+            <div class="flex bg-[#FBFAFF] py-[40px]">
+                <div class="pl-[30px] mr-6">
+                  <svg
+                    width="20"
+                    height="24"
+                    viewBox="0 0 20 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M0.541992 23.3814H1.89315V20.6437H3.9199V19.2748H1.89315V17.906H3.9199V16.5371H0.541992V23.3814ZM7.6356 16.5371H5.27106V23.3814H6.62222V21.3281H7.6356C8.19439 21.3281 8.64897 21.7887 8.64897 22.3547V23.3814H10.0001V22.3547C10.0001 21.685 9.72711 21.0788 9.28816 20.6437C9.72706 20.2085 10.0001 19.6024 10.0001 18.9326C10.0001 17.6118 8.93942 16.5371 7.6356 16.5371ZM7.6356 19.9592H6.62222V17.906H7.6356C8.19439 17.906 8.64897 18.3665 8.64897 18.9326C8.64897 19.4987 8.19439 19.9592 7.6356 19.9592ZM11.3513 23.3814H14.7292V22.0125H12.7025V20.6437H14.7292V19.2748H12.7025V17.906H14.7292V16.5371H11.3513V23.3814ZM16.0804 23.3814H19.4583V22.0125H17.4315V20.6437H19.4583V19.2748H17.4315V17.906H19.4583V16.5371H16.0804V23.3814Z"
+                      fill="#696969"
+                    />
+                    <path
+                      d="M9.99989 15.1681C11.1192 15.1681 12.0266 14.2488 12.0266 13.1148C12.0266 11.9808 11.1192 11.0615 9.99989 11.0615C8.88055 11.0615 7.97314 11.9808 7.97314 13.1148C7.97314 14.2488 8.88055 15.1681 9.99989 15.1681Z"
+                      fill="#696969"
+                    />
+                    <path
+                      d="M10 3.48686C14.881 3.48686 17.4183 6.81902 17.6413 6.97986L20 4.59025C19.7501 4.4154 16.3807 0.110352 10 0.110352C3.63819 0.110352 0.259198 4.40888 0 4.59025L2.36773 6.98904C2.5019 6.89185 5.101 3.48686 10 3.48686Z"
+                      fill="#696969"
+                    />
+                    <path
+                      d="M10.0002 5.54102C6.04608 5.54102 4.03221 8.25756 3.79004 8.43058L6.18326 10.8551C6.40494 10.6881 7.58496 8.96316 10.0002 8.96316C12.4142 8.96316 13.5829 10.6734 13.8204 10.8519L16.2104 8.43058C15.9783 8.26472 13.9596 5.54102 10.0002 5.54102Z"
+                      fill="#696969"
+                    />
+                  </svg>
+                </div>
+                <div>
+                  <h5 class="font-bold mb-[10px]">Comfortable Cars</h5>
+                  <div class="flex">
+                    <p>
+                      The cabin has Wi-Fi, chargers,
+                      <span class="block">air conditioning and free drinks</span>
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="flex bg-[#FBFAFF] py-[40px]">
+                <div class="pl-[30px] mr-6">
+                  <svg
+                    width="18"
+                    height="24"
+                    viewBox="0 0 18 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M17.0552 12.2373L17.0547 12.2368L12.7362 8.23182C12.2658 7.79552 11.7096 7.48766 11.1151 7.29205C12.1016 6.57035 12.751 5.40407 12.751 4.08098C12.751 1.89212 10.9909 0.111328 8.82763 0.111328C6.66431 0.111328 4.90425 1.89212 4.90425 4.08093C4.90425 5.40407 5.55368 6.57031 6.54021 7.292C5.94568 7.48757 5.38954 7.79548 4.9191 8.23178L0.600095 12.2373C0.411195 12.4131 0.26035 12.6267 0.157068 12.8645C0.0537861 13.1022 0.000306629 13.3591 0 13.6188C0 14.6524 0.831406 15.4936 1.88796 15.4936C2.37551 15.4936 2.85302 15.2935 3.19785 14.9446L4.95602 13.1657C5.01156 13.7714 5.11166 14.3582 5.25533 14.9218L3.48903 17.4028C2.80273 18.3284 2.76824 19.5965 3.40236 20.5593L5.09823 23.1329C5.42628 23.6315 5.97561 23.9291 6.57189 23.9291C7.54509 23.9291 8.33723 23.1276 8.33723 22.1429V21.9006C8.33723 21.497 8.19976 21.1006 7.95075 20.7847L6.58389 19.0567L7.35498 18.4718C8.28795 19.1298 9.36745 19.1298 10.3004 18.4718L11.071 19.0567L9.7046 20.7851C9.45496 21.1021 9.31874 21.4953 9.31811 21.9006V22.1429C9.31811 23.1275 10.1103 23.929 11.0878 23.929C11.3785 23.9294 11.6648 23.8569 11.9211 23.7181C12.1774 23.5793 12.3958 23.3784 12.5567 23.1334L14.2722 20.5297C14.8948 19.5853 14.8608 18.3399 14.1932 17.4386L12.4001 14.9213C12.5437 14.3582 12.6438 13.7714 12.6994 13.1656L14.4575 14.9445C14.8024 15.2934 15.2798 15.4935 15.8024 15.4935C16.8239 15.4935 17.6553 14.6523 17.6553 13.6187C17.655 13.359 17.6015 13.1022 17.4982 12.8644C17.3949 12.6267 17.244 12.4132 17.0552 12.2373ZM8.82763 17.9746C7.80463 17.9746 6.8238 16.8015 6.29267 14.9974H11.3626C10.8315 16.8015 9.85062 17.9746 8.82763 17.9746Z"
+                      fill="#696969"
+                    />
+                  </svg>
+                </div>
+                <div>
+                  <h5 class="font-bold mb-[10px]">It's safe with us</h5>
+                  <div class="flex">
+                    <p>
+                      Seats are equipped with seat belts
+                      <span class="block">and special devices for children</span>
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="flex bg-[#FBFAFF] py-[40px]">
+                <div class="pl-[30px] mr-6">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <mask id="mask0_1_1836" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="0" y="0" width="24" height="24">
+                        <path d="M0 0.111053H23.5403V23.9287H0V0.111053Z" fill="white"/>
+                        </mask>
+                        <g mask="url(#mask0_1_1836)">
+                        <path d="M9.1192 13.8328C10.5454 12.9778 11.3248 12.0979 11.3507 10.6186C11.3507 9.4611 10.42 8.51942 9.27603 8.51942C8.13202 8.51942 7.20131 9.4611 7.20131 10.6186V11.3163H8.58062V10.6186C8.58062 10.2306 8.89258 9.91498 9.27603 9.91498C9.65947 9.91498 9.97143 10.2306 9.97143 10.6186C9.96936 11.7749 9.09308 12.2012 8.38168 12.6535C7.64108 13.1244 7.20117 13.9377 7.20117 14.8227V15.5205H11.3506V14.1249H8.80743C8.89111 14.0109 8.99386 13.9079 9.1192 13.8328Z" fill="#696969"/>
+                        <path d="M16.9426 11.6941H16.2472V9.68207H14.8679V11.6941H13.6428L14.289 8.67982L12.9411 8.38396L11.9321 13.0897H14.8679V15.5186H16.2472V13.0897H16.9426V11.6941Z" fill="#696969"/>
+                        <path d="M23.5405 12.0199C23.5405 18.5967 18.2706 23.9287 11.7704 23.9287C8.52023 23.9287 5.5777 22.5959 3.44758 20.4407L2.41861 21.4818L1.94873 21.3032L1.64941 16.8141L1.94321 16.5169L6.38 16.8192C6.46322 17.0439 6.47333 17.0709 6.55655 17.2951L5.5285 18.3353C7.12575 19.9518 9.33265 20.9515 11.7704 20.9515C16.6458 20.9515 20.598 16.9527 20.598 12.0199H23.5405Z" fill="#696969"/>
+                        <path d="M21.8906 7.22623L21.5968 7.52348L17.16 7.22065C17.0768 6.99642 17.0667 6.96944 16.9835 6.74476L18.012 5.70413V5.70367C16.4147 4.0876 14.2078 3.08791 11.7701 3.08791C6.89472 3.08791 2.94253 7.08667 2.94253 12.0195H0C0 5.44269 5.26989 0.110703 11.7701 0.110703C15.0203 0.110703 17.9628 1.44347 20.0929 3.59869L21.121 2.55852C21.343 2.64272 21.3697 2.65249 21.5913 2.73716L21.8906 7.22623Z" fill="#696969"/>
+                        </g>
+                        </svg>
+                        
+                        
+                </div>
+                <div>
+                  <h5 class="font-bold mb-[10px]">At any time</h5>
+                  <div>
+                    <p>Services available 24/7</p>
+                  </div>
+                </div>
+              </div>
+              <div class="flex bg-[#FBFAFF] py-[40px]">
+                <div class="pl-[30px] mr-6">
+                    <svg width="22" height="24" viewBox="0 0 22 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M18.7782 4.23246C16.7006 2.13035 13.9382 0.972656 11 0.972656C8.0618 0.972656 5.29942 2.13035 3.2218 4.23246C1.14417 6.33457 0 9.12945 0 12.1023C0 15.0751 1.14417 17.87 3.2218 19.9721C5.29942 22.0742 8.0618 23.2319 11 23.2319C13.9382 23.2319 16.7006 22.0742 18.7782 19.9721C20.8558 17.87 22 15.0751 22 12.1023C22 9.12945 20.8558 6.33452 18.7782 4.23246ZM11 21.0474C6.12507 21.0474 2.15909 17.0346 2.15909 12.1023C2.15909 12.0942 2.15935 12.0862 2.15939 12.0782C2.15939 12.0761 2.15909 12.0742 2.15909 12.0721C2.15909 12.0687 2.15952 12.0654 2.15961 12.062C2.18105 7.18877 6.07346 3.22397 10.8799 3.15876C10.8899 3.15828 10.8999 3.15724 10.9101 3.15724C10.9162 3.15724 10.9221 3.15797 10.9282 3.15815C10.9521 3.15797 10.976 3.15724 11 3.15724C15.875 3.15724 19.8409 7.16999 19.8409 12.1023C19.8409 17.0347 15.8749 21.0474 11 21.0474Z" fill="#696969"/>
+                        <path d="M17.7152 12.6403C17.3557 12.6403 17.0643 12.3455 17.0643 11.9818C17.0643 11.6181 17.3557 11.3232 17.7152 11.3232H18.4998C18.1313 7.66799 15.2014 4.76833 11.5607 4.49609V5.18713C11.5607 5.55084 11.2693 5.84569 10.9098 5.84569C10.5503 5.84569 10.2589 5.55084 10.2589 5.18713V4.51183C6.67203 4.86746 3.81491 7.7769 3.49166 11.4142H4.19428C4.55376 11.4142 4.84517 11.709 4.84517 12.0728C4.84517 12.4365 4.55376 12.7313 4.19428 12.7313H3.48633C3.78561 16.4272 6.7 19.385 10.3489 19.7022V18.8673C10.3489 18.5036 10.6403 18.2088 10.9998 18.2088C11.3592 18.2088 11.6506 18.5036 11.6506 18.8673V19.7022C15.3294 19.3824 18.2615 16.3785 18.5199 12.6403H17.7152ZM13.6346 10.3684L11.46 12.5686C11.3996 12.6298 11.3279 12.6783 11.2489 12.7114C11.1699 12.7445 11.0853 12.7615 10.9998 12.7615C10.9143 12.7615 10.8297 12.7445 10.7507 12.7114C10.6717 12.6783 10.6 12.6298 10.5396 12.5686L6.75432 8.73878C6.50011 8.48163 6.50011 8.06466 6.75432 7.80746C7.00848 7.55026 7.42059 7.55026 7.67479 7.80746L10.9998 11.1716L12.7142 9.43708C12.9684 9.17988 13.3805 9.17988 13.6347 9.43708C13.8888 9.69423 13.8888 10.1112 13.6346 10.3684Z" fill="#696969"/>
+                        </svg>
+                        
+                        
+                </div>
+                <div>
+                  <h5 class="font-bold mb-[10px]">We will always meet</h5>
+                  <div>
+                    <p>No waiting time limit</p>
+                  </div>
+                </div>
+              </div>
+              <div class="flex bg-[#FBFAFF] py-[40px]">
+                <div class="pl-[30px] mr-6">
+                    <svg width="21" height="25" viewBox="0 0 21 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M7.27344 12.9756V13.6177L7.61515 13.9634C8.3474 14.7043 9.37255 15.1488 10.4465 15.1488C12.448 15.1488 13.4243 13.7659 13.6196 13.6177V13.025C12.7897 14.0128 11.7158 14.8031 10.4465 14.8031C9.17729 14.7537 8.10332 13.9634 7.27344 12.9756Z" fill="#696969"/>
+                        <path d="M13.6199 14.358L13.5711 14.3086C11.8137 16.0867 9.03114 16.0867 7.27374 14.3086C6.05333 19.5441 10.4468 24.6315 10.4468 24.6315C10.4468 24.6315 14.8403 19.5441 13.6199 14.358Z" fill="#696969"/>
+                        <path d="M6.68789 14.8518C5.80919 15.6421 4.14942 17.0744 3.27072 17.3214C2.09912 17.6671 0 18.5068 0 20.1861V24.6314H9.81215C8.88464 23.446 5.95564 19.2971 6.68789 14.8518ZM17.6228 17.3214C16.7929 17.0744 15.1332 15.6421 14.2057 14.8518C14.8891 19.2971 12.0089 23.446 11.0814 24.6314H20.8935V20.1861C20.8935 18.4574 18.7944 17.6671 17.6228 17.3214ZM14.645 10.5053C14.9867 10.6041 15.3773 10.2089 15.5237 9.61624C15.6702 9.02354 15.5237 8.48023 15.182 8.43084H14.9867C14.0592 9.12232 12.4971 9.51746 10.4468 9.51746C8.44529 9.51746 6.83434 9.12232 5.90682 8.43084C5.858 8.43084 5.76037 8.38144 5.71155 8.43084C5.36984 8.52962 5.22339 9.07293 5.36984 9.61624C5.51629 10.2089 5.90682 10.5547 6.24854 10.5053C6.29735 10.5053 6.34617 10.4559 6.39499 10.4559C7.17605 12.481 8.68937 14.2591 10.4468 14.2591C12.2042 14.2591 13.7663 12.481 14.4986 10.4559C14.5474 10.4559 14.5962 10.5053 14.645 10.5053ZM4.93049 6.45516L4.88167 6.2082C4.78404 5.81306 5.02812 5.36854 5.41865 5.26975C6.78552 4.77583 8.54292 4.52887 10.4468 4.52887C12.3506 4.52887 14.108 4.77583 15.4749 5.26975C15.8654 5.41793 16.1095 5.81306 16.0119 6.25759L15.9631 6.50455C16.3048 6.25759 16.5 5.91185 16.5 5.41793C16.5 3.54104 13.8151 0.972656 10.4468 0.972656C7.12724 0.972656 4.3935 3.59043 4.3935 5.41793C4.3935 5.91185 4.58877 6.25759 4.93049 6.45516ZM7.71304 2.25685H8.4941V3.04712H9.27517V2.25685H10.0562V3.04712H10.8373V2.25685H11.6184V3.04712H12.3994V2.25685H13.1805V3.04712H12.3994V3.83739H11.6184V3.04712H10.8373V3.83739H10.0562V3.04712H9.27517V3.83739H8.4941V3.04712H7.71304V2.25685Z" fill="#696969"/>
+                        <path d="M15.5235 6.10971C15.5723 5.91214 15.4747 5.76397 15.2794 5.71458C12.5457 4.77613 8.29862 4.77613 5.56488 5.71458C5.41843 5.76397 5.3208 5.96154 5.3208 6.10971L5.41843 6.70242C8.68915 5.96154 12.1063 5.96154 15.377 6.70242L15.5235 6.10971ZM5.56488 7.24573C6.00423 8.38174 8.00572 9.02384 10.4466 9.02384C12.8874 9.02384 14.8889 8.38174 15.3282 7.24573C13.7173 6.89998 12.1063 6.70242 10.4466 6.70242C8.78679 6.70242 7.17583 6.85059 5.56488 7.24573Z" fill="#696969"/>
+                        </svg>
+                        
+                </div>
+                <div>
+                  <h5 class="font-bold mb-[10px]">Сommunicable</h5>
+                  <div>
+                    <p>Drivers speak Russian, English <span class="block">and Turkish</span> </p>
+                  </div>
+                </div>
+              </div>
+              <div class="flex bg-[#FBFAFF] py-[40px]">
+                <div class="pl-[30px] mr-6">
+                    <svg width="24" height="26" viewBox="0 0 24 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M20.7594 11.4365C20.789 7.92083 17.8295 4.69786 14.1622 4.25218C14.0893 4.24343 14.0099 4.23011 13.9257 4.21602C13.7442 4.18558 13.5564 4.1543 13.367 4.1543C12.6154 4.1543 12.4145 4.68849 12.3616 5.00709C12.3101 5.31685 12.3592 5.57698 12.5071 5.78057C12.7561 6.12302 13.194 6.18381 13.5458 6.23252C13.6489 6.24693 13.7462 6.26033 13.8276 6.27883C17.1225 7.02375 18.2319 8.1949 18.7742 11.5003C18.7874 11.581 18.7934 11.6806 18.7997 11.7861C18.8234 12.1812 18.8727 13.0033 19.7461 13.0033H19.7462C19.8189 13.0033 19.8971 12.9969 19.9784 12.9844C20.7918 12.8593 20.7663 12.1079 20.7541 11.7468C20.7506 11.6452 20.7473 11.549 20.7558 11.485C20.7581 11.4689 20.7593 11.4527 20.7594 11.4365Z" fill="#696969"/>
+                        <path d="M13.154 2.96198C13.2516 2.9691 13.344 2.97592 13.4209 2.98785C18.8314 3.82972 21.3196 6.42339 22.0092 11.9405C22.0209 12.0343 22.0227 12.1487 22.0247 12.2698C22.0315 12.7008 22.0457 13.5975 22.9975 13.6161L23.027 13.6164C23.3255 13.6164 23.563 13.5253 23.7328 13.3455C24.0291 13.032 24.0084 12.5662 23.9917 12.1918C23.9877 12.1 23.9838 12.0135 23.9848 11.9377C24.0536 6.29515 19.2262 1.1785 13.6543 0.988222C13.6312 0.987448 13.6092 0.988687 13.5869 0.991862C13.565 0.994653 13.543 0.995869 13.5209 0.995502C13.4654 0.995502 13.397 0.990623 13.3245 0.985666C13.2369 0.979626 13.1375 0.972656 13.0368 0.972656C12.1495 0.972656 11.9808 1.61078 11.9592 1.99117C11.9095 2.87029 12.75 2.93217 13.154 2.96198ZM21.7481 19.071C21.6319 18.982 21.5167 18.8914 21.4028 18.7994C20.812 18.3184 20.1836 17.875 19.5758 17.4462C19.4496 17.3574 19.3236 17.2684 19.1978 17.1791C18.4192 16.6258 17.7193 16.3569 17.058 16.3569C16.1673 16.3569 15.3907 16.8549 14.7498 17.8368C14.4658 18.2721 14.1213 18.4837 13.6967 18.4837C13.4457 18.4837 13.1604 18.4112 12.849 18.2682C10.336 17.1152 8.54148 15.3473 7.51531 13.0138C7.01925 11.8859 7.18006 11.1487 8.05307 10.5486C8.54882 10.2082 9.47159 9.57442 9.40622 8.36075C9.33221 6.98252 6.32664 2.8356 5.06029 2.36459C4.52413 2.1651 3.96079 2.16325 3.38292 2.35995C1.92713 2.85511 0.882438 3.7247 0.361508 4.87456C-0.141895 5.98562 -0.119162 7.2902 0.427256 8.64729C2.00689 12.571 4.22777 15.9919 7.02844 18.8148C9.76979 21.5783 13.1391 23.8419 17.0428 25.5426C17.3947 25.6958 17.7638 25.7793 18.0333 25.8403C18.1251 25.8612 18.2044 25.879 18.2622 25.895C18.294 25.9038 18.3267 25.9085 18.3595 25.9088L18.3904 25.909H18.3905C20.2266 25.909 22.4312 24.2115 23.1082 22.2762C23.7014 20.5816 22.6184 19.744 21.7481 19.071ZM13.9661 7.444C13.6517 7.45205 12.9975 7.46847 12.768 8.1426C12.6606 8.45763 12.6735 8.73116 12.8063 8.95559C13.0011 9.28487 13.3745 9.38577 13.7141 9.44114C14.9457 9.6411 15.5782 10.3302 15.7048 11.6095C15.7635 12.206 16.1606 12.6226 16.6703 12.6226C16.708 12.6226 16.7465 12.6204 16.7849 12.6156C17.398 12.5418 17.6952 12.0861 17.6683 11.2612C17.6781 10.4003 17.2328 9.42287 16.4754 8.64435C15.7155 7.86342 14.7994 7.42363 13.9661 7.444Z" fill="#696969"/>
+                        </svg>
+                        
+                </div>
+                <div>
+                  <h5 class="font-bold mb-[10px]">Convenient to order</h5>
+                  <div>
+                    <p>Possibility to order a transfer <span class="block">by phone or online</span> </p>
+                  </div>
+                </div>
+              </div>
+        </div>    
+    </section>
+
+    <hr
+      class="container mx-auto h-px my-8 bg-gray-200 border-0 dark:bg-gray-700"
+    />
+
+    <footer>
+      <div class="container mx-auto">
+        <div
+          class="flex flex-col lg:flex-row items-center justify-between py-10"
+        >
+          <img src="src/assets/logo-white.svg" alt="" />
+          <div class="flex items-center space-x-2 mt-4 lg:mt-0">
+            <!-- Lang -->
+            <button
+              id="footer_langDropdownButton"
+              data-dropdown-toggle="footer_langDropdown"
+              class="inline-flex items-center space-x-2 border border-white rounded p-2 text-white"
+              type="button"
+            >
+              <img src="src/assets/english.svg" alt="" />
+              <span>English</span>
+              <svg
+                class="w-4 h-4 ml-2"
+                aria-hidden="true"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M19 9l-7 7-7-7"
+                ></path>
+              </svg>
+            </button>
+
+            <!-- Language dropdown menu -->
+            <div
+              id="footer_langDropdown"
+              class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700 dark:divide-gray-600"
+            >
+              <ul
+                class="py-2 text-sm text-gray-700 dark:text-gray-200"
+                aria-labelledby="footer_langDropdownButton"
+              >
+                <li>
+                  <a
+                    href="#"
+                    class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                    >Türkçe</a
+                  >
+                </li>
+              </ul>
+            </div>
+            <!-- Currency -->
+            <button
+              id="footer_currencyDropdownButton"
+              data-dropdown-toggle="footer_currencyDropdown"
+              class="inline-flex items-center space-x-2 border border-white rounded p-2 text-white"
+              type="button"
+            >
+              <span>USD</span>
+              <svg
+                class="w-4 h-4 ml-2"
+                aria-hidden="true"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M19 9l-7 7-7-7"
+                ></path>
+              </svg>
+            </button>
+
+            <!-- Language dropdown menu -->
+            <div
+              id="footer_currencyDropdown"
+              class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700 dark:divide-gray-600"
+            >
+              <ul
+                class="py-2 text-sm text-gray-700 dark:text-gray-200"
+                aria-labelledby="footer_currencyDropdownButton"
+              >
+                <li>
+                  <a
+                    href="#"
+                    class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                    >EUR</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="flex flex-col lg:flex-row items-center justify-between">
+          <div
+            class="border border-dashed border-white text-4xl text-white p-4 rounded-xl"
+          >
+            +90 (242) 514-13-10
+          </div>
+          <div class="flex flex-col space-y-2 text-white mt-4 lg:mt-0">
+            <div class="flex items-center space-x-2">
+              <button class="py-2 p-4 border border-white rounded-lg">
+                Services
+              </button>
+              <button class="py-2 p-4 border border-white rounded-lg">
+                About us
+              </button>
+            </div>
+            <div class="flex items-center space-x-2">
+              <button class="py-2 p-4 border border-white rounded-lg">
+                Contact us
+              </button>
+              <button class="py-2 p-4 border border-white rounded-lg">
+                Travel guide
+              </button>
+            </div>
+          </div>
+        </div>
+        <div
+          class="flex justify-center lg:!justify-start items-center space-x-2 mt-4 lg:mt-0"
+        >
+          <a
+            href="#"
+            class="flex items-center justify-center w-12 h-12 rounded-lg p-3 border border-white"
+          >
+            <img src="src/assets/social/facebook.svg" alt="" />
+          </a>
+          <a
+            href="#"
+            class="flex items-center justify-center w-12 h-12 rounded-lg p-3 border border-white"
+          >
+            <img src="src/assets/social/instagram.svg" alt="" />
+          </a>
+          <a
+            href="#"
+            class="flex items-center justify-center w-12 h-12 rounded-lg p-3 border border-white"
+          >
+            <img src="src/assets/social/youtube.svg" alt="" />
+          </a>
+          <a
+            href="#"
+            class="flex items-center justify-center w-12 h-12 rounded-lg p-3 border border-white"
+          >
+            <img src="src/assets/social/twitter.svg" alt="" />
+          </a>
+          <a
+            href="#"
+            class="flex items-center justify-center w-12 h-12 rounded-lg p-3 border border-white"
+          >
+            <img src="src/assets/social/linkedin.svg" alt="" />
+          </a>
+        </div>
+        <div
+          class="border-t border-white/55 py-4 mt-10 flex justify-between items-center px-2 md:px-0"
+        >
+          <img class="h-6" src="src/assets/footer/footer.svg" alt="" />
+          <div class="text-white/70 text-xs pl-4">
+            © Copyright Bizim Transfer. All Rights Reserved
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.4/flowbite.min.js"></script>
+  </body>
+</html>
