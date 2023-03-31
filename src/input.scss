@@ -57,3 +57,29 @@ nav {
 footer {
     background: linear-gradient(180deg, #F98F3D 0%, #D76C19 100%);
 }
+
+#top-picker {
+    .form-group {
+        @apply bg-[#F6F7F9] px-4 py-2 space-y-1 rounded-lg;
+
+        .label {
+            @apply font-bold text-[#696969];
+        }
+
+        input {
+            @apply border-none outline-none focus:outline-none bg-transparent p-0;
+            box-shadow: none;
+            -moz-box-shadow: none;
+            -webkit-box-shadow: none;
+        }
+
+    }
+}
+
+.highlighted-text {
+    background: linear-gradient(180deg, #F98F3D 0%, #D76C19 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+}
