@@ -216,9 +216,262 @@
     </nav>
     <!-- Header end -->
 
+    <!-- top area start -->
+    <section class="relative bg-[#FBFAFF] pt-24">
+      <div class="container mx-auto">
+        <div class="grid grid-cols-3 items-center gap-10 pb-8">
+          <div class="col-span-2">
+            <h1 class="text-[53px] font-reglar uppercase">
+              Reliable & Low Cost
+              <span class="block"
+                >Airport Transfers
+                <span class="highlighted-text">in Turkey</span>
+              </span>
+            </h1>
+          </div>
+          <div class="col-span-1">
+            <div class="flex items-center space-x-2">
+              <img src="src/assets/top-slider/baby.svg" alt="" />
+              <img src="src/assets/top-slider/charge.svg" alt="" />
+              <img src="src/assets/top-slider/24hour.svg" alt="" />
+            </div>
+            <p class="mt-3">
+              Comfortable cars, professional drivers and a safe journey - all
+              this you will get by ordering passenger transportation in Turkey
+              with us.
+            </p>
+          </div>
+        </div>
+      </div>
+      <img class="w-full" src="src/assets/main-slider.png" alt="" />
+    </section>
+    <!-- Top area end -->
+
+    <!-- Picker start -->
+    <section class="-mt-24">
+      <div
+        id="top-picker"
+        class="relative container mx-auto py-8 px-10 bg-white rounded-xl shadow-2xl"
+      >
+        <div class="flex items-center space-x-4 pb-2">
+          <!-- One way menu -->
+          <div class="flex items-center space-x-2">
+            <button
+              id="onewayDropdownButton"
+              data-dropdown-toggle="oneway-dropdown"
+              type="button"
+              class="flex items-center space-x-2"
+            >
+              <span>One way</span>
+              <img class="h-4" src="src/assets/chevron-down.svg" alt="" />
+            </button>
+            <div
+              id="oneway-dropdown"
+              class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700"
+            >
+              <ul
+                class="py-2 text-sm text-gray-700 dark:text-gray-200"
+                aria-labelledby="onewayDropdownButton"
+              >
+                <li>
+                  <a href="#" class="block px-4 py-2 hover:bg-gray-100"
+                    >Gidiş-dönüş</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+          <!-- Passengers menu -->
+          <div class="flex items-center space-x-2">
+            <button
+              id="passengersDropdownButton"
+              data-dropdown-toggle="passengers-dropdown"
+              type="button"
+              class="flex items-center space-x-2"
+            >
+              <span>1 passenger</span>
+              <img class="h-4" src="src/assets/chevron-down.svg" alt="" />
+            </button>
+            <div
+              id="passengers-dropdown"
+              class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700"
+            >
+              <ul
+                class="py-2 text-sm text-gray-700 dark:text-gray-200"
+                aria-labelledby="passengersDropdownButton"
+              >
+                <li>
+                  <a href="#" class="block px-4 py-2 hover:bg-gray-100"
+                    >2 passengers</a
+                  >
+                </li>
+                <li>
+                  <a href="#" class="block px-4 py-2 hover:bg-gray-100"
+                    >3 passengers</a
+                  >
+                </li>
+                <li>
+                  <a href="#" class="block px-4 py-2 hover:bg-gray-100"
+                    >4 passengers</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <hr class="mb-4" />
+        <div class="grid grid-cols-7 gap-2">
+          <div class="col-span-2 relative">
+            <div class="form-group">
+              <div class="label">From address</div>
+              <input type="text" placeholder="Pick up location" />
+              <button class="absolute top-4 -right-4">
+                <img src="src/assets/top-slider/swap.svg" alt="" />
+              </button>
+            </div>
+          </div>
+          <div class="col-span-2">
+            <div class="form-group">
+              <div class="label">To</div>
+              <input type="text" placeholder="Drop off location" />
+            </div>
+          </div>
+          <div class="col-span-1">
+            <div class="form-group">
+              <div class="label">Pick up date</div>
+              <input type="text" placeholder="11/03/2023" />
+            </div>
+          </div>
+          <div class="col-span-1">
+            <div class="form-group">
+              <div class="label">Pick up time</div>
+              <input type="text" placeholder="12:00" />
+            </div>
+          </div>
+          <div class="col-span-1">
+            <button class="primary h-full w-full">Search</button>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Picker end -->
+
+    <!-- triple start -->
+    <section class="container mx-auto py-28">
+      <div class="grid grid-cols-3 gap-10">
+        <div class="col-span-1">
+          <div class="flex items-center space-x-4">
+            <img src="src/assets/flexible-booking-policy.svg" alt="" />
+            <div class="space-y-1">
+              <div class="text-[18px] font-semibold">
+                Flexible booking policy
+              </div>
+              <div class="text-black/80">
+                Enjoy free cancellation up to 24 hours before pickup
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-span-1">
+          <div class="flex items-center space-x-4">
+            <img src="src/assets/tried-and-trusted.svg" alt="" />
+            <div class="space-y-1">
+              <div class="text-[18px] font-semibold">Tried and trusted</div>
+              <div class="text-black/80">
+                We work with professional drivers and have 24/7 customer care
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-span-1">
+          <div class="flex items-center space-x-4">
+            <img src="src/assets/one-clear-price.svg" alt="" />
+            <div class="space-y-1">
+              <div class="text-[18px] font-semibold">One clear price</div>
+              <div class="text-black/80">
+                Your price is confirmed upfront – no extra costs, no cash
+                required
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- triple end -->
+
+    <!-- bookin a transfer with us very easy -->
+
+    <section class="container mx-auto">
+      <h2 class="text-[43px]">
+        BOOKING A TRANSFER
+        <span class="block"
+          >WITH US IS <span class="highlighted-text">VERY EASY</span></span
+        >
+      </h2>
+      <hr />
+      <div class="grid grid-cols-3 gap-20 py-10">
+        <div class="col-span-1 relative">
+          <img
+            class="h-[138px] z-10 relative"
+            src="src/assets/bookingwithus-1.png"
+            alt=""
+          />
+          <div
+            class="absolute z-0 text-[88px] text-black/10 left-[11.2rem] top-[2rem]"
+          >
+            01
+          </div>
+          <div class="font-semibold mt-8">Choose your route and car</div>
+        </div>
+        <div class="col-span-1 relative">
+          <img
+            class="h-[138px] z-10 relative"
+            src="src/assets/bookingwithus-2.png"
+            alt=""
+          />
+          <div
+            class="absolute z-0 text-[88px] text-black/10 left-[10rem] top-[2rem]"
+          >
+            02
+          </div>
+          <div class="font-semibold mt-8">
+            Fill out the order form
+            <span class="block">and payment options</span>
+          </div>
+          <div class="text-black/90 mt-4">
+            Choose your desired pick-up date and time, payment method, and other
+            requirements. Once you have successfully placed your order, a
+            confirmation voucher will be sent to your email.
+          </div>
+        </div>
+        <div class="col-span-1 relative">
+          <img
+            class="h-[138px] z-10 relative"
+            src="src/assets/bookingwithus-3.png"
+            alt=""
+          />
+          <div
+            class="absolute z-0 text-[88px] text-black/10 left-[12.5rem] top-[2rem]"
+          >
+            02
+          </div>
+          <div class="font-semibold mt-8">Meet your driver</div>
+          <div class="text-black/90 mt-4">
+            Your driver will be waiting for you at the designated location at
+            the scheduled time. No need to worry about being late or missing
+            your ride. We guarantee timely and reliable transportation services
+            to ensure your convenience and peace of mind.
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer start -->
     <footer>
       <div class="container mx-auto">
-        <div class="flex flex-col lg:flex-row items-center justify-between py-10">
+        <div
+          class="flex flex-col lg:flex-row items-center justify-between py-10"
+        >
           <img src="src/assets/logo-white.svg" alt="" />
           <div class="flex items-center space-x-2 mt-4 lg:mt-0">
             <!-- Lang -->
@@ -335,28 +588,35 @@
             </div>
           </div>
         </div>
-        <div class="flex justify-center lg:!justify-start items-center space-x-2 mt-4 lg:mt-0">
-          <a href="#"
+        <div
+          class="flex justify-center lg:!justify-start items-center space-x-2 mt-4 lg:mt-0"
+        >
+          <a
+            href="#"
             class="flex items-center justify-center w-12 h-12 rounded-lg p-3 border border-white"
           >
             <img src="src/assets/social/facebook.svg" alt="" />
           </a>
-          <a href="#"
+          <a
+            href="#"
             class="flex items-center justify-center w-12 h-12 rounded-lg p-3 border border-white"
           >
             <img src="src/assets/social/instagram.svg" alt="" />
           </a>
-          <a href="#"
+          <a
+            href="#"
             class="flex items-center justify-center w-12 h-12 rounded-lg p-3 border border-white"
           >
             <img src="src/assets/social/youtube.svg" alt="" />
           </a>
-          <a href="#"
+          <a
+            href="#"
             class="flex items-center justify-center w-12 h-12 rounded-lg p-3 border border-white"
           >
             <img src="src/assets/social/twitter.svg" alt="" />
           </a>
-          <a href="#"
+          <a
+            href="#"
             class="flex items-center justify-center w-12 h-12 rounded-lg p-3 border border-white"
           >
             <img src="src/assets/social/linkedin.svg" alt="" />
@@ -372,6 +632,7 @@
         </div>
       </div>
     </footer>
+    <!-- Footer end -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.4/flowbite.min.js"></script>
   </body>
 </html>
