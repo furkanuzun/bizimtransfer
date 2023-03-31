@@ -18,6 +18,10 @@ header {
     }
 }
 
+body {
+    padding-top: 83px;
+}
+
 button {
     &.primary {
         @apply flex justify-center items-center py-4 px-8 text-white space-x-2;
@@ -48,4 +52,8 @@ nav {
             text-fill-color: transparent;
         }
     }
+}
+
+footer {
+    background: linear-gradient(180deg, #F98F3D 0%, #D76C19 100%);
 }

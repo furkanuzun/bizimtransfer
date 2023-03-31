@@ -16,6 +16,7 @@
     />
   </head>
   <body>
+    <!-- Header start -->
     <nav
       class="bg-white dark:bg-gray-900 fixed w-full z-20 top-0 left-0 border-b border-gray-200 dark:border-gray-600"
     >
@@ -213,7 +214,164 @@
         </div>
       </div>
     </nav>
+    <!-- Header end -->
 
+    <footer>
+      <div class="container mx-auto">
+        <div class="flex flex-col lg:flex-row items-center justify-between py-10">
+          <img src="src/assets/logo-white.svg" alt="" />
+          <div class="flex items-center space-x-2 mt-4 lg:mt-0">
+            <!-- Lang -->
+            <button
+              id="footer_langDropdownButton"
+              data-dropdown-toggle="footer_langDropdown"
+              class="inline-flex items-center space-x-2 border border-white rounded p-2 text-white"
+              type="button"
+            >
+              <img src="src/assets/english.svg" alt="" />
+              <span>English</span>
+              <svg
+                class="w-4 h-4 ml-2"
+                aria-hidden="true"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M19 9l-7 7-7-7"
+                ></path>
+              </svg>
+            </button>
+
+            <!-- Language dropdown menu -->
+            <div
+              id="footer_langDropdown"
+              class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700 dark:divide-gray-600"
+            >
+              <ul
+                class="py-2 text-sm text-gray-700 dark:text-gray-200"
+                aria-labelledby="footer_langDropdownButton"
+              >
+                <li>
+                  <a
+                    href="#"
+                    class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                    >Türkçe</a
+                  >
+                </li>
+              </ul>
+            </div>
+            <!-- Currency -->
+            <button
+              id="footer_currencyDropdownButton"
+              data-dropdown-toggle="footer_currencyDropdown"
+              class="inline-flex items-center space-x-2 border border-white rounded p-2 text-white"
+              type="button"
+            >
+              <span>USD</span>
+              <svg
+                class="w-4 h-4 ml-2"
+                aria-hidden="true"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M19 9l-7 7-7-7"
+                ></path>
+              </svg>
+            </button>
+
+            <!-- Language dropdown menu -->
+            <div
+              id="footer_currencyDropdown"
+              class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700 dark:divide-gray-600"
+            >
+              <ul
+                class="py-2 text-sm text-gray-700 dark:text-gray-200"
+                aria-labelledby="footer_currencyDropdownButton"
+              >
+                <li>
+                  <a
+                    href="#"
+                    class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                    >EUR</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="flex flex-col lg:flex-row items-center justify-between">
+          <div
+            class="border border-dashed border-white text-4xl text-white p-4 rounded-xl"
+          >
+            +90 (242) 514-13-10
+          </div>
+          <div class="flex flex-col space-y-2 text-white mt-4 lg:mt-0">
+            <div class="flex items-center space-x-2">
+              <button class="py-2 p-4 border border-white rounded-lg">
+                Services
+              </button>
+              <button class="py-2 p-4 border border-white rounded-lg">
+                About us
+              </button>
+            </div>
+            <div class="flex items-center space-x-2">
+              <button class="py-2 p-4 border border-white rounded-lg">
+                Contact us
+              </button>
+              <button class="py-2 p-4 border border-white rounded-lg">
+                Travel guide
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="flex justify-center lg:!justify-start items-center space-x-2 mt-4 lg:mt-0">
+          <a href="#"
+            class="flex items-center justify-center w-12 h-12 rounded-lg p-3 border border-white"
+          >
+            <img src="src/assets/social/facebook.svg" alt="" />
+          </a>
+          <a href="#"
+            class="flex items-center justify-center w-12 h-12 rounded-lg p-3 border border-white"
+          >
+            <img src="src/assets/social/instagram.svg" alt="" />
+          </a>
+          <a href="#"
+            class="flex items-center justify-center w-12 h-12 rounded-lg p-3 border border-white"
+          >
+            <img src="src/assets/social/youtube.svg" alt="" />
+          </a>
+          <a href="#"
+            class="flex items-center justify-center w-12 h-12 rounded-lg p-3 border border-white"
+          >
+            <img src="src/assets/social/twitter.svg" alt="" />
+          </a>
+          <a href="#"
+            class="flex items-center justify-center w-12 h-12 rounded-lg p-3 border border-white"
+          >
+            <img src="src/assets/social/linkedin.svg" alt="" />
+          </a>
+        </div>
+        <div
+          class="border-t border-white/55 py-4 mt-10 flex justify-between items-center px-2 md:px-0"
+        >
+          <img class="h-6" src="src/assets/footer/footer.svg" alt="" />
+          <div class="text-white/70 text-xs pl-4">
+            © Copyright Bizim Transfer. All Rights Reserved
+          </div>
+        </div>
+      </div>
+    </footer>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.4/flowbite.min.js"></script>
   </body>
 </html>
