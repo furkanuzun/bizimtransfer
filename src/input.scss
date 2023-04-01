@@ -83,3 +83,21 @@ footer {
     background-clip: text;
     text-fill-color: transparent;
 }
+
+.primary-bg,
+.active-tab-btn {
+    @apply  !text-white;
+    background: linear-gradient(180deg, #F98F3D 0%, #D76C19 100%) !important;
+    border-radius: 10px 0px 0px 10px;
+}
+
+.slider-desc {
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(10px);
+    /* Note: backdrop-filter has minimal browser support */
+    border-radius: 5px;
+}
+
+[data-accordion-icon] {
+    @apply -rotate-90 bg-[#FBFAFF];
+}
