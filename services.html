@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="/dist/output.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.4/flowbite.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Raleway&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- Header start -->
+    <nav
+      class="bg-white dark:bg-gray-900 fixed w-full z-20 top-0 left-0 border-b border-gray-200 dark:border-gray-600"
+    >
+      <div
+        class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4"
+      >
+        <a href="https://flowbite.com/" class="flex items-center">
+          <img src="src/assets/logo.svg" class="h-8 mr-3" alt="Flowbite Logo" />
+        </a>
+        <div class="flex space-x-4 md:order-2">
+          <!-- Lang, Currency, User -->
+          <div class="hidden md:flex items-center space-x-8">
+            <!-- Lang -->
+            <button
+              id="langDropdownButton"
+              data-dropdown-toggle="langDropdown"
+              class="inline-flex items-center space-x-2"
+              type="button"
+            >
+              <img src="src/assets/english.svg" alt="" />
+              <span>English</span>
+              <svg
+                class="w-4 h-4 ml-2"
+                aria-hidden="true"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M19 9l-7 7-7-7"
+                ></path>
+              </svg>
+            </button>
+
+            <!-- Language dropdown menu -->
+            <div
+              id="langDropdown"
+              class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700 dark:divide-gray-600"
+            >
+              <ul
+                class="py-2 text-sm text-gray-700 dark:text-gray-200"
+                aria-labelledby="langDropdownButton"
+              >
+                <li>
+                  <a
+                    href="#"
+                    class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                    >Türkçe</a
+                  >
+                </li>
+              </ul>
+            </div>
+            <!-- Currency -->
+            <button
+              id="currencyDropdownButton"
+              data-dropdown-toggle="currencyDropdown"
+              class="inline-flex items-center space-x-2"
+              type="button"
+            >
+              <span>USD</span>
+              <svg
+                class="w-4 h-4 ml-2"
+                aria-hidden="true"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M19 9l-7 7-7-7"
+                ></path>
+              </svg>
+            </button>
+
+            <!-- Currency dropdown menu -->
+            <div
+              id="currencyDropdown"
+              class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700 dark:divide-gray-600"
+            >
+              <ul
+                class="py-2 text-sm text-gray-700 dark:text-gray-200"
+                aria-labelledby="currencyDropdownButton"
+              >
+                <li>
+                  <a
+                    href="#"
+                    class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                    >EUR</a
+                  >
+                </li>
+              </ul>
+            </div>
+            <!-- User -->
+            <button
+              id="userDropdownButton"
+              data-dropdown-toggle="userDropdown"
+              class="inline-flex items-center space-x-2"
+              type="button"
+            >
+              <img src="src/assets/user.svg" alt="" />
+              <svg
+                class="w-4 h-4 ml-2"
+                aria-hidden="true"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M19 9l-7 7-7-7"
+                ></path>
+              </svg>
+            </button>
+
+            <!-- User dropdown menu -->
+            <div
+              id="userDropdown"
+              class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700 dark:divide-gray-600"
+            >
+              <ul
+                class="py-2 text-sm text-gray-700 dark:text-gray-200"
+                aria-labelledby="userDropdownButton"
+              >
+                <li>
+                  <a
+                    href="#"
+                    class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                    >Profile settings</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Contact us -->
+          <button class="!hidden md:!flex primary">
+            <img src="src/assets/call.svg" alt="" />
+            <span>+90 (242) 514-13-10</span>
+          </button>
+          <button
+            data-collapse-toggle="navbar-sticky"
+            type="button"
+            class="primary !inline-flex items-center !p-3 text-sm text-gray-500 rounded-lg lg:!hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+            aria-controls="navbar-sticky"
+            aria-expanded="false"
+          >
+            <svg
+              class="w-6 h-6"
+              aria-hidden="true"
+              fill="currentColor"
+              viewBox="0 0 20 20"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
+                clip-rule="evenodd"
+              ></path>
+            </svg>
+          </button>
+        </div>
+        <div
+          class="items-center justify-between hidden w-full lg:flex lg:w-auto order-5 lg:order-1"
+          id="navbar-sticky"
+        >
+          <ul
+            class="flex flex-col p-4 lg:p-0 mt-4 space-y-4 lg:!space-y-0 border border-gray-100 rounded-lg bg-gray-50 lg:flex-row lg:space-x-8 lg:mt-0 lg:border-0 lg:!bg-white dark:bg-gray-800 lg:dark:bg-gray-900 dark:border-gray-700"
+          >
+            <li>
+              <a href="#" class="primary" aria-current="page">Home</a>
+            </li>
+            <li>
+              <a href="#">About us</a>
+            </li>
+            <li>
+              <a href="#">Services</a>
+            </li>
+            <li>
+              <a href="#">Travel guide</a>
+            </li>
+            <li>
+              <a href="#">Contact us</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!-- Header end -->
+
+    <section class="container mx-auto">
+      <div class="mb-[33px]">
+        <h1
+          class="font-['Bebas_Neue'] text-[33px] sm:text-[43px] uppercase md:mt-[150px] mt-[93px]"
+        >
+          Our
+          <span class="font-['Bebas_Neue'] text-[#F98F3D]">services</span>
+        </h1>
+      </div>
+      <div class="md:w-1/2 sm:w-2/3 ">
+        <p class="leading-[18.78px] pr-[44px]">
+          We guarantee comfortable and safe transportation services using modern
+          vehicles and professional drivers. Book your next transfer today!
+        </p>
+      </div>
+    </section>
+
+    <hr
+      class="container mx-auto h-px my-8 bg-gray-200 border-0 dark:bg-gray-700"
+    />
+
+    <section
+      class="container mx-auto block md:grid md:grid-cols-2 gap-12 items-center"
+    >
+      <div>
+        <img src="./src/assets/serviceimg1.png" alt="" />
+      </div>
+      <div>
+        <h5 class="font-semibold text-[21px] md:mys-0 my-[20px] mb-5">
+          Airport Transfer Services
+        </h5>
+        <p class="leading-[18.78px] mb-14">
+          Individual or group transfer services to and from the airport are
+          conducted on time, safely, and comfortably with specially designed,
+          modern, and the latest technology-equipped vehicles and expert drivers
+          who have undergone special training in driving.
+        </p>
+        <button class="primary w-full mb-[60px] md:mb-0">
+          <div>Book now</div>
+          <img src="./src/assets/button-right-arrow.svg" alt="" />
+        </button>
+      </div>
+    </section>
+
+    <hr
+      class="container mx-auto h-px my-8 bg-gray-200 border-0 dark:bg-gray-700 md:block hidden"
+    />
+
+    <section
+      class="container mx-auto block md:grid md:grid-cols-2 gap-12 items-center"
+    >
+      <div>
+        <img src="./src/assets/serviceimg2.png" alt="" />
+      </div>
+      <div>
+        <h5 class="font-semibold text-[21px] md:mys-0 my-[20px] mb-5">
+          Tourism Agency Services
+        </h5>
+        <p class="leading-[18.78px] mb-14">
+          In accordance with the "safety comes first" principle, all types of
+          transfer services for tourism agencies are provided with our modern
+          and latest technology-equipped vehicles in a safe and comfortable
+          manner by expert drivers.
+        </p>
+        <button class="primary w-full mb-[60px] md:mb-0">
+            <div>Book now</div>
+            <img src="./src/assets/button-right-arrow.svg" alt="" />
+          </button>
+      </div>
+    </section>
+
+    <hr
+      class="container mx-auto h-px my-8 bg-gray-200 border-0 dark:bg-gray-700 md:block hidden"
+    />
+
+    <section class="container mx-auto block md:grid md:grid-cols-2 gap-12 items-center lg:mb-24">
+      <div>
+        <img src="./src/assets/serviceimg3.png" alt="" />
+      </div>
+      <div>
+        <h5 class="font-semibold text-[21px] md:my-0 my-[20px] mb-5">
+          Congress Incentive <span class="block">Transfer Services</span>
+        </h5>
+        <p class="leading-[18.78px] mb-14">
+          All types of hotel-airport transfer services for scientific meetings
+          such as national and international congresses, symposiums, workshops,
+          or dealer meetings are conducted in accordance with our customer
+          satisfaction-oriented work system.
+        </p>
+        <button class="primary w-full mb-[60px]">
+            <div>Book now</div>
+            <img src="./src/assets/button-right-arrow.svg" alt="" />
+          </button>
+      </div>
+    </section>
+
+
+    <!-- Footer start -->
+    <footer>
+      <div class="container mx-auto">
+        <div
+          class="flex flex-col lg:flex-row items-center justify-between py-10"
+        >
+          <img src="src/assets/logo-white.svg" alt="" />
+          <div class="flex items-center space-x-2 mt-4 lg:mt-0">
+            <!-- Lang -->
+            <button
+              id="footer_langDropdownButton"
+              data-dropdown-toggle="footer_langDropdown"
+              class="inline-flex items-center space-x-2 border border-white rounded p-2 text-white"
+              type="button"
+            >
+              <img src="src/assets/english.svg" alt="" />
+              <span>English</span>
+              <svg
+                class="w-4 h-4 ml-2"
+                aria-hidden="true"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M19 9l-7 7-7-7"
+                ></path>
+              </svg>
+            </button>
+
+            <!-- Language dropdown menu -->
+            <div
+              id="footer_langDropdown"
+              class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700 dark:divide-gray-600"
+            >
+              <ul
+                class="py-2 text-sm text-gray-700 dark:text-gray-200"
+                aria-labelledby="footer_langDropdownButton"
+              >
+                <li>
+                  <a
+                    href="#"
+                    class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                    >Türkçe</a
+                  >
+                </li>
+              </ul>
+            </div>
+            <!-- Currency -->
+            <button
+              id="footer_currencyDropdownButton"
+              data-dropdown-toggle="footer_currencyDropdown"
+              class="inline-flex items-center space-x-2 border border-white rounded p-2 text-white"
+              type="button"
+            >
+              <span>USD</span>
+              <svg
+                class="w-4 h-4 ml-2"
+                aria-hidden="true"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M19 9l-7 7-7-7"
+                ></path>
+              </svg>
+            </button>
+
+            <!-- Language dropdown menu -->
+            <div
+              id="footer_currencyDropdown"
+              class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700 dark:divide-gray-600"
+            >
+              <ul
+                class="py-2 text-sm text-gray-700 dark:text-gray-200"
+                aria-labelledby="footer_currencyDropdownButton"
+              >
+                <li>
+                  <a
+                    href="#"
+                    class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                    >EUR</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="flex flex-col lg:flex-row items-center justify-between">
+          <div
+            class="border border-dashed border-white text-4xl text-white p-4 rounded-xl"
+          >
+            +90 (242) 514-13-10
+          </div>
+          <div class="flex flex-col space-y-2 text-white mt-4 lg:mt-0">
+            <div class="flex items-center space-x-2">
+              <button class="py-2 p-4 border border-white rounded-lg">
+                Services
+              </button>
+              <button class="py-2 p-4 border border-white rounded-lg">
+                About us
+              </button>
+            </div>
+            <div class="flex items-center space-x-2">
+              <button class="py-2 p-4 border border-white rounded-lg">
+                Contact us
+              </button>
+              <button class="py-2 p-4 border border-white rounded-lg">
+                Travel guide
+              </button>
+            </div>
+          </div>
+        </div>
+        <div
+          class="flex justify-center lg:!justify-start items-center space-x-2 mt-4 lg:mt-0"
+        >
+          <a
+            href="#"
+            class="flex items-center justify-center w-12 h-12 rounded-lg p-3 border border-white"
+          >
+            <img src="src/assets/social/facebook.svg" alt="" />
+          </a>
+          <a
+            href="#"
+            class="flex items-center justify-center w-12 h-12 rounded-lg p-3 border border-white"
+          >
+            <img src="src/assets/social/instagram.svg" alt="" />
+          </a>
+          <a
+            href="#"
+            class="flex items-center justify-center w-12 h-12 rounded-lg p-3 border border-white"
+          >
+            <img src="src/assets/social/youtube.svg" alt="" />
+          </a>
+          <a
+            href="#"
+            class="flex items-center justify-center w-12 h-12 rounded-lg p-3 border border-white"
+          >
+            <img src="src/assets/social/twitter.svg" alt="" />
+          </a>
+          <a
+            href="#"
+            class="flex items-center justify-center w-12 h-12 rounded-lg p-3 border border-white"
+          >
+            <img src="src/assets/social/linkedin.svg" alt="" />
+          </a>
+        </div>
+        <div
+          class="border-t border-white/55 py-4 mt-10 flex justify-between items-center px-2 md:px-0"
+        >
+          <img class="h-6" src="src/assets/footer/footer.svg" alt="" />
+          <div class="text-white/70 text-xs pl-4">
+            © Copyright Bizim Transfer. All Rights Reserved
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- Footer end -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.4/flowbite.min.js"></script>
+  </body>
+</html>
