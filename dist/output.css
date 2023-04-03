@@ -805,9 +805,6 @@ video {
 .flex {
   display: flex;
 }
-.\!flex {
-  display: flex !important;
-}
 .\!inline-flex {
   display: inline-flex !important;
 }
@@ -2859,10 +2856,6 @@ footer {
 
   .sm\:flex {
     display: flex;
-  }
-
-  .sm\:\!flex {
-    display: flex !important;
   }
 
   .sm\:grid {
