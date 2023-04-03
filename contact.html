@@ -1,0 +1,735 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="/dist/output.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.4/flowbite.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Raleway&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- Header start -->
+    <nav
+      class="bg-white dark:bg-gray-900 fixed w-full z-20 top-0 left-0 border-b border-gray-200 dark:border-gray-600"
+    >
+      <div
+        class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4"
+      >
+        <a href="https://flowbite.com/" class="flex items-center">
+          <img src="src/assets/logo.svg" class="h-8 mr-3" alt="Flowbite Logo" />
+        </a>
+        <div class="flex space-x-4 md:order-2">
+          <!-- Lang, Currency, User -->
+          <div class="hidden md:flex items-center space-x-8">
+            <!-- Lang -->
+            <button
+              id="langDropdownButton"
+              data-dropdown-toggle="langDropdown"
+              class="inline-flex items-center space-x-2"
+              type="button"
+            >
+              <img src="src/assets/english.svg" alt="" />
+              <span>English</span>
+              <svg
+                class="w-4 h-4 ml-2"
+                aria-hidden="true"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M19 9l-7 7-7-7"
+                ></path>
+              </svg>
+            </button>
+
+            <!-- Language dropdown menu -->
+            <div
+              id="langDropdown"
+              class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700 dark:divide-gray-600"
+            >
+              <ul
+                class="py-2 text-sm text-gray-700 dark:text-gray-200"
+                aria-labelledby="langDropdownButton"
+              >
+                <li>
+                  <a
+                    href="#"
+                    class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                    >Türkçe</a
+                  >
+                </li>
+              </ul>
+            </div>
+            <!-- Currency -->
+            <button
+              id="currencyDropdownButton"
+              data-dropdown-toggle="currencyDropdown"
+              class="inline-flex items-center space-x-2"
+              type="button"
+            >
+              <span>USD</span>
+              <svg
+                class="w-4 h-4 ml-2"
+                aria-hidden="true"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M19 9l-7 7-7-7"
+                ></path>
+              </svg>
+            </button>
+
+            <!-- Currency dropdown menu -->
+            <div
+              id="currencyDropdown"
+              class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700 dark:divide-gray-600"
+            >
+              <ul
+                class="py-2 text-sm text-gray-700 dark:text-gray-200"
+                aria-labelledby="currencyDropdownButton"
+              >
+                <li>
+                  <a
+                    href="#"
+                    class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                    >EUR</a
+                  >
+                </li>
+              </ul>
+            </div>
+            <!-- User -->
+            <button
+              id="userDropdownButton"
+              data-dropdown-toggle="userDropdown"
+              class="inline-flex items-center space-x-2"
+              type="button"
+            >
+              <img src="src/assets/user.svg" alt="" />
+              <svg
+                class="w-4 h-4 ml-2"
+                aria-hidden="true"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M19 9l-7 7-7-7"
+                ></path>
+              </svg>
+            </button>
+
+            <!-- User dropdown menu -->
+            <div
+              id="userDropdown"
+              class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700 dark:divide-gray-600"
+            >
+              <ul
+                class="py-2 text-sm text-gray-700 dark:text-gray-200"
+                aria-labelledby="userDropdownButton"
+              >
+                <li>
+                  <a
+                    href="#"
+                    class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                    >Profile settings</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Contact us -->
+          <button class="!hidden md:!flex primary">
+            <img src="src/assets/call.svg" alt="" />
+            <span>+90 (242) 514-13-10</span>
+          </button>
+          <button
+            data-collapse-toggle="navbar-sticky"
+            type="button"
+            class="primary !inline-flex items-center !p-3 text-sm text-gray-500 rounded-lg lg:!hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+            aria-controls="navbar-sticky"
+            aria-expanded="false"
+          >
+            <svg
+              class="w-6 h-6"
+              aria-hidden="true"
+              fill="currentColor"
+              viewBox="0 0 20 20"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
+                clip-rule="evenodd"
+              ></path>
+            </svg>
+          </button>
+        </div>
+        <div
+          class="items-center justify-between hidden w-full lg:flex lg:w-auto order-5 lg:order-1"
+          id="navbar-sticky"
+        >
+          <ul
+            class="flex flex-col p-4 lg:p-0 mt-4 space-y-4 lg:!space-y-0 border border-gray-100 rounded-lg bg-gray-50 lg:flex-row lg:space-x-8 lg:mt-0 lg:border-0 lg:!bg-white dark:bg-gray-800 lg:dark:bg-gray-900 dark:border-gray-700"
+          >
+            <li>
+              <a href="#" class="primary" aria-current="page">Home</a>
+            </li>
+            <li>
+              <a href="#">About us</a>
+            </li>
+            <li>
+              <a href="#">Services</a>
+            </li>
+            <li>
+              <a href="#">Travel guide</a>
+            </li>
+            <li>
+              <a href="#">Contact us</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!-- Header end -->
+
+    <section class="container mx-auto">
+      <div class="mb-[33px]">
+        <h1 class="font-['Bebas_Neue'] text-[43px] uppercase mt-[150px]">
+          Contact
+        </h1>
+      </div>
+    </section>
+
+    <section class="container mx-auto mb-[6px] sm:mb-10">
+      <iframe
+        class="w-full h-[500px] rounded-md"
+        src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12820.907872407432!2d31.982234!3d36.54864!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14dca28544bdf719%3A0x8a2da38ba85170e3!2sBizim%20Transfer!5e0!3m2!1str!2str!4v1680510523211!5m2!1str!2str"
+        style="border: 0"
+        allowfullscreen=""
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+      ></iframe>
+    </section>
+
+    <section class="container mx-auto grid lg:grid-cols-3 md:grid-cols-2">
+      <div class="lg:col-span-2 lg:grid lg:grid-cols-2">
+        <div class="flex justify-around sm:hidden mb-10">
+          <a href="">
+            <svg
+              width="56"
+              height="56"
+              viewBox="0 0 56 56"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <g clip-path="url(#clip0_1_9199)">
+                <rect width="56" height="56" rx="5" fill="#FBFAFF" />
+                <path
+                  d="M36.1392 19.1821C35.7644 19.1821 35.4594 19.4871 35.4594 19.8619C35.4594 20.2367 35.7644 20.5417 36.1392 20.5417C36.514 20.5417 36.8189 20.2367 36.8189 19.8619C36.8189 19.4871 36.514 19.1821 36.1392 19.1821ZM28 21.9747C24.6771 21.9747 21.9736 24.6782 21.9736 28.0011C21.9736 31.324 24.6771 34.0275 28 34.0275C31.323 34.0275 34.0264 31.3241 34.0264 28.0011C34.0264 24.6782 31.323 21.9747 28 21.9747Z"
+                  fill="#696969"
+                />
+                <path
+                  d="M34.3242 14H21.6758C17.4433 14 14 17.4433 14 21.6758V34.3242C14 38.5567 17.4433 42 21.6758 42H34.3242C38.5567 42 42 38.5567 42 34.3242V21.6758C42 17.4433 38.5567 14 34.3242 14ZM28 35.6799C23.7653 35.6799 20.3202 32.2347 20.3202 28C20.3202 23.7653 23.7653 20.3202 28 20.3202C32.2347 20.3202 35.6799 23.7653 35.6799 28C35.6799 32.2347 32.2347 35.6799 28 35.6799ZM36.1392 22.1942C34.8526 22.1942 33.8059 21.1474 33.8059 19.8609C33.8059 18.5743 34.8526 17.5275 36.1392 17.5275C37.4258 17.5275 38.4725 18.5742 38.4725 19.8608C38.4725 21.1474 37.4258 22.1942 36.1392 22.1942Z"
+                  fill="#696969"
+                />
+              </g>
+              <defs>
+                <clipPath id="clip0_1_9199">
+                  <rect width="56" height="56" fill="white" />
+                </clipPath>
+              </defs>
+            </svg>
+          </a>
+          <a href="">
+            <svg
+              width="56"
+              height="56"
+              viewBox="0 0 56 56"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <g clip-path="url(#clip0_1_9206)">
+                <rect width="56" height="56" rx="5" fill="#FBFAFF" />
+                <path
+                  d="M42 28C42 20.2672 35.7328 14 28 14C20.2672 14 14 20.2672 14 28C14 35.7328 20.2672 42 28 42C28.082 42 28.1641 42 28.2461 41.9945V31.1008H25.2383V27.5953H28.2461V25.0141C28.2461 22.0227 30.0727 20.393 32.7414 20.393C34.0211 20.393 35.1203 20.4859 35.4375 20.5297V23.6578H33.6C32.1508 23.6578 31.8664 24.3469 31.8664 25.3586V27.5898H35.3391L34.8852 31.0953H31.8664V41.4586C37.718 39.7797 42 34.393 42 28Z"
+                  fill="#696969"
+                />
+              </g>
+              <defs>
+                <clipPath id="clip0_1_9206">
+                  <rect width="56" height="56" fill="white" />
+                </clipPath>
+              </defs>
+            </svg>
+          </a>
+          <a href="">
+            <svg
+              width="56"
+              height="56"
+              viewBox="0 0 56 56"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <g clip-path="url(#clip0_1_9212)">
+                <rect width="56" height="56" rx="5" fill="#FBFAFF" />
+                <path
+                  d="M44.2789 19.7554C43.8756 18.2869 42.6934 17.1293 41.1941 16.7339C38.4553 16 27.4996 16 27.4996 16C27.4996 16 16.5444 16 13.8055 16.7061C12.3351 17.1011 11.1241 18.2872 10.7208 19.7554C10 22.4376 10 28.0001 10 28.0001C10 28.0001 10 33.5905 10.7208 36.2446C11.1245 37.7129 12.3063 38.8705 13.8057 39.2659C16.5732 40 27.5 40 27.5 40C27.5 40 38.4553 40 41.1941 39.2939C42.6936 38.8987 43.8756 37.7411 44.2793 36.2728C44.9999 33.5905 44.9999 28.0282 44.9999 28.0282C44.9999 28.0282 45.0287 22.4375 44.2789 19.7554ZM24.0115 33.1388V22.8612L33.1217 27.9999L24.0115 33.1388Z"
+                  fill="#696969"
+                />
+              </g>
+              <defs>
+                <clipPath id="clip0_1_9212">
+                  <rect width="56" height="56" fill="white" />
+                </clipPath>
+              </defs>
+            </svg>
+          </a>
+          <a href="">
+            <svg
+              width="56"
+              height="56"
+              viewBox="0 0 56 56"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <g clip-path="url(#clip0_1_9218)">
+                <rect width="56" height="56" rx="5" fill="#FBFAFF" />
+                <path
+                  d="M43 18.8659C41.8844 19.352 40.6956 19.6741 39.4562 19.8306C40.7312 19.0745 41.7044 17.8864 42.1619 16.4544C40.9731 17.1583 39.6606 17.6555 38.2619 17.933C37.1331 16.7393 35.5244 16 33.7694 16C30.3644 16 27.6231 18.7449 27.6231 22.1099C27.6231 22.5941 27.6644 23.0596 27.7656 23.5028C22.6525 23.2552 18.1281 20.8213 15.0887 17.1136C14.5581 18.0279 14.2469 19.0745 14.2469 20.2011C14.2469 22.3166 15.3438 24.1919 16.9787 25.2775C15.9906 25.2589 15.0213 24.974 14.2 24.5252V24.5922C14.2 27.5606 16.3319 30.0262 19.1275 30.5941C18.6269 30.7301 18.0813 30.7953 17.515 30.7953C17.1213 30.7953 16.7237 30.7729 16.3506 30.691C17.1475 33.11 19.4088 34.8884 22.0975 34.9461C20.005 36.5718 17.3481 37.5513 14.4719 37.5513C13.9675 37.5513 13.4837 37.529 13 37.4675C15.7244 39.2124 18.9531 40.2087 22.435 40.2087C33.7525 40.2087 39.94 30.8977 39.94 22.8269C39.94 22.5568 39.9306 22.2961 39.9175 22.0373C41.1381 21.1769 42.1637 20.1024 43 18.8659Z"
+                  fill="#696969"
+                />
+              </g>
+              <defs>
+                <clipPath id="clip0_1_9218">
+                  <rect width="56" height="56" fill="white" />
+                </clipPath>
+              </defs>
+            </svg>
+          </a>
+          <a href="">
+            <svg
+              width="56"
+              height="56"
+              viewBox="0 0 56 56"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <g clip-path="url(#clip0_1_9224)">
+                <rect width="56" height="56" rx="5" fill="#FBFAFF" />
+                <path
+                  d="M28 14C20.2692 14 14 20.2692 14 28C14 35.7308 20.2692 42 28 42C35.7308 42 42 35.7308 42 28C42 20.2692 35.7308 14 28 14ZM23.9318 35.1641H20.5221V24.9061H23.9317L23.9318 35.1641ZM22.227 23.5053H22.2048C21.0606 23.5053 20.3207 22.7177 20.3207 21.7334C20.3207 20.7268 21.0833 19.9609 22.2497 19.9609C23.4161 19.9609 24.1339 20.7268 24.1561 21.7334C24.1561 22.7177 23.4161 23.5054 22.227 23.5054V23.5053ZM36.2263 35.1641H32.817V29.6763C32.817 28.2972 32.3234 27.3565 31.0897 27.3565C30.1478 27.3565 29.5869 27.991 29.3403 28.6035C29.2502 28.8227 29.2282 29.129 29.2282 29.4355V35.1641H25.8187C25.8187 35.1641 25.8634 25.8684 25.8187 24.9061H29.2282V26.3585C29.6813 25.6596 30.492 24.6654 32.301 24.6654C34.5442 24.6654 36.2263 26.1314 36.2263 29.2821V35.1641Z"
+                  fill="#696969"
+                />
+              </g>
+              <defs>
+                <clipPath id="clip0_1_9224">
+                  <rect width="56" height="56" fill="white" />
+                </clipPath>
+                ∏
+              </defs>
+            </svg>
+          </a>
+        </div>
+        <div class="md:block sm:grid sm:grid-cols-2 sm:mb-[46px]">
+          <div>
+            <h5 class="font-[700] text-lg font-['Raleway']">Bizim Transfer</h5>
+            <p
+              class="text-sm font-['Raleway'] lg:mb-[40px] md:mb-[27px] mb-[38px] md:flex"
+            >
+              Hazarfen Tur. Sey. Eml. Tas.
+              <span class="block">İnş. San. ve Tic. Ltd. Sti</span>
+            </p>
+          </div>
+
+          <div class="sm:flex hidden items-center space-x-[18px] md:mb-[80px]">
+            <a href="">
+              <svg
+                width="29"
+                height="29"
+                viewBox="0 0 29 29"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M28.4722 14.2361C28.4722 6.37288 22.0993 0 14.2361 0C6.37288 0 0 6.37288 0 14.2361C0 22.0993 6.37288 28.4722 14.2361 28.4722C14.3195 28.4722 14.4029 28.4722 14.4864 28.4667V17.3892H11.4278V13.8246H14.4864V11.1998C14.4864 8.15796 16.3437 6.50079 19.0575 6.50079C20.3588 6.50079 21.4765 6.59532 21.799 6.63981V9.82069H19.9306C18.4569 9.82069 18.1677 10.5214 18.1677 11.5502V13.819H21.6989L21.2374 17.3836H18.1677V27.9217C24.118 26.2145 28.4722 20.7369 28.4722 14.2361Z"
+                  fill="#696969"
+                />
+              </svg>
+            </a>
+            <a href="">
+              <svg
+                width="29"
+                height="29"
+                viewBox="0 0 29 29"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M20.9863 0H8.12456C3.82075 0 0.319336 3.50142 0.319336 7.80528V20.667C0.319336 24.9709 3.82075 28.4722 8.12456 28.4722H20.9863C25.2902 28.4722 28.7916 24.9708 28.7916 20.667V7.80528C28.7916 3.50142 25.2902 0 20.9863 0ZM14.5554 22.0455C10.2493 22.0455 6.74611 18.5423 6.74611 14.2361C6.74611 9.92997 10.2494 6.42683 14.5554 6.42683C18.8615 6.42683 22.3648 9.93002 22.3648 14.2361C22.3648 18.5422 18.8615 22.0455 14.5554 22.0455ZM22.8319 8.33235C21.5236 8.33235 20.4593 7.26798 20.4593 5.9597C20.4593 4.65143 21.5236 3.587 22.8319 3.587C24.1402 3.587 25.2046 4.65137 25.2046 5.95965C25.2046 7.26792 24.1402 8.33235 22.8319 8.33235Z"
+                  fill="#696969"
+                />
+              </svg>
+            </a>
+            <a href="">
+              <svg
+                width="33"
+                height="23"
+                viewBox="0 0 33 23"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M32.1089 3.55607C31.7349 2.16553 30.6385 1.0694 29.2482 0.694965C26.7082 -4.83668e-08 16.5481 0 16.5481 0C16.5481 0 6.38845 0 3.84848 0.668643C2.48487 1.04268 1.36181 2.16579 0.987776 3.55607C0.319336 6.09584 0.319336 11.3631 0.319336 11.3631C0.319336 11.3631 0.319336 16.6568 0.987776 19.17C1.36216 20.5603 2.45814 21.6565 3.84868 22.0309C6.41518 22.7261 16.5485 22.7261 16.5485 22.7261C16.5485 22.7261 26.7082 22.7261 29.2482 22.0574C30.6387 21.6832 31.7349 20.587 32.1093 19.1967C32.7775 16.6567 32.7775 11.3898 32.7775 11.3898C32.7775 11.3898 32.8043 6.09579 32.1089 3.55607ZM13.3133 16.229V6.49695L21.762 11.363L13.3133 16.229Z"
+                  fill="#696969"
+                />
+              </svg>
+            </a>
+            <a href="">
+              <svg
+                width="29"
+                height="24"
+                viewBox="0 0 29 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M28.7916 2.73867C27.7327 3.20312 26.6045 3.51098 25.4283 3.66046C26.6383 2.93798 27.5619 1.80265 27.9961 0.434201C26.8679 1.10686 25.6222 1.58199 24.2947 1.84714C23.2235 0.706467 21.6966 0 20.031 0C16.7994 0 14.1978 2.623 14.1978 5.83859C14.1978 6.30126 14.2369 6.74614 14.333 7.16966C9.48027 6.93299 5.18631 4.60716 2.30171 1.06415C1.79811 1.93789 1.50271 2.93798 1.50271 4.01458C1.50271 6.03611 2.54373 7.82808 4.09546 8.86554C3.15766 8.84774 2.23765 8.57548 1.45822 8.14661V8.21068C1.45822 11.0472 3.48153 13.4033 6.13479 13.946C5.65966 14.076 5.14182 14.1382 4.60441 14.1382C4.23071 14.1382 3.85345 14.1169 3.49933 14.0386C4.25562 16.3502 6.40171 18.0496 8.95354 18.1048C6.9676 19.6583 4.44603 20.5943 1.71625 20.5943C1.23757 20.5943 0.77845 20.573 0.319336 20.5142C2.90497 22.1816 5.96929 23.1337 9.27385 23.1337C20.015 23.1337 25.8874 14.2361 25.8874 6.5237C25.8874 6.26567 25.8785 6.01654 25.866 5.76918C27.0245 4.94705 27.9979 3.92027 28.7916 2.73867Z"
+                  fill="#696969"
+                />
+              </svg>
+            </a>
+            <a href="">
+              <svg
+                width="29"
+                height="29"
+                viewBox="0 0 29 29"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M14.5554 0C6.69428 0 0.319336 6.37494 0.319336 14.2361C0.319336 22.0973 6.69428 28.4722 14.5554 28.4722C22.4166 28.4722 28.7916 22.0973 28.7916 14.2361C28.7916 6.37494 22.4166 0 14.5554 0ZM10.4186 21.521H6.95147V11.09H10.4186L10.4186 21.521ZM8.68511 9.66565H8.66253C7.49906 9.66565 6.74661 8.86476 6.74661 7.86378C6.74661 6.84023 7.52209 6.06147 8.70819 6.06147C9.89423 6.06147 10.6241 6.84023 10.6467 7.86378C10.6467 8.86476 9.89423 9.66571 8.68511 9.66571V9.66565ZM22.9204 21.521H19.4537V15.9407C19.4537 14.5383 18.9517 13.5818 17.6972 13.5818C16.7395 13.5818 16.1691 14.227 15.9184 14.8498C15.8267 15.0726 15.8043 15.3842 15.8043 15.6959V21.521H12.3374C12.3374 21.521 12.3828 12.0686 12.3374 11.09H15.8043V12.5669C16.2651 11.8562 17.0895 10.8452 18.9289 10.8452C21.2101 10.8452 22.9204 12.336 22.9204 15.5399V21.521Z"
+                  fill="#696969"
+                />
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <div class="lg:col-span-1 sm:grid sm:grid-cols-2 md:block">
+          <div class="flex items-center mb-[5px] sm:order-2 md:order-1">
+            <div class="mr-[15px] text-sm">
+              <svg
+                width="48"
+                height="48"
+                viewBox="0 0 48 48"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <rect width="48" height="48" rx="5" fill="#FBFAFF" />
+                <path
+                  d="M24.1246 10C18.5426 10 14 14.5741 14 20.1977C14 28.1883 23.1729 36.4387 23.5633 36.7852C23.7175 36.9233 23.9173 36.9998 24.1244 37C24.3315 37.0002 24.5314 36.9241 24.686 36.7863C25.0763 36.4387 34.2492 28.1883 34.2492 20.1977C34.2492 14.5741 29.7066 10 24.1246 10ZM24.1246 25.7494C21.0231 25.7494 18.4998 23.2261 18.4998 20.1246C18.4998 17.0231 21.0231 14.4998 24.1246 14.4998C27.2261 14.4998 29.7494 17.0231 29.7494 20.1246C29.7494 23.2261 27.2261 25.7494 24.1246 25.7494Z"
+                  fill="#696969"
+                />
+              </svg>
+            </div>
+            <div class="flex-1">
+              <p class="text-[14px]">
+                Atatürk Cd. No.152 Alış. Apt.
+                <span class="block">07400 Alanya / ANTALYA</span>
+              </p>
+            </div>
+          </div>
+          <div
+            class="flex items-center sm:order-3 md:order-2 sm:mb-[60px] md:mb-[5px]"
+          >
+            <div class="mr-[15px] text-sm">
+              <svg
+                width="48"
+                height="48"
+                viewBox="0 0 48 48"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <rect width="48" height="48" rx="5" fill="#FBFAFF" />
+                <g clip-path="url(#clip0_1_1890)">
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M31.6525 30.593L28.4497 28.7441C27.8273 28.3848 27.0242 28.5988 26.6651 29.2218L26.5387 29.441C26.2187 29.9961 25.7264 30.3499 25.0988 30.4785C24.4737 30.6065 23.8775 30.4725 23.3671 30.0896C22.3196 29.3037 21.3299 28.4359 20.4041 27.5101C19.4784 26.5844 18.6106 25.5949 17.825 24.5474C17.442 24.0369 17.3076 23.4407 17.4356 22.8154C17.5642 22.1879 17.9187 21.6963 18.4735 21.3761L18.6925 21.2497C18.9963 21.0744 19.209 20.794 19.2998 20.4555C19.3903 20.1185 19.3454 19.7675 19.1708 19.4653L17.3216 16.2625C16.9933 15.6937 16.3157 15.468 15.7061 15.702L15.6663 15.7173C15.038 15.9583 13.3063 16.5908 12.8409 17.0562C11.4647 18.4324 12.0535 20.9222 12.6675 22.5065C13.7428 25.2812 15.7824 27.9519 17.8727 30.0418C19.9627 32.1316 22.6332 34.1719 25.4076 35.2471C26.3702 35.6201 27.4535 35.9146 28.4926 35.9146C29.3624 35.9146 30.228 35.704 30.8584 35.0737C31.302 34.6301 31.96 32.8441 32.2011 32.2376L32.2166 32.1986C32.4573 31.5932 32.215 30.9177 31.6525 30.593ZM30.6659 18.0289C30.8137 18.082 30.9415 18.1793 31.0319 18.3077C31.1222 18.4361 31.1707 18.5893 31.1707 18.7463V22.3932H31.3127C31.7332 22.3932 32.0747 22.7347 32.0747 23.1552C32.0747 23.5762 31.7337 23.9172 31.3127 23.9172H31.1707V24.7608C31.1707 25.1817 30.8293 25.5225 30.4087 25.5225C29.9879 25.5225 29.6469 25.1817 29.6469 24.7608V23.9172H26.7802C26.6358 23.9172 26.4944 23.8762 26.3724 23.799C26.2505 23.7217 26.1529 23.6114 26.0912 23.4809C26.0295 23.3504 26.0062 23.205 26.024 23.0617C26.0418 22.9184 26.0999 22.783 26.1916 22.6715L29.8201 18.2619C29.92 18.1407 30.0548 18.0533 30.2062 18.0116C30.3576 17.9699 30.5181 17.976 30.6659 18.0289ZM29.6469 22.3932H28.3943L29.6469 20.8713V22.3932ZM24.4825 20.8887C24.6224 20.3759 24.5402 19.9939 24.2367 19.7538C23.8838 19.4748 23.2961 19.4254 22.8985 19.6419C22.6123 19.7978 22.4912 20.0606 22.5278 20.4459C22.5684 20.8649 22.2616 21.2374 21.8426 21.2773C21.4234 21.318 21.0517 21.0107 21.0112 20.5922C20.9148 19.5909 21.3369 18.7565 22.1692 18.3032C23.1076 17.7928 24.3468 17.8975 25.1825 18.5591C25.9746 19.1856 26.2554 20.1815 25.9526 21.2901C25.7464 22.0456 25.0328 22.6019 24.2782 23.1913C23.9561 23.4425 23.6137 23.7096 23.3033 23.9988H25.5174C25.9382 23.9988 26.2792 24.3402 26.2792 24.7608C26.2792 25.1817 25.9382 25.5225 25.5174 25.5225H21.7521C21.623 25.5226 21.496 25.4898 21.383 25.4273C21.2701 25.3649 21.1748 25.2747 21.1063 25.1653C21.0377 25.0559 20.9981 24.9309 20.9912 24.8019C20.9842 24.673 21.0101 24.5444 21.0665 24.4283C21.585 23.3601 22.5584 22.6003 23.3404 21.9899C23.8166 21.618 24.4094 21.1554 24.4825 20.8887ZM36 22.0091C36 24.6597 34.9675 27.1515 33.0933 29.026C33.0225 29.0968 32.9385 29.153 32.8461 29.1913C32.7536 29.2296 32.6545 29.2493 32.5544 29.2493C32.4543 29.2493 32.3552 29.2296 32.2628 29.1913C32.1703 29.153 32.0864 29.0968 32.0157 29.026C31.718 28.7283 31.718 28.2457 32.0157 27.9481C33.6019 26.3619 34.476 24.2524 34.476 22.0091C34.476 17.377 30.7079 13.609 26.0759 13.609C23.8323 13.609 21.7231 14.4829 20.1367 16.0691C19.839 16.3668 19.3566 16.3668 19.059 16.0691C18.7613 15.7714 18.7613 15.2891 19.059 14.9914C20.9335 13.1174 23.4253 12.085 26.0759 12.085C31.5479 12.085 36 16.5369 36 22.0091Z"
+                    fill="#696969"
+                  />
+                </g>
+                <defs>
+                  <clipPath id="clip0_1_1890">
+                    <rect
+                      width="24"
+                      height="24"
+                      fill="white"
+                      transform="translate(12 12)"
+                    />
+                  </clipPath>
+                </defs>
+              </svg>
+            </div>
+            <div class="flex-1">
+              <p class="text-[14px]">+90 (242) 514-13-10</p>
+            </div>
+          </div>
+          <div
+            class="flex items-center mb-[39px] sm:mb-[5px] sm:order-1 md:order-3"
+          >
+            <div class="mr-[15px] text-sm">
+              <svg
+                width="48"
+                height="48"
+                viewBox="0 0 48 48"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <rect width="48" height="48" rx="5" fill="#FBFAFF" />
+                <path
+                  d="M24.7521 26.8616C24.5065 27.0151 24.2302 27.0765 23.9847 27.0765C23.7391 27.0765 23.4628 27.0151 23.2172 26.8616L11 19.4023V29.3173C11 31.4354 12.719 33.1544 14.8371 33.1544H33.1629C35.281 33.1544 37 31.4354 37 29.3173V19.4023L24.7521 26.8616Z"
+                  fill="#696969"
+                />
+                <path
+                  d="M33.1632 14H14.8373C13.0262 14 11.4914 15.2893 11.123 17.0083L24.0156 24.8666L36.8775 17.0083C36.5091 15.2893 34.9743 14 33.1632 14Z"
+                  fill="#696969"
+                />
+              </svg>
+            </div>
+            <div class="flex-1">
+              <p text-[14px]>info@bizimtransfer.com</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="lg:col-span-1">
+        <h5
+          class="md:block lg:hidden font-[700] text-lg font-['Raleway'] md:mb-[45px] mb-[26px]"
+        >
+          Contact us
+        </h5>
+        <input
+          type="text"
+          class="bg-gray-50 border-none !py-[19px] !pl-[26px] text-sm focus:ring-blue-500 focus:border-blue-500 block w-full dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 mb-[5px]"
+          placeholder="Name"
+          required
+        />
+        <input
+          type="number"
+          class="bg-gray-50 border-none !py-[19px] !pl-[26px] text-sm focus:ring-blue-500 focus:border-blue-500 block w-full dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 mb-[5px]"
+          placeholder="Number"
+          required
+        />
+        <textarea
+          id="message"
+          rows="4"
+          class="mb-[25px] block !py-[19px] !pl-[26px] w-full text-sm text-gray-900 bg-gray-50 border-none focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+          placeholder="Your question or comment"
+        ></textarea>
+        <button class="primary mb-[100px] w-full sm:w-auto">
+          <div>Submit</div>
+          <img src="./src/assets/button-right-arrow.svg" alt="" />
+        </button>
+      </div>
+    </section>
+
+    <!-- Footer start -->
+    <footer>
+      <div class="container mx-auto">
+        <div
+          class="flex flex-col lg:flex-row items-center justify-between py-10"
+        >
+          <img src="src/assets/logo-white.svg" alt="" />
+          <div class="flex items-center space-x-2 mt-4 lg:mt-0">
+            <!-- Lang -->
+            <button
+              id="footer_langDropdownButton"
+              data-dropdown-toggle="footer_langDropdown"
+              class="inline-flex items-center space-x-2 border border-white rounded p-2 text-white"
+              type="button"
+            >
+              <img src="src/assets/english.svg" alt="" />
+              <span>English</span>
+              <svg
+                class="w-4 h-4 ml-2"
+                aria-hidden="true"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M19 9l-7 7-7-7"
+                ></path>
+              </svg>
+            </button>
+
+            <!-- Language dropdown menu -->
+            <div
+              id="footer_langDropdown"
+              class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700 dark:divide-gray-600"
+            >
+              <ul
+                class="py-2 text-sm text-gray-700 dark:text-gray-200"
+                aria-labelledby="footer_langDropdownButton"
+              >
+                <li>
+                  <a
+                    href="#"
+                    class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                    >Türkçe</a
+                  >
+                </li>
+              </ul>
+            </div>
+            <!-- Currency -->
+            <button
+              id="footer_currencyDropdownButton"
+              data-dropdown-toggle="footer_currencyDropdown"
+              class="inline-flex items-center space-x-2 border border-white rounded p-2 text-white"
+              type="button"
+            >
+              <span>USD</span>
+              <svg
+                class="w-4 h-4 ml-2"
+                aria-hidden="true"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M19 9l-7 7-7-7"
+                ></path>
+              </svg>
+            </button>
+
+            <!-- Language dropdown menu -->
+            <div
+              id="footer_currencyDropdown"
+              class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700 dark:divide-gray-600"
+            >
+              <ul
+                class="py-2 text-sm text-gray-700 dark:text-gray-200"
+                aria-labelledby="footer_currencyDropdownButton"
+              >
+                <li>
+                  <a
+                    href="#"
+                    class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                    >EUR</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="flex flex-col lg:flex-row items-center justify-between">
+          <div
+            class="border border-dashed border-white text-4xl text-white p-4 rounded-xl"
+          >
+            +90 (242) 514-13-10
+          </div>
+          <div class="flex flex-col space-y-2 text-white mt-4 lg:mt-0">
+            <div class="flex items-center space-x-2">
+              <button class="py-2 p-4 border border-white rounded-lg">
+                Services
+              </button>
+              <button class="py-2 p-4 border border-white rounded-lg">
+                About us
+              </button>
+            </div>
+            <div class="flex items-center space-x-2">
+              <button class="py-2 p-4 border border-white rounded-lg">
+                Contact us
+              </button>
+              <button class="py-2 p-4 border border-white rounded-lg">
+                Travel guide
+              </button>
+            </div>
+          </div>
+        </div>
+        <div
+          class="flex justify-center lg:!justify-start items-center space-x-2 mt-4 lg:mt-0"
+        >
+          <a
+            href="#"
+            class="flex items-center justify-center w-12 h-12 rounded-lg p-3 border border-white"
+          >
+            <img src="src/assets/social/facebook.svg" alt="" />
+          </a>
+          <a
+            href="#"
+            class="flex items-center justify-center w-12 h-12 rounded-lg p-3 border border-white"
+          >
+            <img src="src/assets/social/instagram.svg" alt="" />
+          </a>
+          <a
+            href="#"
+            class="flex items-center justify-center w-12 h-12 rounded-lg p-3 border border-white"
+          >
+            <img src="src/assets/social/youtube.svg" alt="" />
+          </a>
+          <a
+            href="#"
+            class="flex items-center justify-center w-12 h-12 rounded-lg p-3 border border-white"
+          >
+            <img src="src/assets/social/twitter.svg" alt="" />
+          </a>
+          <a
+            href="#"
+            class="flex items-center justify-center w-12 h-12 rounded-lg p-3 border border-white"
+          >
+            <img src="src/assets/social/linkedin.svg" alt="" />
+          </a>
+        </div>
+        <div
+          class="border-t border-white/55 py-4 mt-10 flex justify-between items-center px-2 md:px-0"
+        >
+          <img class="h-6" src="src/assets/footer/footer.svg" alt="" />
+          <div class="text-white/70 text-xs pl-4">
+            © Copyright Bizim Transfer. All Rights Reserved
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- Footer end -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.4/flowbite.min.js"></script>
+  </body>
+</html>
