@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="/dist/output.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.4/flowbite.min.css"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Playfair+Display&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Raleway:wght@400;500&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <!-- Header start -->
+    <nav
+      class="bg-white dark:bg-gray-900 fixed w-full z-20 top-0 left-0 border-b border-gray-200 dark:border-gray-600"
+    >
+      <div
+        class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4"
+      >
+        <a href="https://flowbite.com/" class="flex items-center">
+          <img src="src/assets/logo.svg" class="h-8 mr-3" alt="Flowbite Logo" />
+        </a>
+        <div class="flex space-x-4 md:order-2">
+          <!-- Lang, Currency, User -->
+          <div class="hidden md:flex items-center space-x-8">
+            <!-- Lang -->
+            <button
+              id="langDropdownButton"
+              data-dropdown-toggle="langDropdown"
+              class="inline-flex items-center space-x-2"
+              type="button"
+            >
+              <img src="src/assets/english.svg" alt="" />
+              <span>English</span>
+              <svg
+                class="w-4 h-4 ml-2"
+                aria-hidden="true"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M19 9l-7 7-7-7"
+                ></path>
+              </svg>
+            </button>
+
+            <!-- Language dropdown menu -->
+            <div
+              id="langDropdown"
+              class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700 dark:divide-gray-600"
+            >
+              <ul
+                class="py-2 text-sm text-gray-700 dark:text-gray-200"
+                aria-labelledby="langDropdownButton"
+              >
+                <li>
+                  <a
+                    href="#"
+                    class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                    >Türkçe</a
+                  >
+                </li>
+              </ul>
+            </div>
+            <!-- Currency -->
+            <button
+              id="currencyDropdownButton"
+              data-dropdown-toggle="currencyDropdown"
+              class="inline-flex items-center space-x-2"
+              type="button"
+            >
+              <span>USD</span>
+              <svg
+                class="w-4 h-4 ml-2"
+                aria-hidden="true"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M19 9l-7 7-7-7"
+                ></path>
+              </svg>
+            </button>
+
+            <!-- Currency dropdown menu -->
+            <div
+              id="currencyDropdown"
+              class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700 dark:divide-gray-600"
+            >
+              <ul
+                class="py-2 text-sm text-gray-700 dark:text-gray-200"
+                aria-labelledby="currencyDropdownButton"
+              >
+                <li>
+                  <a
+                    href="#"
+                    class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                    >EUR</a
+                  >
+                </li>
+              </ul>
+            </div>
+            <!-- User -->
+            <button
+              id="userDropdownButton"
+              data-dropdown-toggle="userDropdown"
+              class="inline-flex items-center space-x-2"
+              type="button"
+            >
+              <img src="src/assets/user.svg" alt="" />
+              <svg
+                class="w-4 h-4 ml-2"
+                aria-hidden="true"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M19 9l-7 7-7-7"
+                ></path>
+              </svg>
+            </button>
+
+            <!-- User dropdown menu -->
+            <div
+              id="userDropdown"
+              class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700 dark:divide-gray-600"
+            >
+              <ul
+                class="py-2 text-sm text-gray-700 dark:text-gray-200"
+                aria-labelledby="userDropdownButton"
+              >
+                <li>
+                  <a
+                    href="#"
+                    class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                    >Profile settings</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Contact us -->
+          <button class="!hidden md:!flex primary">
+            <img src="src/assets/call.svg" alt="" />
+            <span>+90 (242) 514-13-10</span>
+          </button>
+          <button
+            data-collapse-toggle="navbar-sticky"
+            type="button"
+            class="primary !inline-flex items-center !p-3 text-sm text-gray-500 rounded-lg lg:!hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+            aria-controls="navbar-sticky"
+            aria-expanded="false"
+          >
+            <svg
+              class="w-6 h-6"
+              aria-hidden="true"
+              fill="currentColor"
+              viewBox="0 0 20 20"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
+                clip-rule="evenodd"
+              ></path>
+            </svg>
+          </button>
+        </div>
+        <div
+          class="items-center justify-between hidden w-full lg:flex lg:w-auto order-5 lg:order-1"
+          id="navbar-sticky"
+        >
+          <ul
+            class="flex flex-col p-4 lg:p-0 mt-4 space-y-4 lg:!space-y-0 border border-gray-100 rounded-lg bg-gray-50 lg:flex-row lg:space-x-8 lg:mt-0 lg:border-0 lg:!bg-white dark:bg-gray-800 lg:dark:bg-gray-900 dark:border-gray-700"
+          >
+            <li>
+              <a href="#" class="primary" aria-current="page">Home</a>
+            </li>
+            <li>
+              <a href="#">About us</a>
+            </li>
+            <li>
+              <a href="#">Services</a>
+            </li>
+            <li>
+              <a href="#">Travel guide</a>
+            </li>
+            <li>
+              <a href="#">Contact us</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!-- Header end -->
+
+    <section class="container mx-auto">
+        <div class="mb-[33px] flex">
+            <h1 class="font-['Bebas_Neue'] sm:text-[43px] text-[33px] uppercase md:mt-[150px] mt-[60px] text-[#F98F3D]">
+                denizli 
+                <span class=" font-['Bebas_Neue'] text-black">popular destination</span>
+              </h1>
+        </div>
+      </section>
+
+    <section>
+        <img class="w-full" src="./src/assets/cities.png" alt="">
+    </section>
+
+    <section class="container mx-auto mt-9 mb-20">
+        <div class="grid grid-cols-3 md:!grid-cols-5 border-y items-center">
+            <div class="flex col-span-1 items-center">
+                <div class="mr-[10px]">
+                    <svg width="21" height="27" viewBox="0 0 21 27" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M10.1246 0C4.54257 0 0 4.57407 0 10.1977C0 18.1883 9.17289 26.4387 9.56325 26.7852C9.71755 26.9233 9.91731 26.9998 10.1244 27C10.3315 27.0002 10.5314 26.9241 10.686 26.7863C11.0763 26.4387 20.2492 18.1883 20.2492 10.1977C20.2492 4.57407 15.7066 0 10.1246 0ZM10.1246 15.7494C7.0231 15.7494 4.49983 13.2261 4.49983 10.1246C4.49983 7.0231 7.0231 4.49983 10.1246 4.49983C13.2261 4.49983 15.7494 7.0231 15.7494 10.1246C15.7494 13.2261 13.2261 15.7494 10.1246 15.7494Z" fill="url(#paint0_linear_1_2974)"/>
+                        <defs>
+                        <linearGradient id="paint0_linear_1_2974" x1="10.1246" y1="0" x2="10.1246" y2="27" gradientUnits="userSpaceOnUse">
+                        <stop stop-color="#F98F3D"/>
+                        <stop offset="1" stop-color="#D76C19"/>
+                        </linearGradient>
+                        </defs>
+                        </svg>                        
+                </div>
+                <div class="uppercase opacity-50 font-['Raleway'] font-medium text-[12px] sm:text-base">
+                    Denizli
+                </div>
+            </div>
+            <div class="flex col-span-1 items-center">
+                <div class="mr-[10px]">
+                    <svg width="21" height="27" viewBox="0 0 21 27" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M10.1246 0C4.54257 0 0 4.57407 0 10.1977C0 18.1883 9.17289 26.4387 9.56325 26.7852C9.71755 26.9233 9.91731 26.9998 10.1244 27C10.3315 27.0002 10.5314 26.9241 10.686 26.7863C11.0763 26.4387 20.2492 18.1883 20.2492 10.1977C20.2492 4.57407 15.7066 0 10.1246 0ZM10.1246 15.7494C7.0231 15.7494 4.49983 13.2261 4.49983 10.1246C4.49983 7.0231 7.0231 4.49983 10.1246 4.49983C13.2261 4.49983 15.7494 7.0231 15.7494 10.1246C15.7494 13.2261 13.2261 15.7494 10.1246 15.7494Z" fill="url(#paint0_linear_1_2977)"/>
+                        <defs>
+                        <linearGradient id="paint0_linear_1_2977" x1="10.1246" y1="0" x2="10.1246" y2="27" gradientUnits="userSpaceOnUse">
+                        <stop stop-color="#F98F3D"/>
+                        <stop offset="1" stop-color="#D76C19"/>
+                        </linearGradient>
+                        </defs>
+                        </svg>                                          
+                </div>
+                <div class="uppercase font-['Raleway'] font-medium text-[12px] sm:text-base ">
+                    pamukkale
+                </div>
+            </div>
+            <div class="md:col-span-2 md:flex justify-center hidden">
+                <p class="text-[15px] font-medium font-['Raleway'] text-[#696969]">5h 30min</p>
+            </div>
+            <div class="text-[12px] sm:text-base col-span-1 flex justify-end">
+                <button type="button" class="text-gray-900 bg-white border border-black focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-200 font-medium rounded text-sm px-5 py-2.5 my-1 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700">Book now</button>
+            </div>
+        </div>
+    </section>
+
+    <section class="container mx-auto mb-24">
+        <h1 class="uppercase text-[23px] font-medium font-['Raleway'] mb-[30px]">Other popular destinations</h1>
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+            <div class="col-span-1 border border-[#F98F3D] py-7 flex items-center justify-center">
+                Istanbul
+            </div>
+            <div class="col-span-1 border border-[#F98F3D] py-7 flex items-center justify-center">
+                Antalya
+            </div>
+            <div class="col-span-1 border border-[#F98F3D] py-7 flex items-center justify-center">
+                Izmir
+            </div>
+            <div class="col-span-1 border border-[#F98F3D] py-7 flex items-center justify-center">
+                Nevsehir
+            </div>
+            <div class="col-span-1 border border-[#F98F3D] py-7 flex items-center justify-center">
+                Bodrum
+            </div>
+            <div class="col-span-1 border border-[#F98F3D] py-7 flex items-center justify-center">
+                Marmaris
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer start -->
+    <footer>
+      <div class="container mx-auto">
+        <div
+          class="flex flex-col lg:flex-row items-center justify-between py-10"
+        >
+          <img src="src/assets/logo-white.svg" alt="" />
+          <div class="flex items-center space-x-2 mt-4 lg:mt-0">
+            <!-- Lang -->
+            <button
+              id="footer_langDropdownButton"
+              data-dropdown-toggle="footer_langDropdown"
+              class="inline-flex items-center space-x-2 border border-white rounded p-2 text-white"
+              type="button"
+            >
+              <img src="src/assets/english.svg" alt="" />
+              <span>English</span>
+              <svg
+                class="w-4 h-4 ml-2"
+                aria-hidden="true"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M19 9l-7 7-7-7"
+                ></path>
+              </svg>
+            </button>
+
+            <!-- Language dropdown menu -->
+            <div
+              id="footer_langDropdown"
+              class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700 dark:divide-gray-600"
+            >
+              <ul
+                class="py-2 text-sm text-gray-700 dark:text-gray-200"
+                aria-labelledby="footer_langDropdownButton"
+              >
+                <li>
+                  <a
+                    href="#"
+                    class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                    >Türkçe</a
+                  >
+                </li>
+              </ul>
+            </div>
+            <!-- Currency -->
+            <button
+              id="footer_currencyDropdownButton"
+              data-dropdown-toggle="footer_currencyDropdown"
+              class="inline-flex items-center space-x-2 border border-white rounded p-2 text-white"
+              type="button"
+            >
+              <span>USD</span>
+              <svg
+                class="w-4 h-4 ml-2"
+                aria-hidden="true"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M19 9l-7 7-7-7"
+                ></path>
+              </svg>
+            </button>
+
+            <!-- Language dropdown menu -->
+            <div
+              id="footer_currencyDropdown"
+              class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700 dark:divide-gray-600"
+            >
+              <ul
+                class="py-2 text-sm text-gray-700 dark:text-gray-200"
+                aria-labelledby="footer_currencyDropdownButton"
+              >
+                <li>
+                  <a
+                    href="#"
+                    class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                    >EUR</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="flex flex-col lg:flex-row items-center justify-between">
+          <div
+            class="border border-dashed border-white text-4xl text-white p-4 rounded-xl"
+          >
+            +90 (242) 514-13-10
+          </div>
+          <div class="flex flex-col space-y-2 text-white mt-4 lg:mt-0">
+            <div class="flex items-center space-x-2">
+              <button class="py-2 p-4 border border-white rounded-lg">
+                Services
+              </button>
+              <button class="py-2 p-4 border border-white rounded-lg">
+                About us
+              </button>
+            </div>
+            <div class="flex items-center space-x-2">
+              <button class="py-2 p-4 border border-white rounded-lg">
+                Contact us
+              </button>
+              <button class="py-2 p-4 border border-white rounded-lg">
+                Travel guide
+              </button>
+            </div>
+          </div>
+        </div>
+        <div
+          class="flex justify-center lg:!justify-start items-center space-x-2 mt-4 lg:mt-0"
+        >
+          <a
+            href="#"
+            class="flex items-center justify-center w-12 h-12 rounded-lg p-3 border border-white"
+          >
+            <img src="src/assets/social/facebook.svg" alt="" />
+          </a>
+          <a
+            href="#"
+            class="flex items-center justify-center w-12 h-12 rounded-lg p-3 border border-white"
+          >
+            <img src="src/assets/social/instagram.svg" alt="" />
+          </a>
+          <a
+            href="#"
+            class="flex items-center justify-center w-12 h-12 rounded-lg p-3 border border-white"
+          >
+            <img src="src/assets/social/youtube.svg" alt="" />
+          </a>
+          <a
+            href="#"
+            class="flex items-center justify-center w-12 h-12 rounded-lg p-3 border border-white"
+          >
+            <img src="src/assets/social/twitter.svg" alt="" />
+          </a>
+          <a
+            href="#"
+            class="flex items-center justify-center w-12 h-12 rounded-lg p-3 border border-white"
+          >
+            <img src="src/assets/social/linkedin.svg" alt="" />
+          </a>
+        </div>
+        <div
+          class="border-t border-white/55 py-4 mt-10 flex justify-between items-center px-2 md:px-0"
+        >
+          <img class="h-6" src="src/assets/footer/footer.svg" alt="" />
+          <div class="text-white/70 text-xs pl-4">
+            © Copyright Bizim Transfer. All Rights Reserved
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- Footer end -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.4/flowbite.min.js"></script>
+  </body>
+</html>
