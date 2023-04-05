@@ -1,0 +1,1529 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="/dist/output.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.4/flowbite.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"
+    />
+  </head>
+  <body class="booking">
+    <!-- Header start -->
+    <nav
+      class="bg-white dark:bg-gray-900 fixed w-full z-20 top-0 left-0 border-b border-gray-200 dark:border-gray-600"
+    >
+      <div
+        class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4"
+      >
+        <a href="https://flowbite.com/" class="flex items-center">
+          <img src="src/assets/logo.svg" class="h-8 mr-3" alt="Flowbite Logo" />
+        </a>
+        <div class="flex space-x-4 md:order-2">
+          <!-- Lang, Currency, User -->
+          <div class="hidden md:flex items-center space-x-8">
+            <!-- Lang -->
+            <button
+              id="langDropdownButton"
+              data-dropdown-toggle="langDropdown"
+              class="inline-flex items-center space-x-2"
+              type="button"
+            >
+              <img src="src/assets/english.svg" alt="" />
+              <span>English</span>
+              <svg
+                class="w-4 h-4 ml-2"
+                aria-hidden="true"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M19 9l-7 7-7-7"
+                ></path>
+              </svg>
+            </button>
+
+            <!-- Language dropdown menu -->
+            <div
+              id="langDropdown"
+              class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700 dark:divide-gray-600"
+            >
+              <ul
+                class="py-2 text-sm text-gray-700 dark:text-gray-200"
+                aria-labelledby="langDropdownButton"
+              >
+                <li>
+                  <a
+                    href="#"
+                    class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                    >Türkçe</a
+                  >
+                </li>
+              </ul>
+            </div>
+            <!-- Currency -->
+            <button
+              id="currencyDropdownButton"
+              data-dropdown-toggle="currencyDropdown"
+              class="inline-flex items-center space-x-2"
+              type="button"
+            >
+              <span>USD</span>
+              <svg
+                class="w-4 h-4 ml-2"
+                aria-hidden="true"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M19 9l-7 7-7-7"
+                ></path>
+              </svg>
+            </button>
+
+            <!-- Currency dropdown menu -->
+            <div
+              id="currencyDropdown"
+              class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700 dark:divide-gray-600"
+            >
+              <ul
+                class="py-2 text-sm text-gray-700 dark:text-gray-200"
+                aria-labelledby="currencyDropdownButton"
+              >
+                <li>
+                  <a
+                    href="#"
+                    class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                    >EUR</a
+                  >
+                </li>
+              </ul>
+            </div>
+            <!-- User -->
+            <button
+              id="userDropdownButton"
+              data-dropdown-toggle="userDropdown"
+              class="inline-flex items-center space-x-2"
+              type="button"
+            >
+              <img src="src/assets/user.svg" alt="" />
+              <svg
+                class="w-4 h-4 ml-2"
+                aria-hidden="true"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M19 9l-7 7-7-7"
+                ></path>
+              </svg>
+            </button>
+
+            <!-- User dropdown menu -->
+            <div
+              id="userDropdown"
+              class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700 dark:divide-gray-600"
+            >
+              <ul
+                class="py-2 text-sm text-gray-700 dark:text-gray-200"
+                aria-labelledby="userDropdownButton"
+              >
+                <li>
+                  <a
+                    href="#"
+                    class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                    >Profile settings</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Contact us -->
+          <button class="!hidden md:!flex primary">
+            <img src="src/assets/call.svg" alt="" />
+            <span>+90 (242) 514-13-10</span>
+          </button>
+          <button
+            data-collapse-toggle="navbar-sticky"
+            type="button"
+            class="primary !inline-flex items-center !p-3 text-sm text-gray-500 rounded-lg lg:!hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+            aria-controls="navbar-sticky"
+            aria-expanded="false"
+          >
+            <svg
+              class="w-6 h-6"
+              aria-hidden="true"
+              fill="currentColor"
+              viewBox="0 0 20 20"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
+                clip-rule="evenodd"
+              ></path>
+            </svg>
+          </button>
+        </div>
+        <div
+          class="items-center justify-between hidden w-full lg:flex lg:w-auto order-5 lg:order-1"
+          id="navbar-sticky"
+        >
+          <ul
+            class="flex flex-col p-4 lg:p-0 mt-4 space-y-4 lg:!space-y-0 border border-gray-100 rounded-lg bg-gray-50 lg:flex-row lg:space-x-8 lg:mt-0 lg:border-0 lg:!bg-white dark:bg-gray-800 lg:dark:bg-gray-900 dark:border-gray-700"
+          >
+            <li>
+              <a href="#" class="primary" aria-current="page">Home</a>
+            </li>
+            <li>
+              <a href="#">About us</a>
+            </li>
+            <li>
+              <a href="#">Services</a>
+            </li>
+            <li>
+              <a href="#">Travel guide</a>
+            </li>
+            <li>
+              <a href="#">Contact us</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!-- Header end -->
+
+    <!-- top area start -->
+    <section class="relative bg-[#FBFAFF] pt-24">
+      <div class="container mx-auto">
+        <div
+          class="grid md:grid-cols-1 lg:grid-cols-3 items-center gap-10 pb-8"
+        >
+          <div class="md:grid-cols-1 lg:col-span-2">
+            <h1 class="text-[53px] font-reglar uppercase">
+              Reliable & Low Cost
+              <span class="block"
+                >Airport Transfers
+                <span class="highlighted-text">in Turkey</span>
+              </span>
+            </h1>
+          </div>
+          <div class="col-span-1 flex flex-col md:flex-row lg:!flex-col">
+            <div
+              class="flex items-center space-x-2 order-2 lg:order-1 md:ml-4 lg:ml-0 mt-10 md:mt-0 z-[1]"
+            >
+              <img src="src/assets/top-slider/baby.svg" alt="" />
+              <img src="src/assets/top-slider/charge.svg" alt="" />
+              <img src="src/assets/top-slider/24hour.svg" alt="" />
+            </div>
+            <p class="md:w-1/2 lg:w-full mt-3 order-1 lg:order-2">
+              Comfortable cars, professional drivers and a safe journey - all
+              this you will get by ordering passenger transportation in Turkey
+              with us.
+            </p>
+          </div>
+        </div>
+      </div>
+      <img
+        class="w-full h-[378px] md:h-auto object-cover -mt-24 md:mt-0"
+        src="src/assets/main-slider.png"
+        alt=""
+      />
+    </section>
+    <!-- Top area end -->
+
+    <!-- Picker start -->
+    <section class="-mt-24">
+      <div
+        id="top-picker"
+        class="relative container mx-auto py-8 !px-10 bg-white rounded-xl shadow-2xl"
+      >
+        <div class="flex items-center space-x-4 pb-2">
+          <!-- One way menu -->
+          <div class="flex items-center space-x-2">
+            <button
+              id="onewayDropdownButton"
+              data-dropdown-toggle="oneway-dropdown"
+              type="button"
+              class="flex items-center space-x-2"
+            >
+              <span>One way</span>
+              <img class="h-4" src="src/assets/chevron-down.svg" alt="" />
+            </button>
+            <div
+              id="oneway-dropdown"
+              class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700"
+            >
+              <ul
+                class="py-2 text-sm text-gray-700 dark:text-gray-200"
+                aria-labelledby="onewayDropdownButton"
+              >
+                <li>
+                  <a href="#" class="block px-4 py-2 hover:bg-gray-100"
+                    >Gidiş-dönüş</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+          <!-- Passengers menu -->
+          <div class="flex items-center space-x-2">
+            <button
+              id="passengersDropdownButton"
+              data-dropdown-toggle="passengers-dropdown"
+              type="button"
+              class="flex items-center space-x-2"
+            >
+              <span>1 passenger</span>
+              <img class="h-4" src="src/assets/chevron-down.svg" alt="" />
+            </button>
+            <div
+              id="passengers-dropdown"
+              class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700"
+            >
+              <ul
+                class="py-2 text-sm text-gray-700 dark:text-gray-200"
+                aria-labelledby="passengersDropdownButton"
+              >
+                <li>
+                  <a href="#" class="block px-4 py-2 hover:bg-gray-100"
+                    >2 passengers</a
+                  >
+                </li>
+                <li>
+                  <a href="#" class="block px-4 py-2 hover:bg-gray-100"
+                    >3 passengers</a
+                  >
+                </li>
+                <li>
+                  <a href="#" class="block px-4 py-2 hover:bg-gray-100"
+                    >4 passengers</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <hr class="mb-4" />
+        <div class="grid md:grid-cols-2 lg:!grid-cols-7 gap-2">
+          <div class="md:col-span-1 lg:col-span-2 relative">
+            <div class="form-group">
+              <div class="label">From address</div>
+              <input type="text" placeholder="Pick up location" />
+              <button
+                class="absolute md:top-4 md:-right-4 top-14 right-4 rotate-90 md:!rotate-0"
+              >
+                <img src="src/assets/top-slider/swap.svg" alt="" />
+              </button>
+            </div>
+          </div>
+          <div class="md:col-span-1 lg:col-span-2">
+            <div class="form-group">
+              <div class="label">To</div>
+              <input type="text" placeholder="Drop off location" />
+            </div>
+          </div>
+          <div class="col-span-1">
+            <div class="form-group">
+              <div class="label">Pick up date</div>
+              <input type="text" placeholder="11/03/2023" />
+            </div>
+          </div>
+          <div class="col-span-1">
+            <div class="form-group">
+              <div class="label">Pick up time</div>
+              <input type="text" placeholder="12:00" />
+            </div>
+          </div>
+          <div class="md:col-span-2 lg:col-span-1">
+            <button class="primary h-full w-full">Search</button>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Picker end -->
+
+    <!-- First trip start -->
+    <div class="container mx-auto mt-14 py-10">
+      <h2 class="text-[30px] font-medium mb-8">1. YOUR TRIP</h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="col-span-1">
+          <div class="rounded-lg border border-gray-200">
+            <div
+              class="flex items-center justify-between py-2 px-4 border-b border-gray-200"
+            >
+              <div class="font-semibold text-[12px]">YOUR BOOKING DETAILS</div>
+              <button
+                class="py-1 px-4 border border-primary text-primary rounded-full text-[14px] font-medium"
+              >
+                Edit trip
+              </button>
+            </div>
+            <div class="flex flex-col border-b border-gray-200 p-4 space-y-2">
+              <div class="flex items-center space-x-2">
+                <div
+                  class="w-12 h-12 bg-lightgraybg flex items-center justify-center rounded"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="15"
+                    height="20"
+                    fill="none"
+                    viewBox="0 0 15 20"
+                  >
+                    <path
+                      fill="url(#a)"
+                      d="M7.5 0C3.365 0 0 3.388 0 7.554c0 5.92 6.795 12.031 7.084 12.288a.624.624 0 0 0 .832 0C8.205 19.585 15 13.474 15 7.555 15 3.388 11.635 0 7.5 0Zm0 11.667A4.171 4.171 0 0 1 3.333 7.5 4.171 4.171 0 0 1 7.5 3.333 4.171 4.171 0 0 1 11.667 7.5 4.171 4.171 0 0 1 7.5 11.667Z"
+                    />
+                    <defs>
+                      <linearGradient
+                        id="a"
+                        x1="7.5"
+                        x2="7.5"
+                        y1="0"
+                        y2="20.001"
+                        gradientUnits="userSpaceOnUse"
+                      >
+                        <stop stop-color="#F98F3D" />
+                        <stop offset="1" stop-color="#D76C19" />
+                      </linearGradient>
+                    </defs>
+                  </svg>
+                </div>
+                <div
+                  class="h-12 rounded bg-lightgraybg flex-1 px-4 flex items-center font-medium text-[15px]"
+                >
+                  Antalya, Alanya
+                </div>
+              </div>
+              <div class="flex items-center space-x-2">
+                <div
+                  class="w-12 h-12 bg-lightgraybg flex items-center justify-center rounded"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="18"
+                    height="20"
+                    fill="none"
+                    viewBox="0 0 18 20"
+                  >
+                    <path
+                      fill="url(#a)"
+                      d="M17.224 1.357a.626.626 0 0 0-.584-.062c-.04.016-4.175 1.643-7.624.015C6.044-.095 2.77.562 1.25 1.006V.625a.625.625 0 0 0-1.25 0v18.75a.625.625 0 0 0 1.25 0v-7.057c1.109-.36 4.399-1.217 7.234.122 1.351.639 2.765.851 4.049.851 2.468 0 4.453-.786 4.577-.836a.627.627 0 0 0 .39-.58v-10a.624.624 0 0 0-.276-.518Z"
+                    />
+                    <defs>
+                      <linearGradient
+                        id="a"
+                        x1="8.75"
+                        x2="8.75"
+                        y1="0"
+                        y2="20"
+                        gradientUnits="userSpaceOnUse"
+                      >
+                        <stop stop-color="#F98F3D" />
+                        <stop offset="1" stop-color="#D76C19" />
+                      </linearGradient>
+                    </defs>
+                  </svg>
+                </div>
+                <div
+                  class="h-12 rounded bg-lightgraybg flex-1 px-4 flex items-center font-medium text-[15px]"
+                >
+                  Antalya, Alanya
+                </div>
+              </div>
+              <div class="flex items-center space-x-2">
+                <div
+                  class="w-12 h-12 bg-lightgraybg flex items-center justify-center rounded"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="21"
+                    height="24"
+                    fill="none"
+                    viewBox="0 0 21 24"
+                  >
+                    <path
+                      fill="url(#a)"
+                      d="M13.086 4.215a2.11 2.11 0 1 0 .282-4.21 2.11 2.11 0 0 0-.282 4.21ZM6.568 13.13a1.536 1.536 0 0 1-.338-.195l-1.37 2.97-1.025-.473a.796.796 0 0 0-1.055.389L.073 21.69a.796.796 0 0 0 .39 1.055l.349.161a.632.632 0 1 0 1.061.49l.349.16a.796.796 0 0 0 1.055-.389l2.707-5.869a.795.795 0 0 0-.273-.988l1.412-3.062a1.528 1.528 0 0 1-.555-.118Z"
+                    />
+                    <path
+                      fill="url(#b)"
+                      d="m19.472 9.057-2.86-.72-1.291-1.488.026-.39a1.425 1.425 0 0 0-1.327-1.517l-2.536-.17c-.757-.05-1.415.5-1.509 1.242l.58-.167-2.34 1.25a.963.963 0 0 0-.435.478l-1.51 3.611a.963.963 0 0 0 1.776.743l1.378-3.295 2.038-1.088-1.495 1.263-.216.516-.272 4.07.013.002.205 4.108-2.251 4.854a1.155 1.155 0 1 0 2.096.971l2.37-5.112c.08-.17.116-.357.106-.544l-.205-4.122.52.034 1.279 3.802.485 5.557a1.155 1.155 0 1 0 2.302-.201L15.9 17.05a1.156 1.156 0 0 0-.055-.268l-1.019-3.029.032.002.28-4.179.218.252c.129.149.3.254.492.302l3.153.794a.963.963 0 1 0 .47-1.867Z"
+                    />
+                    <defs>
+                      <linearGradient
+                        id="a"
+                        x1="7.669"
+                        x2="7.669"
+                        y1="0"
+                        y2="24"
+                        gradientUnits="userSpaceOnUse"
+                      >
+                        <stop stop-color="#F98F3D" />
+                        <stop offset="1" stop-color="#D76C19" />
+                      </linearGradient>
+                      <linearGradient
+                        id="b"
+                        x1="13.197"
+                        x2="13.197"
+                        y1="4.769"
+                        y2="24"
+                        gradientUnits="userSpaceOnUse"
+                      >
+                        <stop stop-color="#F98F3D" />
+                        <stop offset="1" stop-color="#D76C19" />
+                      </linearGradient>
+                    </defs>
+                  </svg>
+                </div>
+                <div
+                  class="h-12 rounded bg-lightgraybg flex-1 px-4 flex items-center font-medium text-[15px]"
+                >
+                  1 Passenger
+                </div>
+              </div>
+            </div>
+            <div class="font-semibold text-[12px] p-4">
+              <div class="mb-2">YOUR TRIP</div>
+              <div class="flex items-center space-x-2">
+                <div
+                  class="w-12 h-12 bg-lightgraybg flex items-center justify-center rounded"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="21"
+                    height="21"
+                    fill="none"
+                    viewBox="0 0 21 21"
+                  >
+                    <path
+                      fill="url(#a)"
+                      d="M21 3.72v2.258H0V3.72a2.257 2.257 0 0 1 2.25-2.25h2.625v2.22c0 .413.338.75.75.75s.75-.337.75-.75V1.47h8.25v2.22c0 .413.338.75.75.75s.75-.337.75-.75V1.47h2.625A2.257 2.257 0 0 1 21 3.72Zm-6 11.265h5.543l-6.293 5.61v-4.86c0-.412.338-.75.75-.75Z"
+                    />
+                    <path
+                      fill="url(#b)"
+                      d="M21 7.478v6.007h-6a2.257 2.257 0 0 0-2.25 2.25V21H2.25A2.257 2.257 0 0 1 0 18.75V7.477h21ZM6.375.75v.72h-1.5V.75c0-.412.338-.75.75-.75s.75.338.75.75Zm9.75 0v.72h-1.5V.75c0-.412.338-.75.75-.75s.75.338.75.75Z"
+                    />
+                    <defs>
+                      <linearGradient
+                        id="a"
+                        x1="10.5"
+                        x2="10.5"
+                        y1="1.47"
+                        y2="20.595"
+                        gradientUnits="userSpaceOnUse"
+                      >
+                        <stop stop-color="#F98F3D" />
+                        <stop offset="1" stop-color="#D76C19" />
+                      </linearGradient>
+                      <linearGradient
+                        id="b"
+                        x1="10.5"
+                        x2="10.5"
+                        y1="0"
+                        y2="21"
+                        gradientUnits="userSpaceOnUse"
+                      >
+                        <stop stop-color="#F98F3D" />
+                        <stop offset="1" stop-color="#D76C19" />
+                      </linearGradient>
+                    </defs>
+                  </svg>
+                </div>
+                <div
+                  class="h-12 rounded bg-lightgraybg flex-1 px-4 flex items-center font-medium text-[15px]"
+                >
+                  Antalya, Alanya
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="hidden md:block">
+            <img class="w-full mt-2" src="src/assets/show-route.png" alt="" />
+            <button class="primary w-full mt-2">Add your return</button>
+          </div>
+        </div>
+        <div class="col-span-1 md:!col-span-2">
+          <div class="border border-gray-200 rounded">
+            <div
+              class="grid grid-cols-3 items-center gap-4 p-4 border-b border-gray-200 last:border-b-0"
+            >
+              <div class="col-span-3 sm:!col-span-1">
+                <img src="src/assets/car.png" alt="" />
+              </div>
+              <div
+                class="col-span-3 sm:!col-span-2 flex flex-col sm:flex-row items-stretch justify-between"
+              >
+                <div class="w-full md:w-3/5">
+                  <div class="">
+                    <div class="font-semibold text-[29px]">Standart</div>
+                    <div class="font-medium text-black/40">
+                      Dacia Lodgy or similar
+                    </div>
+                  </div>
+                  <div
+                    class="inline-flex py-2 px-4 items-center space-x-2 rounded-full border border-gray-200 mt-8"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="25"
+                      height="25"
+                      fill="none"
+                      viewBox="0 0 25 25"
+                    >
+                      <path
+                        fill="#696969"
+                        d="M7.897 5.853H2.246a1.922 1.922 0 0 0-1.92 1.92v6.972a.676.676 0 1 0 1.352 0v-5.71a.376.376 0 0 1 .751 0v13.663a1.133 1.133 0 0 0 2.265 0v-7.803a.375.375 0 1 1 .751 0v7.803a1.133 1.133 0 0 0 2.265 0V9.035a.376.376 0 1 1 .751 0v5.71a.676.676 0 0 0 1.352 0V7.773a1.922 1.922 0 0 0-1.916-1.92Z"
+                      />
+                      <path
+                        fill="#696969"
+                        d="M6.58 24a1.303 1.303 0 0 1-1.302-1.302v-7.803a.207.207 0 0 0-.414 0v7.803a1.302 1.302 0 0 1-2.603 0V9.034a.206.206 0 1 0-.413 0v5.71a.845.845 0 0 1-1.69 0V7.772a2.09 2.09 0 0 1 2.089-2.088h5.65a2.09 2.09 0 0 1 2.088 2.088v6.972a.845.845 0 0 1-1.69 0v-5.71a.207.207 0 0 0-.413 0v13.664c0 .719-.584 1.301-1.302 1.302Zm-1.51-9.65c.3 0 .544.244.545.545v7.803a.964.964 0 0 0 1.927 0V9.034a.545.545 0 0 1 1.089 0v5.71a.507.507 0 0 0 1.014 0V7.772a1.752 1.752 0 0 0-1.75-1.75h-5.65a1.752 1.752 0 0 0-1.75 1.75v6.972a.507.507 0 0 0 1.013 0v-5.71a.545.545 0 0 1 1.09 0v13.664a.964.964 0 0 0 1.926 0v-7.803c0-.302.245-.545.546-.545Zm.001-9.778a2.202 2.202 0 1 0 0-4.404 2.202 2.202 0 0 0 0 4.404Z"
+                      />
+                      <path
+                        fill="#696969"
+                        d="M5.07 4.743A2.371 2.371 0 1 1 5.07 0a2.371 2.371 0 0 1 0 4.743Zm0-4.405a2.033 2.033 0 1 0 0 4.066 2.033 2.033 0 0 0 0-4.066ZM15.49 22c-.815 0-1.439-.235-1.872-.703-.433-.469-.65-1.13-.65-1.986v-5.622c0-.856.217-1.518.65-1.986.433-.469 1.057-.703 1.873-.703.815 0 1.44.234 1.872.703.433.468.65 1.13.65 1.986v5.622c0 .855-.217 1.517-.65 1.986-.433.468-1.057.703-1.872.703Zm0-1.528c.575 0 .862-.351.862-1.054v-5.836c0-.703-.287-1.055-.861-1.055-.574 0-.861.352-.861 1.055v5.836c0 .703.287 1.054.86 1.054ZM21.492 22c-.815 0-1.435-.23-1.858-.688-.412-.458-.619-1.115-.619-1.97v-.871h1.57v.947c0 .703.288 1.054.862 1.054.282 0 .493-.087.634-.26.151-.183.227-.499.227-.947v-.87c0-.49-.086-.836-.257-1.04-.171-.214-.448-.32-.83-.32h-.56v-1.528h.604c.333 0 .58-.087.74-.26.172-.173.257-.463.257-.87v-.78c0-.367-.075-.637-.226-.81a.762.762 0 0 0-.604-.26c-.534 0-.8.332-.8.994v.702H19.06v-.565c0-.855.206-1.512.619-1.97.423-.46 1.027-.688 1.812-.688.795 0 1.4.229 1.812.687.413.448.62 1.1.62 1.956v.382c0 .58-.096 1.049-.287 1.405-.192.347-.489.596-.892.749v.03c.433.163.745.428.937.795.191.367.287.835.287 1.405v.948c0 .855-.212 1.512-.635 1.97-.412.449-1.026.673-1.842.673Z"
+                      />
+                    </svg>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="25"
+                      height="25"
+                      fill="none"
+                      viewBox="0 0 25 25"
+                    >
+                      <g clip-path="url(#a)">
+                        <path
+                          fill="#696969"
+                          d="M2.39 22.295c0 .387.318.705.705.705a.708.708 0 0 0 .704-.705v-.704H2.39v.704Zm5.305 0c0 .387.318.705.705.705a.708.708 0 0 0 .705-.705v-.704h-1.41v.704Zm3.8-6.88V7.968a1.837 1.837 0 0 0-1.838-1.837h-7.82A1.837 1.837 0 0 0 0 7.968v7.447h11.495ZM0 16.451v2.68c0 1.01.815 1.838 1.837 1.838h7.834a1.837 1.837 0 0 0 1.838-1.837v-2.68H0ZM3.04 3.3h.096v2.183h.898V3.299h3.413v2.183h.898V3.299h.096a.649.649 0 1 0 0-1.299H3.04a.649.649 0 1 0 0 1.299ZM16.694 22c-.816 0-1.44-.234-1.873-.703-.433-.468-.65-1.13-.65-1.986V13.69c0-.855.217-1.518.65-1.986.433-.468 1.057-.703 1.873-.703.815 0 1.44.235 1.873.703.432.469.649 1.13.649 1.986v5.622c0 .856-.217 1.518-.65 1.986-.432.469-1.057.703-1.872.703Zm0-1.527c.574 0 .86-.352.86-1.055v-5.836c0-.703-.286-1.054-.86-1.054-.574 0-.86.351-.86 1.054v5.836c0 .703.286 1.055.86 1.055ZM22.695 22c-.815 0-1.434-.229-1.857-.687-.413-.459-.62-1.115-.62-1.971v-.87h1.571v.946c0 .703.287 1.055.86 1.055.283 0 .494-.087.635-.26.151-.184.227-.5.227-.948v-.87c0-.49-.086-.835-.257-1.04-.171-.213-.448-.32-.83-.32h-.56v-1.528h.605c.332 0 .579-.086.74-.26.17-.173.256-.463.256-.87v-.78c0-.366-.075-.636-.226-.81a.762.762 0 0 0-.604-.259c-.534 0-.8.331-.8.993v.703h-1.571v-.565c0-.856.206-1.513.619-1.971.423-.459 1.027-.688 1.812-.688.796 0 1.4.23 1.812.688.413.448.62 1.1.62 1.955v.382c0 .58-.096 1.05-.287 1.406a1.643 1.643 0 0 1-.891.748v.031c.432.163.745.428.936.794.191.367.287.836.287 1.406v.947c0 .856-.212 1.513-.634 1.971-.413.448-1.027.672-1.843.672Z"
+                        />
+                      </g>
+                      <defs>
+                        <clipPath id="a">
+                          <path fill="#fff" d="M0 0h25v25H0z" />
+                        </clipPath>
+                      </defs>
+                    </svg>
+                  </div>
+                </div>
+                <div
+                  class="w-full sm:w-2/5 flex flex-col justify-between items-start sm:!items-end mt-4 sm:mt-0"
+                >
+                  <div class="font-semibold text-[23px]">
+                    2145.00 <span class="text-[12px]">TRY</span>
+                  </div>
+                  <button
+                    class="primary w-full sm:!py-2 sm:!px-2 md:text-[14px] lg:text-[16px] mt-4 sm:mt-0"
+                  >
+                    <div>Book now</div>
+                    <img src="src/assets/button-right-arrow.svg" alt="" />
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div
+              class="grid grid-cols-3 items-center gap-4 p-4 border-b border-gray-200 last:border-b-0"
+            >
+              <div class="col-span-3 sm:!col-span-1">
+                <img src="src/assets/car-medium.png" alt="" />
+              </div>
+              <div
+                class="col-span-3 sm:!col-span-2 flex flex-col sm:flex-row items-stretch justify-between"
+              >
+                <div class="w-full sm:w-3/5">
+                  <div class="">
+                    <div class="font-semibold text-[29px]">Standart</div>
+                    <div class="font-medium text-black/40">
+                      Dacia Lodgy or similar
+                    </div>
+                  </div>
+                  <div
+                    class="inline-flex py-2 px-4 items-center space-x-2 rounded-full border border-gray-200 mt-8"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="25"
+                      height="25"
+                      fill="none"
+                      viewBox="0 0 25 25"
+                    >
+                      <path
+                        fill="#696969"
+                        d="M7.897 5.853H2.246a1.922 1.922 0 0 0-1.92 1.92v6.972a.676.676 0 1 0 1.352 0v-5.71a.376.376 0 0 1 .751 0v13.663a1.133 1.133 0 0 0 2.265 0v-7.803a.375.375 0 1 1 .751 0v7.803a1.133 1.133 0 0 0 2.265 0V9.035a.376.376 0 1 1 .751 0v5.71a.676.676 0 0 0 1.352 0V7.773a1.922 1.922 0 0 0-1.916-1.92Z"
+                      />
+                      <path
+                        fill="#696969"
+                        d="M6.58 24a1.303 1.303 0 0 1-1.302-1.302v-7.803a.207.207 0 0 0-.414 0v7.803a1.302 1.302 0 0 1-2.603 0V9.034a.206.206 0 1 0-.413 0v5.71a.845.845 0 0 1-1.69 0V7.772a2.09 2.09 0 0 1 2.089-2.088h5.65a2.09 2.09 0 0 1 2.088 2.088v6.972a.845.845 0 0 1-1.69 0v-5.71a.207.207 0 0 0-.413 0v13.664c0 .719-.584 1.301-1.302 1.302Zm-1.51-9.65c.3 0 .544.244.545.545v7.803a.964.964 0 0 0 1.927 0V9.034a.545.545 0 0 1 1.089 0v5.71a.507.507 0 0 0 1.014 0V7.772a1.752 1.752 0 0 0-1.75-1.75h-5.65a1.752 1.752 0 0 0-1.75 1.75v6.972a.507.507 0 0 0 1.013 0v-5.71a.545.545 0 0 1 1.09 0v13.664a.964.964 0 0 0 1.926 0v-7.803c0-.302.245-.545.546-.545Zm.001-9.778a2.202 2.202 0 1 0 0-4.404 2.202 2.202 0 0 0 0 4.404Z"
+                      />
+                      <path
+                        fill="#696969"
+                        d="M5.07 4.743A2.371 2.371 0 1 1 5.07 0a2.371 2.371 0 0 1 0 4.743Zm0-4.405a2.033 2.033 0 1 0 0 4.066 2.033 2.033 0 0 0 0-4.066ZM15.49 22c-.815 0-1.439-.235-1.872-.703-.433-.469-.65-1.13-.65-1.986v-5.622c0-.856.217-1.518.65-1.986.433-.469 1.057-.703 1.873-.703.815 0 1.44.234 1.872.703.433.468.65 1.13.65 1.986v5.622c0 .855-.217 1.517-.65 1.986-.433.468-1.057.703-1.872.703Zm0-1.528c.575 0 .862-.351.862-1.054v-5.836c0-.703-.287-1.055-.861-1.055-.574 0-.861.352-.861 1.055v5.836c0 .703.287 1.054.86 1.054ZM21.492 22c-.815 0-1.435-.23-1.858-.688-.412-.458-.619-1.115-.619-1.97v-.871h1.57v.947c0 .703.288 1.054.862 1.054.282 0 .493-.087.634-.26.151-.183.227-.499.227-.947v-.87c0-.49-.086-.836-.257-1.04-.171-.214-.448-.32-.83-.32h-.56v-1.528h.604c.333 0 .58-.087.74-.26.172-.173.257-.463.257-.87v-.78c0-.367-.075-.637-.226-.81a.762.762 0 0 0-.604-.26c-.534 0-.8.332-.8.994v.702H19.06v-.565c0-.855.206-1.512.619-1.97.423-.46 1.027-.688 1.812-.688.795 0 1.4.229 1.812.687.413.448.62 1.1.62 1.956v.382c0 .58-.096 1.049-.287 1.405-.192.347-.489.596-.892.749v.03c.433.163.745.428.937.795.191.367.287.835.287 1.405v.948c0 .855-.212 1.512-.635 1.97-.412.449-1.026.673-1.842.673Z"
+                      />
+                    </svg>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="25"
+                      height="25"
+                      fill="none"
+                      viewBox="0 0 25 25"
+                    >
+                      <g clip-path="url(#a)">
+                        <path
+                          fill="#696969"
+                          d="M2.39 22.295c0 .387.318.705.705.705a.708.708 0 0 0 .704-.705v-.704H2.39v.704Zm5.305 0c0 .387.318.705.705.705a.708.708 0 0 0 .705-.705v-.704h-1.41v.704Zm3.8-6.88V7.968a1.837 1.837 0 0 0-1.838-1.837h-7.82A1.837 1.837 0 0 0 0 7.968v7.447h11.495ZM0 16.451v2.68c0 1.01.815 1.838 1.837 1.838h7.834a1.837 1.837 0 0 0 1.838-1.837v-2.68H0ZM3.04 3.3h.096v2.183h.898V3.299h3.413v2.183h.898V3.299h.096a.649.649 0 1 0 0-1.299H3.04a.649.649 0 1 0 0 1.299ZM16.694 22c-.816 0-1.44-.234-1.873-.703-.433-.468-.65-1.13-.65-1.986V13.69c0-.855.217-1.518.65-1.986.433-.468 1.057-.703 1.873-.703.815 0 1.44.235 1.873.703.432.469.649 1.13.649 1.986v5.622c0 .856-.217 1.518-.65 1.986-.432.469-1.057.703-1.872.703Zm0-1.527c.574 0 .86-.352.86-1.055v-5.836c0-.703-.286-1.054-.86-1.054-.574 0-.86.351-.86 1.054v5.836c0 .703.286 1.055.86 1.055ZM22.695 22c-.815 0-1.434-.229-1.857-.687-.413-.459-.62-1.115-.62-1.971v-.87h1.571v.946c0 .703.287 1.055.86 1.055.283 0 .494-.087.635-.26.151-.184.227-.5.227-.948v-.87c0-.49-.086-.835-.257-1.04-.171-.213-.448-.32-.83-.32h-.56v-1.528h.605c.332 0 .579-.086.74-.26.17-.173.256-.463.256-.87v-.78c0-.366-.075-.636-.226-.81a.762.762 0 0 0-.604-.259c-.534 0-.8.331-.8.993v.703h-1.571v-.565c0-.856.206-1.513.619-1.971.423-.459 1.027-.688 1.812-.688.796 0 1.4.23 1.812.688.413.448.62 1.1.62 1.955v.382c0 .58-.096 1.05-.287 1.406a1.643 1.643 0 0 1-.891.748v.031c.432.163.745.428.936.794.191.367.287.836.287 1.406v.947c0 .856-.212 1.513-.634 1.971-.413.448-1.027.672-1.843.672Z"
+                        />
+                      </g>
+                      <defs>
+                        <clipPath id="a">
+                          <path fill="#fff" d="M0 0h25v25H0z" />
+                        </clipPath>
+                      </defs>
+                    </svg>
+                  </div>
+                </div>
+                <div
+                  class="w-full sm:w-2/5 flex flex-col justify-between items-start sm:!items-end mt-4 sm:mt-0"
+                >
+                  <div class="font-semibold text-[23px]">
+                    2145.00 <span class="text-[12px]">TRY</span>
+                  </div>
+                  <button
+                    class="green w-full sm:!py-2 sm:!px-2 md:text-[14px] lg:text-[16px] mt-4 sm:mt-0"
+                  >
+                    <div>Book now</div>
+                    <img src="src/assets/button-right-arrow.svg" alt="" />
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div
+              class="grid grid-cols-3 items-center gap-4 p-4 border-b border-gray-200 last:border-b-0"
+            >
+              <div class="col-span-3 sm:!col-span-1">
+                <img src="src/assets/car-large.png" alt="" />
+              </div>
+              <div
+                class="col-span-3 sm:!col-span-2 flex flex-col sm:flex-row items-stretch justify-between"
+              >
+                <div class="w-full sm:w-3/5">
+                  <div class="">
+                    <div class="font-semibold text-[29px]">Standart</div>
+                    <div class="font-medium text-black/40">
+                      Dacia Lodgy or similar
+                    </div>
+                  </div>
+                  <div
+                    class="inline-flex py-2 px-4 items-center space-x-2 rounded-full border border-gray-200 mt-8"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="25"
+                      height="25"
+                      fill="none"
+                      viewBox="0 0 25 25"
+                    >
+                      <path
+                        fill="#696969"
+                        d="M7.897 5.853H2.246a1.922 1.922 0 0 0-1.92 1.92v6.972a.676.676 0 1 0 1.352 0v-5.71a.376.376 0 0 1 .751 0v13.663a1.133 1.133 0 0 0 2.265 0v-7.803a.375.375 0 1 1 .751 0v7.803a1.133 1.133 0 0 0 2.265 0V9.035a.376.376 0 1 1 .751 0v5.71a.676.676 0 0 0 1.352 0V7.773a1.922 1.922 0 0 0-1.916-1.92Z"
+                      />
+                      <path
+                        fill="#696969"
+                        d="M6.58 24a1.303 1.303 0 0 1-1.302-1.302v-7.803a.207.207 0 0 0-.414 0v7.803a1.302 1.302 0 0 1-2.603 0V9.034a.206.206 0 1 0-.413 0v5.71a.845.845 0 0 1-1.69 0V7.772a2.09 2.09 0 0 1 2.089-2.088h5.65a2.09 2.09 0 0 1 2.088 2.088v6.972a.845.845 0 0 1-1.69 0v-5.71a.207.207 0 0 0-.413 0v13.664c0 .719-.584 1.301-1.302 1.302Zm-1.51-9.65c.3 0 .544.244.545.545v7.803a.964.964 0 0 0 1.927 0V9.034a.545.545 0 0 1 1.089 0v5.71a.507.507 0 0 0 1.014 0V7.772a1.752 1.752 0 0 0-1.75-1.75h-5.65a1.752 1.752 0 0 0-1.75 1.75v6.972a.507.507 0 0 0 1.013 0v-5.71a.545.545 0 0 1 1.09 0v13.664a.964.964 0 0 0 1.926 0v-7.803c0-.302.245-.545.546-.545Zm.001-9.778a2.202 2.202 0 1 0 0-4.404 2.202 2.202 0 0 0 0 4.404Z"
+                      />
+                      <path
+                        fill="#696969"
+                        d="M5.07 4.743A2.371 2.371 0 1 1 5.07 0a2.371 2.371 0 0 1 0 4.743Zm0-4.405a2.033 2.033 0 1 0 0 4.066 2.033 2.033 0 0 0 0-4.066ZM15.49 22c-.815 0-1.439-.235-1.872-.703-.433-.469-.65-1.13-.65-1.986v-5.622c0-.856.217-1.518.65-1.986.433-.469 1.057-.703 1.873-.703.815 0 1.44.234 1.872.703.433.468.65 1.13.65 1.986v5.622c0 .855-.217 1.517-.65 1.986-.433.468-1.057.703-1.872.703Zm0-1.528c.575 0 .862-.351.862-1.054v-5.836c0-.703-.287-1.055-.861-1.055-.574 0-.861.352-.861 1.055v5.836c0 .703.287 1.054.86 1.054ZM21.492 22c-.815 0-1.435-.23-1.858-.688-.412-.458-.619-1.115-.619-1.97v-.871h1.57v.947c0 .703.288 1.054.862 1.054.282 0 .493-.087.634-.26.151-.183.227-.499.227-.947v-.87c0-.49-.086-.836-.257-1.04-.171-.214-.448-.32-.83-.32h-.56v-1.528h.604c.333 0 .58-.087.74-.26.172-.173.257-.463.257-.87v-.78c0-.367-.075-.637-.226-.81a.762.762 0 0 0-.604-.26c-.534 0-.8.332-.8.994v.702H19.06v-.565c0-.855.206-1.512.619-1.97.423-.46 1.027-.688 1.812-.688.795 0 1.4.229 1.812.687.413.448.62 1.1.62 1.956v.382c0 .58-.096 1.049-.287 1.405-.192.347-.489.596-.892.749v.03c.433.163.745.428.937.795.191.367.287.835.287 1.405v.948c0 .855-.212 1.512-.635 1.97-.412.449-1.026.673-1.842.673Z"
+                      />
+                    </svg>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="25"
+                      height="25"
+                      fill="none"
+                      viewBox="0 0 25 25"
+                    >
+                      <g clip-path="url(#a)">
+                        <path
+                          fill="#696969"
+                          d="M2.39 22.295c0 .387.318.705.705.705a.708.708 0 0 0 .704-.705v-.704H2.39v.704Zm5.305 0c0 .387.318.705.705.705a.708.708 0 0 0 .705-.705v-.704h-1.41v.704Zm3.8-6.88V7.968a1.837 1.837 0 0 0-1.838-1.837h-7.82A1.837 1.837 0 0 0 0 7.968v7.447h11.495ZM0 16.451v2.68c0 1.01.815 1.838 1.837 1.838h7.834a1.837 1.837 0 0 0 1.838-1.837v-2.68H0ZM3.04 3.3h.096v2.183h.898V3.299h3.413v2.183h.898V3.299h.096a.649.649 0 1 0 0-1.299H3.04a.649.649 0 1 0 0 1.299ZM16.694 22c-.816 0-1.44-.234-1.873-.703-.433-.468-.65-1.13-.65-1.986V13.69c0-.855.217-1.518.65-1.986.433-.468 1.057-.703 1.873-.703.815 0 1.44.235 1.873.703.432.469.649 1.13.649 1.986v5.622c0 .856-.217 1.518-.65 1.986-.432.469-1.057.703-1.872.703Zm0-1.527c.574 0 .86-.352.86-1.055v-5.836c0-.703-.286-1.054-.86-1.054-.574 0-.86.351-.86 1.054v5.836c0 .703.286 1.055.86 1.055ZM22.695 22c-.815 0-1.434-.229-1.857-.687-.413-.459-.62-1.115-.62-1.971v-.87h1.571v.946c0 .703.287 1.055.86 1.055.283 0 .494-.087.635-.26.151-.184.227-.5.227-.948v-.87c0-.49-.086-.835-.257-1.04-.171-.213-.448-.32-.83-.32h-.56v-1.528h.605c.332 0 .579-.086.74-.26.17-.173.256-.463.256-.87v-.78c0-.366-.075-.636-.226-.81a.762.762 0 0 0-.604-.259c-.534 0-.8.331-.8.993v.703h-1.571v-.565c0-.856.206-1.513.619-1.971.423-.459 1.027-.688 1.812-.688.796 0 1.4.23 1.812.688.413.448.62 1.1.62 1.955v.382c0 .58-.096 1.05-.287 1.406a1.643 1.643 0 0 1-.891.748v.031c.432.163.745.428.936.794.191.367.287.836.287 1.406v.947c0 .856-.212 1.513-.634 1.971-.413.448-1.027.672-1.843.672Z"
+                        />
+                      </g>
+                      <defs>
+                        <clipPath id="a">
+                          <path fill="#fff" d="M0 0h25v25H0z" />
+                        </clipPath>
+                      </defs>
+                    </svg>
+                  </div>
+                </div>
+                <div
+                  class="w-full sm:w-2/5 flex flex-col justify-between items-start sm:!items-end mt-4 sm:mt-0"
+                >
+                  <div class="font-semibold text-[23px]">
+                    2145.00 <span class="text-[12px]">TRY</span>
+                  </div>
+                  <button
+                    class="primary w-full sm:!py-2 sm:!px-2 md:text-[14px] lg:text-[16px] mt-4 sm:mt-0"
+                  >
+                    <div>Book now</div>
+                    <img src="src/assets/button-right-arrow.svg" alt="" />
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-span-1 block md:hidden">
+          <img class="w-full mt-2" src="src/assets/show-route.png" alt="" />
+          <button class="primary w-full mt-2">Add your return</button>
+        </div>
+      </div>
+    </div>
+    <!-- Second trip start -->
+    <div class="container mx-auto mt-14 py-10">
+      <h2 class="text-[30px] font-medium mb-8">2. YOUR TRIP</h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="col-span-1">
+          <div class="rounded-lg border border-gray-200">
+            <div
+              class="flex items-center justify-between py-2 px-4 border-b border-gray-200"
+            >
+              <div class="font-semibold text-[12px]">YOUR BOOKING DETAILS</div>
+              <button
+                class="py-1 px-4 border border-primary text-primary rounded-full text-[14px] font-medium"
+              >
+                Edit trip
+              </button>
+            </div>
+            <div class="flex flex-col border-b border-gray-200 p-4 space-y-2">
+              <div class="flex items-center space-x-2">
+                <div
+                  class="w-12 h-12 bg-lightgraybg flex items-center justify-center rounded"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="15"
+                    height="20"
+                    fill="none"
+                    viewBox="0 0 15 20"
+                  >
+                    <path
+                      fill="url(#a)"
+                      d="M7.5 0C3.365 0 0 3.388 0 7.554c0 5.92 6.795 12.031 7.084 12.288a.624.624 0 0 0 .832 0C8.205 19.585 15 13.474 15 7.555 15 3.388 11.635 0 7.5 0Zm0 11.667A4.171 4.171 0 0 1 3.333 7.5 4.171 4.171 0 0 1 7.5 3.333 4.171 4.171 0 0 1 11.667 7.5 4.171 4.171 0 0 1 7.5 11.667Z"
+                    />
+                    <defs>
+                      <linearGradient
+                        id="a"
+                        x1="7.5"
+                        x2="7.5"
+                        y1="0"
+                        y2="20.001"
+                        gradientUnits="userSpaceOnUse"
+                      >
+                        <stop stop-color="#F98F3D" />
+                        <stop offset="1" stop-color="#D76C19" />
+                      </linearGradient>
+                    </defs>
+                  </svg>
+                </div>
+                <div
+                  class="h-12 rounded bg-lightgraybg flex-1 px-4 flex items-center font-medium text-[15px]"
+                >
+                  Antalya, Alanya
+                </div>
+              </div>
+              <div class="flex items-center space-x-2">
+                <div
+                  class="w-12 h-12 bg-lightgraybg flex items-center justify-center rounded"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="18"
+                    height="20"
+                    fill="none"
+                    viewBox="0 0 18 20"
+                  >
+                    <path
+                      fill="url(#a)"
+                      d="M17.224 1.357a.626.626 0 0 0-.584-.062c-.04.016-4.175 1.643-7.624.015C6.044-.095 2.77.562 1.25 1.006V.625a.625.625 0 0 0-1.25 0v18.75a.625.625 0 0 0 1.25 0v-7.057c1.109-.36 4.399-1.217 7.234.122 1.351.639 2.765.851 4.049.851 2.468 0 4.453-.786 4.577-.836a.627.627 0 0 0 .39-.58v-10a.624.624 0 0 0-.276-.518Z"
+                    />
+                    <defs>
+                      <linearGradient
+                        id="a"
+                        x1="8.75"
+                        x2="8.75"
+                        y1="0"
+                        y2="20"
+                        gradientUnits="userSpaceOnUse"
+                      >
+                        <stop stop-color="#F98F3D" />
+                        <stop offset="1" stop-color="#D76C19" />
+                      </linearGradient>
+                    </defs>
+                  </svg>
+                </div>
+                <div
+                  class="h-12 rounded bg-lightgraybg flex-1 px-4 flex items-center font-medium text-[15px]"
+                >
+                  Antalya, Alanya
+                </div>
+              </div>
+              <div class="flex items-center space-x-2">
+                <div
+                  class="w-12 h-12 bg-lightgraybg flex items-center justify-center rounded"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="21"
+                    height="24"
+                    fill="none"
+                    viewBox="0 0 21 24"
+                  >
+                    <path
+                      fill="url(#a)"
+                      d="M13.086 4.215a2.11 2.11 0 1 0 .282-4.21 2.11 2.11 0 0 0-.282 4.21ZM6.568 13.13a1.536 1.536 0 0 1-.338-.195l-1.37 2.97-1.025-.473a.796.796 0 0 0-1.055.389L.073 21.69a.796.796 0 0 0 .39 1.055l.349.161a.632.632 0 1 0 1.061.49l.349.16a.796.796 0 0 0 1.055-.389l2.707-5.869a.795.795 0 0 0-.273-.988l1.412-3.062a1.528 1.528 0 0 1-.555-.118Z"
+                    />
+                    <path
+                      fill="url(#b)"
+                      d="m19.472 9.057-2.86-.72-1.291-1.488.026-.39a1.425 1.425 0 0 0-1.327-1.517l-2.536-.17c-.757-.05-1.415.5-1.509 1.242l.58-.167-2.34 1.25a.963.963 0 0 0-.435.478l-1.51 3.611a.963.963 0 0 0 1.776.743l1.378-3.295 2.038-1.088-1.495 1.263-.216.516-.272 4.07.013.002.205 4.108-2.251 4.854a1.155 1.155 0 1 0 2.096.971l2.37-5.112c.08-.17.116-.357.106-.544l-.205-4.122.52.034 1.279 3.802.485 5.557a1.155 1.155 0 1 0 2.302-.201L15.9 17.05a1.156 1.156 0 0 0-.055-.268l-1.019-3.029.032.002.28-4.179.218.252c.129.149.3.254.492.302l3.153.794a.963.963 0 1 0 .47-1.867Z"
+                    />
+                    <defs>
+                      <linearGradient
+                        id="a"
+                        x1="7.669"
+                        x2="7.669"
+                        y1="0"
+                        y2="24"
+                        gradientUnits="userSpaceOnUse"
+                      >
+                        <stop stop-color="#F98F3D" />
+                        <stop offset="1" stop-color="#D76C19" />
+                      </linearGradient>
+                      <linearGradient
+                        id="b"
+                        x1="13.197"
+                        x2="13.197"
+                        y1="4.769"
+                        y2="24"
+                        gradientUnits="userSpaceOnUse"
+                      >
+                        <stop stop-color="#F98F3D" />
+                        <stop offset="1" stop-color="#D76C19" />
+                      </linearGradient>
+                    </defs>
+                  </svg>
+                </div>
+                <div
+                  class="h-12 rounded bg-lightgraybg flex-1 px-4 flex items-center font-medium text-[15px]"
+                >
+                  1 Passenger
+                </div>
+              </div>
+            </div>
+            <div class="font-semibold text-[12px] p-4">
+              <div class="mb-2">YOUR TRIP</div>
+              <div class="flex items-center space-x-2">
+                <div
+                  class="w-12 h-12 bg-lightgraybg flex items-center justify-center rounded"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="21"
+                    height="21"
+                    fill="none"
+                    viewBox="0 0 21 21"
+                  >
+                    <path
+                      fill="url(#a)"
+                      d="M21 3.72v2.258H0V3.72a2.257 2.257 0 0 1 2.25-2.25h2.625v2.22c0 .413.338.75.75.75s.75-.337.75-.75V1.47h8.25v2.22c0 .413.338.75.75.75s.75-.337.75-.75V1.47h2.625A2.257 2.257 0 0 1 21 3.72Zm-6 11.265h5.543l-6.293 5.61v-4.86c0-.412.338-.75.75-.75Z"
+                    />
+                    <path
+                      fill="url(#b)"
+                      d="M21 7.478v6.007h-6a2.257 2.257 0 0 0-2.25 2.25V21H2.25A2.257 2.257 0 0 1 0 18.75V7.477h21ZM6.375.75v.72h-1.5V.75c0-.412.338-.75.75-.75s.75.338.75.75Zm9.75 0v.72h-1.5V.75c0-.412.338-.75.75-.75s.75.338.75.75Z"
+                    />
+                    <defs>
+                      <linearGradient
+                        id="a"
+                        x1="10.5"
+                        x2="10.5"
+                        y1="1.47"
+                        y2="20.595"
+                        gradientUnits="userSpaceOnUse"
+                      >
+                        <stop stop-color="#F98F3D" />
+                        <stop offset="1" stop-color="#D76C19" />
+                      </linearGradient>
+                      <linearGradient
+                        id="b"
+                        x1="10.5"
+                        x2="10.5"
+                        y1="0"
+                        y2="21"
+                        gradientUnits="userSpaceOnUse"
+                      >
+                        <stop stop-color="#F98F3D" />
+                        <stop offset="1" stop-color="#D76C19" />
+                      </linearGradient>
+                    </defs>
+                  </svg>
+                </div>
+                <div
+                  class="h-12 rounded bg-lightgraybg flex-1 px-4 flex items-center font-medium text-[15px]"
+                >
+                  Antalya, Alanya
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="hidden md:block">
+            <img class="w-full mt-2" src="src/assets/show-route.png" alt="" />
+            <button class="primary w-full mt-2">Add your return</button>
+          </div>
+        </div>
+        <div class="col-span-1 md:!col-span-2">
+          <div class="border border-gray-200 rounded">
+            <div
+              class="grid grid-cols-3 items-center gap-4 p-4 border-b border-gray-200 last:border-b-0"
+            >
+              <div class="col-span-3 sm:!col-span-1">
+                <img src="src/assets/car.png" alt="" />
+              </div>
+              <div
+                class="col-span-3 sm:!col-span-2 flex flex-col sm:flex-row items-stretch justify-between"
+              >
+                <div class="w-full md:w-3/5">
+                  <div class="">
+                    <div class="font-semibold text-[29px]">Standart</div>
+                    <div class="font-medium text-black/40">
+                      Dacia Lodgy or similar
+                    </div>
+                  </div>
+                  <div
+                    class="inline-flex py-2 px-4 items-center space-x-2 rounded-full border border-gray-200 mt-8"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="25"
+                      height="25"
+                      fill="none"
+                      viewBox="0 0 25 25"
+                    >
+                      <path
+                        fill="#696969"
+                        d="M7.897 5.853H2.246a1.922 1.922 0 0 0-1.92 1.92v6.972a.676.676 0 1 0 1.352 0v-5.71a.376.376 0 0 1 .751 0v13.663a1.133 1.133 0 0 0 2.265 0v-7.803a.375.375 0 1 1 .751 0v7.803a1.133 1.133 0 0 0 2.265 0V9.035a.376.376 0 1 1 .751 0v5.71a.676.676 0 0 0 1.352 0V7.773a1.922 1.922 0 0 0-1.916-1.92Z"
+                      />
+                      <path
+                        fill="#696969"
+                        d="M6.58 24a1.303 1.303 0 0 1-1.302-1.302v-7.803a.207.207 0 0 0-.414 0v7.803a1.302 1.302 0 0 1-2.603 0V9.034a.206.206 0 1 0-.413 0v5.71a.845.845 0 0 1-1.69 0V7.772a2.09 2.09 0 0 1 2.089-2.088h5.65a2.09 2.09 0 0 1 2.088 2.088v6.972a.845.845 0 0 1-1.69 0v-5.71a.207.207 0 0 0-.413 0v13.664c0 .719-.584 1.301-1.302 1.302Zm-1.51-9.65c.3 0 .544.244.545.545v7.803a.964.964 0 0 0 1.927 0V9.034a.545.545 0 0 1 1.089 0v5.71a.507.507 0 0 0 1.014 0V7.772a1.752 1.752 0 0 0-1.75-1.75h-5.65a1.752 1.752 0 0 0-1.75 1.75v6.972a.507.507 0 0 0 1.013 0v-5.71a.545.545 0 0 1 1.09 0v13.664a.964.964 0 0 0 1.926 0v-7.803c0-.302.245-.545.546-.545Zm.001-9.778a2.202 2.202 0 1 0 0-4.404 2.202 2.202 0 0 0 0 4.404Z"
+                      />
+                      <path
+                        fill="#696969"
+                        d="M5.07 4.743A2.371 2.371 0 1 1 5.07 0a2.371 2.371 0 0 1 0 4.743Zm0-4.405a2.033 2.033 0 1 0 0 4.066 2.033 2.033 0 0 0 0-4.066ZM15.49 22c-.815 0-1.439-.235-1.872-.703-.433-.469-.65-1.13-.65-1.986v-5.622c0-.856.217-1.518.65-1.986.433-.469 1.057-.703 1.873-.703.815 0 1.44.234 1.872.703.433.468.65 1.13.65 1.986v5.622c0 .855-.217 1.517-.65 1.986-.433.468-1.057.703-1.872.703Zm0-1.528c.575 0 .862-.351.862-1.054v-5.836c0-.703-.287-1.055-.861-1.055-.574 0-.861.352-.861 1.055v5.836c0 .703.287 1.054.86 1.054ZM21.492 22c-.815 0-1.435-.23-1.858-.688-.412-.458-.619-1.115-.619-1.97v-.871h1.57v.947c0 .703.288 1.054.862 1.054.282 0 .493-.087.634-.26.151-.183.227-.499.227-.947v-.87c0-.49-.086-.836-.257-1.04-.171-.214-.448-.32-.83-.32h-.56v-1.528h.604c.333 0 .58-.087.74-.26.172-.173.257-.463.257-.87v-.78c0-.367-.075-.637-.226-.81a.762.762 0 0 0-.604-.26c-.534 0-.8.332-.8.994v.702H19.06v-.565c0-.855.206-1.512.619-1.97.423-.46 1.027-.688 1.812-.688.795 0 1.4.229 1.812.687.413.448.62 1.1.62 1.956v.382c0 .58-.096 1.049-.287 1.405-.192.347-.489.596-.892.749v.03c.433.163.745.428.937.795.191.367.287.835.287 1.405v.948c0 .855-.212 1.512-.635 1.97-.412.449-1.026.673-1.842.673Z"
+                      />
+                    </svg>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="25"
+                      height="25"
+                      fill="none"
+                      viewBox="0 0 25 25"
+                    >
+                      <g clip-path="url(#a)">
+                        <path
+                          fill="#696969"
+                          d="M2.39 22.295c0 .387.318.705.705.705a.708.708 0 0 0 .704-.705v-.704H2.39v.704Zm5.305 0c0 .387.318.705.705.705a.708.708 0 0 0 .705-.705v-.704h-1.41v.704Zm3.8-6.88V7.968a1.837 1.837 0 0 0-1.838-1.837h-7.82A1.837 1.837 0 0 0 0 7.968v7.447h11.495ZM0 16.451v2.68c0 1.01.815 1.838 1.837 1.838h7.834a1.837 1.837 0 0 0 1.838-1.837v-2.68H0ZM3.04 3.3h.096v2.183h.898V3.299h3.413v2.183h.898V3.299h.096a.649.649 0 1 0 0-1.299H3.04a.649.649 0 1 0 0 1.299ZM16.694 22c-.816 0-1.44-.234-1.873-.703-.433-.468-.65-1.13-.65-1.986V13.69c0-.855.217-1.518.65-1.986.433-.468 1.057-.703 1.873-.703.815 0 1.44.235 1.873.703.432.469.649 1.13.649 1.986v5.622c0 .856-.217 1.518-.65 1.986-.432.469-1.057.703-1.872.703Zm0-1.527c.574 0 .86-.352.86-1.055v-5.836c0-.703-.286-1.054-.86-1.054-.574 0-.86.351-.86 1.054v5.836c0 .703.286 1.055.86 1.055ZM22.695 22c-.815 0-1.434-.229-1.857-.687-.413-.459-.62-1.115-.62-1.971v-.87h1.571v.946c0 .703.287 1.055.86 1.055.283 0 .494-.087.635-.26.151-.184.227-.5.227-.948v-.87c0-.49-.086-.835-.257-1.04-.171-.213-.448-.32-.83-.32h-.56v-1.528h.605c.332 0 .579-.086.74-.26.17-.173.256-.463.256-.87v-.78c0-.366-.075-.636-.226-.81a.762.762 0 0 0-.604-.259c-.534 0-.8.331-.8.993v.703h-1.571v-.565c0-.856.206-1.513.619-1.971.423-.459 1.027-.688 1.812-.688.796 0 1.4.23 1.812.688.413.448.62 1.1.62 1.955v.382c0 .58-.096 1.05-.287 1.406a1.643 1.643 0 0 1-.891.748v.031c.432.163.745.428.936.794.191.367.287.836.287 1.406v.947c0 .856-.212 1.513-.634 1.971-.413.448-1.027.672-1.843.672Z"
+                        />
+                      </g>
+                      <defs>
+                        <clipPath id="a">
+                          <path fill="#fff" d="M0 0h25v25H0z" />
+                        </clipPath>
+                      </defs>
+                    </svg>
+                  </div>
+                </div>
+                <div
+                  class="w-full sm:w-2/5 flex flex-col justify-between items-start sm:!items-end mt-4 sm:mt-0"
+                >
+                  <div class="font-semibold text-[23px]">
+                    2145.00 <span class="text-[12px]">TRY</span>
+                  </div>
+                  <button
+                    class="primary w-full sm:!py-2 sm:!px-2 md:text-[14px] lg:text-[16px] mt-4 sm:mt-0"
+                  >
+                    <div>Book now</div>
+                    <img src="src/assets/button-right-arrow.svg" alt="" />
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div
+              class="grid grid-cols-3 items-center gap-4 p-4 border-b border-gray-200 last:border-b-0"
+            >
+              <div class="col-span-3 sm:!col-span-1">
+                <img src="src/assets/car-medium.png" alt="" />
+              </div>
+              <div
+                class="col-span-3 sm:!col-span-2 flex flex-col sm:flex-row items-stretch justify-between"
+              >
+                <div class="w-full sm:w-3/5">
+                  <div class="">
+                    <div class="font-semibold text-[29px]">Standart</div>
+                    <div class="font-medium text-black/40">
+                      Dacia Lodgy or similar
+                    </div>
+                  </div>
+                  <div
+                    class="inline-flex py-2 px-4 items-center space-x-2 rounded-full border border-gray-200 mt-8"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="25"
+                      height="25"
+                      fill="none"
+                      viewBox="0 0 25 25"
+                    >
+                      <path
+                        fill="#696969"
+                        d="M7.897 5.853H2.246a1.922 1.922 0 0 0-1.92 1.92v6.972a.676.676 0 1 0 1.352 0v-5.71a.376.376 0 0 1 .751 0v13.663a1.133 1.133 0 0 0 2.265 0v-7.803a.375.375 0 1 1 .751 0v7.803a1.133 1.133 0 0 0 2.265 0V9.035a.376.376 0 1 1 .751 0v5.71a.676.676 0 0 0 1.352 0V7.773a1.922 1.922 0 0 0-1.916-1.92Z"
+                      />
+                      <path
+                        fill="#696969"
+                        d="M6.58 24a1.303 1.303 0 0 1-1.302-1.302v-7.803a.207.207 0 0 0-.414 0v7.803a1.302 1.302 0 0 1-2.603 0V9.034a.206.206 0 1 0-.413 0v5.71a.845.845 0 0 1-1.69 0V7.772a2.09 2.09 0 0 1 2.089-2.088h5.65a2.09 2.09 0 0 1 2.088 2.088v6.972a.845.845 0 0 1-1.69 0v-5.71a.207.207 0 0 0-.413 0v13.664c0 .719-.584 1.301-1.302 1.302Zm-1.51-9.65c.3 0 .544.244.545.545v7.803a.964.964 0 0 0 1.927 0V9.034a.545.545 0 0 1 1.089 0v5.71a.507.507 0 0 0 1.014 0V7.772a1.752 1.752 0 0 0-1.75-1.75h-5.65a1.752 1.752 0 0 0-1.75 1.75v6.972a.507.507 0 0 0 1.013 0v-5.71a.545.545 0 0 1 1.09 0v13.664a.964.964 0 0 0 1.926 0v-7.803c0-.302.245-.545.546-.545Zm.001-9.778a2.202 2.202 0 1 0 0-4.404 2.202 2.202 0 0 0 0 4.404Z"
+                      />
+                      <path
+                        fill="#696969"
+                        d="M5.07 4.743A2.371 2.371 0 1 1 5.07 0a2.371 2.371 0 0 1 0 4.743Zm0-4.405a2.033 2.033 0 1 0 0 4.066 2.033 2.033 0 0 0 0-4.066ZM15.49 22c-.815 0-1.439-.235-1.872-.703-.433-.469-.65-1.13-.65-1.986v-5.622c0-.856.217-1.518.65-1.986.433-.469 1.057-.703 1.873-.703.815 0 1.44.234 1.872.703.433.468.65 1.13.65 1.986v5.622c0 .855-.217 1.517-.65 1.986-.433.468-1.057.703-1.872.703Zm0-1.528c.575 0 .862-.351.862-1.054v-5.836c0-.703-.287-1.055-.861-1.055-.574 0-.861.352-.861 1.055v5.836c0 .703.287 1.054.86 1.054ZM21.492 22c-.815 0-1.435-.23-1.858-.688-.412-.458-.619-1.115-.619-1.97v-.871h1.57v.947c0 .703.288 1.054.862 1.054.282 0 .493-.087.634-.26.151-.183.227-.499.227-.947v-.87c0-.49-.086-.836-.257-1.04-.171-.214-.448-.32-.83-.32h-.56v-1.528h.604c.333 0 .58-.087.74-.26.172-.173.257-.463.257-.87v-.78c0-.367-.075-.637-.226-.81a.762.762 0 0 0-.604-.26c-.534 0-.8.332-.8.994v.702H19.06v-.565c0-.855.206-1.512.619-1.97.423-.46 1.027-.688 1.812-.688.795 0 1.4.229 1.812.687.413.448.62 1.1.62 1.956v.382c0 .58-.096 1.049-.287 1.405-.192.347-.489.596-.892.749v.03c.433.163.745.428.937.795.191.367.287.835.287 1.405v.948c0 .855-.212 1.512-.635 1.97-.412.449-1.026.673-1.842.673Z"
+                      />
+                    </svg>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="25"
+                      height="25"
+                      fill="none"
+                      viewBox="0 0 25 25"
+                    >
+                      <g clip-path="url(#a)">
+                        <path
+                          fill="#696969"
+                          d="M2.39 22.295c0 .387.318.705.705.705a.708.708 0 0 0 .704-.705v-.704H2.39v.704Zm5.305 0c0 .387.318.705.705.705a.708.708 0 0 0 .705-.705v-.704h-1.41v.704Zm3.8-6.88V7.968a1.837 1.837 0 0 0-1.838-1.837h-7.82A1.837 1.837 0 0 0 0 7.968v7.447h11.495ZM0 16.451v2.68c0 1.01.815 1.838 1.837 1.838h7.834a1.837 1.837 0 0 0 1.838-1.837v-2.68H0ZM3.04 3.3h.096v2.183h.898V3.299h3.413v2.183h.898V3.299h.096a.649.649 0 1 0 0-1.299H3.04a.649.649 0 1 0 0 1.299ZM16.694 22c-.816 0-1.44-.234-1.873-.703-.433-.468-.65-1.13-.65-1.986V13.69c0-.855.217-1.518.65-1.986.433-.468 1.057-.703 1.873-.703.815 0 1.44.235 1.873.703.432.469.649 1.13.649 1.986v5.622c0 .856-.217 1.518-.65 1.986-.432.469-1.057.703-1.872.703Zm0-1.527c.574 0 .86-.352.86-1.055v-5.836c0-.703-.286-1.054-.86-1.054-.574 0-.86.351-.86 1.054v5.836c0 .703.286 1.055.86 1.055ZM22.695 22c-.815 0-1.434-.229-1.857-.687-.413-.459-.62-1.115-.62-1.971v-.87h1.571v.946c0 .703.287 1.055.86 1.055.283 0 .494-.087.635-.26.151-.184.227-.5.227-.948v-.87c0-.49-.086-.835-.257-1.04-.171-.213-.448-.32-.83-.32h-.56v-1.528h.605c.332 0 .579-.086.74-.26.17-.173.256-.463.256-.87v-.78c0-.366-.075-.636-.226-.81a.762.762 0 0 0-.604-.259c-.534 0-.8.331-.8.993v.703h-1.571v-.565c0-.856.206-1.513.619-1.971.423-.459 1.027-.688 1.812-.688.796 0 1.4.23 1.812.688.413.448.62 1.1.62 1.955v.382c0 .58-.096 1.05-.287 1.406a1.643 1.643 0 0 1-.891.748v.031c.432.163.745.428.936.794.191.367.287.836.287 1.406v.947c0 .856-.212 1.513-.634 1.971-.413.448-1.027.672-1.843.672Z"
+                        />
+                      </g>
+                      <defs>
+                        <clipPath id="a">
+                          <path fill="#fff" d="M0 0h25v25H0z" />
+                        </clipPath>
+                      </defs>
+                    </svg>
+                  </div>
+                </div>
+                <div
+                  class="w-full sm:w-2/5 flex flex-col justify-between items-start sm:!items-end mt-4 sm:mt-0"
+                >
+                  <div class="font-semibold text-[23px]">
+                    2145.00 <span class="text-[12px]">TRY</span>
+                  </div>
+                  <button
+                    class="green w-full sm:!py-2 sm:!px-2 md:text-[14px] lg:text-[16px] mt-4 sm:mt-0"
+                  >
+                    <div>Book now</div>
+                    <img src="src/assets/button-right-arrow.svg" alt="" />
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div
+              class="grid grid-cols-3 items-center gap-4 p-4 border-b border-gray-200 last:border-b-0"
+            >
+              <div class="col-span-3 sm:!col-span-1">
+                <img src="src/assets/car-large.png" alt="" />
+              </div>
+              <div
+                class="col-span-3 sm:!col-span-2 flex flex-col sm:flex-row items-stretch justify-between"
+              >
+                <div class="w-full sm:w-3/5">
+                  <div class="">
+                    <div class="font-semibold text-[29px]">Standart</div>
+                    <div class="font-medium text-black/40">
+                      Dacia Lodgy or similar
+                    </div>
+                  </div>
+                  <div
+                    class="inline-flex py-2 px-4 items-center space-x-2 rounded-full border border-gray-200 mt-8"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="25"
+                      height="25"
+                      fill="none"
+                      viewBox="0 0 25 25"
+                    >
+                      <path
+                        fill="#696969"
+                        d="M7.897 5.853H2.246a1.922 1.922 0 0 0-1.92 1.92v6.972a.676.676 0 1 0 1.352 0v-5.71a.376.376 0 0 1 .751 0v13.663a1.133 1.133 0 0 0 2.265 0v-7.803a.375.375 0 1 1 .751 0v7.803a1.133 1.133 0 0 0 2.265 0V9.035a.376.376 0 1 1 .751 0v5.71a.676.676 0 0 0 1.352 0V7.773a1.922 1.922 0 0 0-1.916-1.92Z"
+                      />
+                      <path
+                        fill="#696969"
+                        d="M6.58 24a1.303 1.303 0 0 1-1.302-1.302v-7.803a.207.207 0 0 0-.414 0v7.803a1.302 1.302 0 0 1-2.603 0V9.034a.206.206 0 1 0-.413 0v5.71a.845.845 0 0 1-1.69 0V7.772a2.09 2.09 0 0 1 2.089-2.088h5.65a2.09 2.09 0 0 1 2.088 2.088v6.972a.845.845 0 0 1-1.69 0v-5.71a.207.207 0 0 0-.413 0v13.664c0 .719-.584 1.301-1.302 1.302Zm-1.51-9.65c.3 0 .544.244.545.545v7.803a.964.964 0 0 0 1.927 0V9.034a.545.545 0 0 1 1.089 0v5.71a.507.507 0 0 0 1.014 0V7.772a1.752 1.752 0 0 0-1.75-1.75h-5.65a1.752 1.752 0 0 0-1.75 1.75v6.972a.507.507 0 0 0 1.013 0v-5.71a.545.545 0 0 1 1.09 0v13.664a.964.964 0 0 0 1.926 0v-7.803c0-.302.245-.545.546-.545Zm.001-9.778a2.202 2.202 0 1 0 0-4.404 2.202 2.202 0 0 0 0 4.404Z"
+                      />
+                      <path
+                        fill="#696969"
+                        d="M5.07 4.743A2.371 2.371 0 1 1 5.07 0a2.371 2.371 0 0 1 0 4.743Zm0-4.405a2.033 2.033 0 1 0 0 4.066 2.033 2.033 0 0 0 0-4.066ZM15.49 22c-.815 0-1.439-.235-1.872-.703-.433-.469-.65-1.13-.65-1.986v-5.622c0-.856.217-1.518.65-1.986.433-.469 1.057-.703 1.873-.703.815 0 1.44.234 1.872.703.433.468.65 1.13.65 1.986v5.622c0 .855-.217 1.517-.65 1.986-.433.468-1.057.703-1.872.703Zm0-1.528c.575 0 .862-.351.862-1.054v-5.836c0-.703-.287-1.055-.861-1.055-.574 0-.861.352-.861 1.055v5.836c0 .703.287 1.054.86 1.054ZM21.492 22c-.815 0-1.435-.23-1.858-.688-.412-.458-.619-1.115-.619-1.97v-.871h1.57v.947c0 .703.288 1.054.862 1.054.282 0 .493-.087.634-.26.151-.183.227-.499.227-.947v-.87c0-.49-.086-.836-.257-1.04-.171-.214-.448-.32-.83-.32h-.56v-1.528h.604c.333 0 .58-.087.74-.26.172-.173.257-.463.257-.87v-.78c0-.367-.075-.637-.226-.81a.762.762 0 0 0-.604-.26c-.534 0-.8.332-.8.994v.702H19.06v-.565c0-.855.206-1.512.619-1.97.423-.46 1.027-.688 1.812-.688.795 0 1.4.229 1.812.687.413.448.62 1.1.62 1.956v.382c0 .58-.096 1.049-.287 1.405-.192.347-.489.596-.892.749v.03c.433.163.745.428.937.795.191.367.287.835.287 1.405v.948c0 .855-.212 1.512-.635 1.97-.412.449-1.026.673-1.842.673Z"
+                      />
+                    </svg>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="25"
+                      height="25"
+                      fill="none"
+                      viewBox="0 0 25 25"
+                    >
+                      <g clip-path="url(#a)">
+                        <path
+                          fill="#696969"
+                          d="M2.39 22.295c0 .387.318.705.705.705a.708.708 0 0 0 .704-.705v-.704H2.39v.704Zm5.305 0c0 .387.318.705.705.705a.708.708 0 0 0 .705-.705v-.704h-1.41v.704Zm3.8-6.88V7.968a1.837 1.837 0 0 0-1.838-1.837h-7.82A1.837 1.837 0 0 0 0 7.968v7.447h11.495ZM0 16.451v2.68c0 1.01.815 1.838 1.837 1.838h7.834a1.837 1.837 0 0 0 1.838-1.837v-2.68H0ZM3.04 3.3h.096v2.183h.898V3.299h3.413v2.183h.898V3.299h.096a.649.649 0 1 0 0-1.299H3.04a.649.649 0 1 0 0 1.299ZM16.694 22c-.816 0-1.44-.234-1.873-.703-.433-.468-.65-1.13-.65-1.986V13.69c0-.855.217-1.518.65-1.986.433-.468 1.057-.703 1.873-.703.815 0 1.44.235 1.873.703.432.469.649 1.13.649 1.986v5.622c0 .856-.217 1.518-.65 1.986-.432.469-1.057.703-1.872.703Zm0-1.527c.574 0 .86-.352.86-1.055v-5.836c0-.703-.286-1.054-.86-1.054-.574 0-.86.351-.86 1.054v5.836c0 .703.286 1.055.86 1.055ZM22.695 22c-.815 0-1.434-.229-1.857-.687-.413-.459-.62-1.115-.62-1.971v-.87h1.571v.946c0 .703.287 1.055.86 1.055.283 0 .494-.087.635-.26.151-.184.227-.5.227-.948v-.87c0-.49-.086-.835-.257-1.04-.171-.213-.448-.32-.83-.32h-.56v-1.528h.605c.332 0 .579-.086.74-.26.17-.173.256-.463.256-.87v-.78c0-.366-.075-.636-.226-.81a.762.762 0 0 0-.604-.259c-.534 0-.8.331-.8.993v.703h-1.571v-.565c0-.856.206-1.513.619-1.971.423-.459 1.027-.688 1.812-.688.796 0 1.4.23 1.812.688.413.448.62 1.1.62 1.955v.382c0 .58-.096 1.05-.287 1.406a1.643 1.643 0 0 1-.891.748v.031c.432.163.745.428.936.794.191.367.287.836.287 1.406v.947c0 .856-.212 1.513-.634 1.971-.413.448-1.027.672-1.843.672Z"
+                        />
+                      </g>
+                      <defs>
+                        <clipPath id="a">
+                          <path fill="#fff" d="M0 0h25v25H0z" />
+                        </clipPath>
+                      </defs>
+                    </svg>
+                  </div>
+                </div>
+                <div
+                  class="w-full sm:w-2/5 flex flex-col justify-between items-start sm:!items-end mt-4 sm:mt-0"
+                >
+                  <div class="font-semibold text-[23px]">
+                    2145.00 <span class="text-[12px]">TRY</span>
+                  </div>
+                  <button
+                    class="primary w-full sm:!py-2 sm:!px-2 md:text-[14px] lg:text-[16px] mt-4 sm:mt-0"
+                  >
+                    <div>Book now</div>
+                    <img src="src/assets/button-right-arrow.svg" alt="" />
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-span-1 block md:hidden">
+          <img class="w-full mt-2" src="src/assets/show-route.png" alt="" />
+          <button class="primary w-full mt-2">Add your return</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Cart total -->
+
+    <div class="container px-4 mx-auto pb-10">
+      <div class="flex items-center space-x-0 sm:space-x-2">
+        <div
+          class="hidden sm:flex w-[100px] h-[100px] bg-lightgraybg rounded items-center justify-center"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="32"
+            height="35"
+            fill="none"
+            viewBox="0 0 32 35"
+          >
+            <path
+              fill="#0F982D"
+              d="M26.435 0H5.565A5.57 5.57 0 0 0 0 5.565v23.652a5.571 5.571 0 0 0 5.565 5.566h20.87A5.571 5.571 0 0 0 32 29.217V5.565A5.571 5.571 0 0 0 26.435 0ZM7.652 30.609a3.478 3.478 0 1 1 0-6.957 3.478 3.478 0 0 1 0 6.957Zm0-8.348a3.478 3.478 0 1 1 0-6.957 3.478 3.478 0 0 1 0 6.957ZM16 30.609a3.478 3.478 0 1 1 0-6.957 3.478 3.478 0 0 1 0 6.957Zm0-8.348a3.478 3.478 0 1 1 0-6.957 3.478 3.478 0 0 1 0 6.957Zm11.826 4.87a3.478 3.478 0 0 1-6.956 0v-8.348a3.478 3.478 0 1 1 6.956 0v8.347Zm0-17.392a2.786 2.786 0 0 1-2.782 2.783H6.957a2.785 2.785 0 0 1-2.783-2.783V6.957a2.785 2.785 0 0 1 2.783-2.783h18.087a2.786 2.786 0 0 1 2.782 2.783v2.782Z"
+            />
+          </svg>
+        </div>
+        <div
+          class="flex flex-col sm:flex-row items-center justify-between sm:!h-[100px] bg-lightgraybg md:px-6 py-8 sm:py-0 space-y-6 sm:space-y-0 px-4 md:px-12 w-full rounded-lg"
+        >
+          <div
+            class="flex items-center space-x-2 text-[18px] sm:text-[16px] md:text-[24px] lg:text-[30px]"
+          >
+            <svg
+            class="block sm:hidden"
+              xmlns="http://www.w3.org/2000/svg"
+              width="18"
+              height="19"
+              fill="none"
+              viewBox="0 0 18 19"
+            >
+              <path
+                fill="#0F982D"
+                d="M14.463 0H3.376A2.96 2.96 0 0 0 .42 2.957v12.565a2.96 2.96 0 0 0 2.956 2.956h11.087a2.96 2.96 0 0 0 2.957-2.956V2.957A2.96 2.96 0 0 0 14.463 0ZM4.485 16.26a1.848 1.848 0 1 1 0-3.695 1.848 1.848 0 0 1 0 3.696Zm0-4.434a1.848 1.848 0 1 1 0-3.696 1.848 1.848 0 0 1 0 3.696Zm4.435 4.435a1.848 1.848 0 1 1 0-3.696 1.848 1.848 0 0 1 0 3.696Zm0-4.435a1.848 1.848 0 1 1 0-3.696 1.848 1.848 0 0 1 0 3.696Zm6.283 2.587a1.848 1.848 0 0 1-3.696 0V9.978a1.848 1.848 0 0 1 3.696 0v4.435Zm0-9.24a1.48 1.48 0 0 1-1.479 1.48H4.116a1.48 1.48 0 0 1-1.479-1.48V3.697a1.48 1.48 0 0 1 1.479-1.479h9.608a1.48 1.48 0 0 1 1.479 1.479v1.478Z"
+              />
+            </svg>
+            <div class="font-medium">Total price:</div>
+            <div class="font-bold text-[#0F982D]">2145.00 TRY</div>
+          </div>
+          <button
+            class="green !bg-transparent !text-[#0F982D] border !border-[#0F982D] w-full sm:w-auto"
+          >
+            <div class="!text-[#0F982D]">Continue reservation</div>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="27"
+              height="8"
+              fill="none"
+              viewBox="0 0 27 8"
+            >
+              <path
+                fill="#0F982D"
+                d="M26.354 4.354a.5.5 0 0 0 0-.708L23.172.464a.5.5 0 1 0-.707.708L25.293 4l-2.828 2.828a.5.5 0 1 0 .707.708l3.182-3.182ZM0 4.5h26v-1H0v1Z"
+              />
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+    <!-- Footer start -->
+    <footer>
+      <div class="container mx-auto">
+        <div
+          class="flex flex-col lg:flex-row items-center justify-between py-10"
+        >
+          <img src="src/assets/logo-white.svg" alt="" />
+          <div class="flex items-center space-x-2 mt-4 lg:mt-0">
+            <!-- Lang -->
+            <button
+              id="footer_langDropdownButton"
+              data-dropdown-toggle="footer_langDropdown"
+              class="inline-flex items-center space-x-2 border border-white rounded p-2 text-white"
+              type="button"
+            >
+              <img src="src/assets/english.svg" alt="" />
+              <span>English</span>
+              <svg
+                class="w-4 h-4 ml-2"
+                aria-hidden="true"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M19 9l-7 7-7-7"
+                ></path>
+              </svg>
+            </button>
+
+            <!-- Language dropdown menu -->
+            <div
+              id="footer_langDropdown"
+              class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700 dark:divide-gray-600"
+            >
+              <ul
+                class="py-2 text-sm text-gray-700 dark:text-gray-200"
+                aria-labelledby="footer_langDropdownButton"
+              >
+                <li>
+                  <a
+                    href="#"
+                    class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                    >Türkçe</a
+                  >
+                </li>
+              </ul>
+            </div>
+            <!-- Currency -->
+            <button
+              id="footer_currencyDropdownButton"
+              data-dropdown-toggle="footer_currencyDropdown"
+              class="inline-flex items-center space-x-2 border border-white rounded p-2 text-white"
+              type="button"
+            >
+              <span>USD</span>
+              <svg
+                class="w-4 h-4 ml-2"
+                aria-hidden="true"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M19 9l-7 7-7-7"
+                ></path>
+              </svg>
+            </button>
+
+            <!-- Language dropdown menu -->
+            <div
+              id="footer_currencyDropdown"
+              class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700 dark:divide-gray-600"
+            >
+              <ul
+                class="py-2 text-sm text-gray-700 dark:text-gray-200"
+                aria-labelledby="footer_currencyDropdownButton"
+              >
+                <li>
+                  <a
+                    href="#"
+                    class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                    >EUR</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="flex flex-col lg:flex-row items-center justify-between">
+          <div
+            class="border border-dashed border-white text-4xl text-white p-4 rounded-xl"
+          >
+            +90 (242) 514-13-10
+          </div>
+          <div
+            class="flex flex-col space-y-2 text-white mt-4 lg:mt-0 w-3/4 lg:w-1/4"
+          >
+            <div class="flex items-center grid grid-cols-2 gap-2">
+              <button class="py-2 p-4 border border-white rounded-lg">
+                Services
+              </button>
+              <button class="py-2 p-4 border border-white rounded-lg">
+                About us
+              </button>
+            </div>
+            <div class="flex items-center grid grid-cols-2 gap-2">
+              <button class="py-2 p-4 border border-white rounded-lg">
+                Contact us
+              </button>
+              <button class="py-2 p-4 border border-white rounded-lg">
+                Travel guide
+              </button>
+            </div>
+          </div>
+        </div>
+        <div
+          class="flex justify-center lg:!justify-start items-center space-x-2 mt-4 lg:mt-0"
+        >
+          <a
+            href="#"
+            class="flex items-center justify-center w-12 h-12 rounded-lg p-3 border border-white"
+          >
+            <img src="src/assets/social/facebook.svg" alt="" />
+          </a>
+          <a
+            href="#"
+            class="flex items-center justify-center w-12 h-12 rounded-lg p-3 border border-white"
+          >
+            <img src="src/assets/social/instagram.svg" alt="" />
+          </a>
+          <a
+            href="#"
+            class="flex items-center justify-center w-12 h-12 rounded-lg p-3 border border-white"
+          >
+            <img src="src/assets/social/youtube.svg" alt="" />
+          </a>
+          <a
+            href="#"
+            class="flex items-center justify-center w-12 h-12 rounded-lg p-3 border border-white"
+          >
+            <img src="src/assets/social/twitter.svg" alt="" />
+          </a>
+          <a
+            href="#"
+            class="flex items-center justify-center w-12 h-12 rounded-lg p-3 border border-white"
+          >
+            <img src="src/assets/social/linkedin.svg" alt="" />
+          </a>
+        </div>
+        <div
+          class="border-t border-white/55 py-4 mt-10 flex justify-between items-center px-2 md:px-0"
+        >
+          <img class="h-6" src="src/assets/footer/footer.svg" alt="" />
+          <div class="text-white/70 text-xs pl-4">
+            © Copyright Bizim Transfer. All Rights Reserved
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- Footer end -->
+    <script
+      type="text/javascript"
+      src="//code.jquery.com/jquery-1.11.0.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="//code.jquery.com/jquery-migrate-1.2.1.min.js"
+    ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.4/flowbite.min.js"></script>
+    <script
+      type="text/javascript"
+      src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"
+    ></script>
+    <script>
+      window.addEventListener("DOMContentLoaded", (event) => {
+        const windowWidth = window.innerWidth;
+        if (windowWidth > 1024) {
+          let box = document.querySelector(".container");
+          let margin = (windowWidth - box.offsetWidth) / 2;
+          let sliderEl = document.getElementById("slider-area");
+          sliderEl.style.marginLeft = `${margin}px`;
+        }
+        $(document).ready(function () {
+          $(".your-class").slick({
+            slidesToShow: 3.2,
+            arrows: false,
+            infinite: false,
+            responsive: [
+              {
+                breakpoint: 1024,
+                settings: {
+                  slidesToShow: 3,
+                  slidesToScroll: 3,
+                },
+              },
+              {
+                breakpoint: 640,
+                settings: {
+                  slidesToShow: 1.2,
+                  slidesToScroll: 1.2,
+                },
+              },
+              // You can unslick at a given breakpoint now by adding:
+              // settings: "unslick"
+              // instead of a settings object
+            ],
+          });
+        });
+      });
+    </script>
+  </body>
+</html>

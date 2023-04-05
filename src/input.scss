@@ -5,9 +5,17 @@
 * {
     font-family: "Raleway", sans-serif;
 }
+
 .container {
     @apply px-4 sm:px-0;
 }
+
+.booking {
+    .container {
+        @apply px-4 lg:px-0;
+    }
+}
+
 header {
     font-family: 'Raleway';
     font-style: normal;
@@ -28,6 +36,16 @@ button {
     &.primary {
         @apply flex justify-center items-center py-4 px-8 text-white space-x-2;
         background: linear-gradient(180deg, #F98F3D 0%, #D76C19 100%);
+        border-radius: 5px;
+
+        * {
+            @apply text-white font-medium;
+        }
+    }
+
+    &.green {
+        @apply flex justify-center items-center py-4 px-8 text-white space-x-2;
+        background: #0F982D;
         border-radius: 5px;
 
         * {
