@@ -224,8 +224,10 @@
     <!-- top area start -->
     <section class="relative bg-[#FBFAFF] pt-24">
       <div class="container mx-auto">
-        <div class="grid grid-cols-3 items-center gap-10 pb-8">
-          <div class="col-span-2">
+        <div
+          class="grid md:grid-cols-1 lg:grid-cols-3 items-center gap-10 pb-8"
+        >
+          <div class="md:grid-cols-1 lg:col-span-2">
             <h1 class="text-[53px] font-reglar uppercase">
               Reliable & Low Cost
               <span class="block"
@@ -234,13 +236,15 @@
               </span>
             </h1>
           </div>
-          <div class="col-span-1">
-            <div class="flex items-center space-x-2">
+          <div class="col-span-1 flex flex-col md:flex-row lg:!flex-col">
+            <div
+              class="flex items-center space-x-2 order-2 lg:order-1 md:ml-4 lg:ml-0 mt-10 md:mt-0 z-[1]"
+            >
               <img src="src/assets/top-slider/baby.svg" alt="" />
               <img src="src/assets/top-slider/charge.svg" alt="" />
               <img src="src/assets/top-slider/24hour.svg" alt="" />
             </div>
-            <p class="mt-3">
+            <p class="md:w-1/2 lg:w-full mt-3 order-1 lg:order-2">
               Comfortable cars, professional drivers and a safe journey - all
               this you will get by ordering passenger transportation in Turkey
               with us.
@@ -248,7 +252,7 @@
           </div>
         </div>
       </div>
-      <img class="w-full" src="src/assets/main-slider.png" alt="" />
+      <img class="w-full h-[378px] md:h-auto object-cover -mt-24 md:mt-0" src="src/assets/main-slider.png" alt="" />
     </section>
     <!-- Top area end -->
 
@@ -256,7 +260,7 @@
     <section class="-mt-24">
       <div
         id="top-picker"
-        class="relative container mx-auto py-8 px-10 bg-white rounded-xl shadow-2xl"
+        class="relative container mx-auto py-8 !px-10 bg-white rounded-xl shadow-2xl"
       >
         <div class="flex items-center space-x-4 pb-2">
           <!-- One way menu -->
@@ -325,17 +329,17 @@
           </div>
         </div>
         <hr class="mb-4" />
-        <div class="grid grid-cols-7 gap-2">
-          <div class="col-span-2 relative">
+        <div class="grid md:grid-cols-2 lg:!grid-cols-7 gap-2">
+          <div class="md:col-span-1 lg:col-span-2 relative">
             <div class="form-group">
               <div class="label">From address</div>
               <input type="text" placeholder="Pick up location" />
-              <button class="absolute top-4 -right-4">
+              <button class="absolute md:top-4 md:-right-4 top-14 right-4 rotate-90 md:!rotate-0">
                 <img src="src/assets/top-slider/swap.svg" alt="" />
               </button>
             </div>
           </div>
-          <div class="col-span-2">
+          <div class="md:col-span-1 lg:col-span-2">
             <div class="form-group">
               <div class="label">To</div>
               <input type="text" placeholder="Drop off location" />
@@ -353,7 +357,7 @@
               <input type="text" placeholder="12:00" />
             </div>
           </div>
-          <div class="col-span-1">
+          <div class="md:col-span-2 lg:col-span-1">
             <button class="primary h-full w-full">Search</button>
           </div>
         </div>
@@ -363,9 +367,9 @@
 
     <!-- triple start -->
     <section class="container mx-auto py-28">
-      <div class="grid grid-cols-3 gap-10">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
         <div class="col-span-1">
-          <div class="flex items-center space-x-4">
+          <div class="flex md:flex-col lg:flex-row items-center space-x-4">
             <img src="src/assets/flexible-booking-policy.svg" alt="" />
             <div class="space-y-1">
               <div class="text-[18px] font-semibold">
@@ -378,7 +382,7 @@
           </div>
         </div>
         <div class="col-span-1">
-          <div class="flex items-center space-x-4">
+          <div class="flex md:flex-col lg:flex-row items-center space-x-4">
             <img src="src/assets/tried-and-trusted.svg" alt="" />
             <div class="space-y-1">
               <div class="text-[18px] font-semibold">Tried and trusted</div>
@@ -389,7 +393,7 @@
           </div>
         </div>
         <div class="col-span-1">
-          <div class="flex items-center space-x-4">
+          <div class="flex md:flex-col lg:flex-row items-center space-x-4">
             <img src="src/assets/one-clear-price.svg" alt="" />
             <div class="space-y-1">
               <div class="text-[18px] font-semibold">One clear price</div>
@@ -414,58 +418,83 @@
         >
       </h2>
       <hr />
-      <div class="grid grid-cols-3 gap-20 py-10">
-        <div class="col-span-1 relative">
+      <div
+        class="grid grid-cols-1 lg:grid-cols-3 items-start md:gap-4 lg:gap-x-20 py-10"
+      >
+        <div class="col-span-1 grid grid-cols-5 gap-8 relative items-center">
           <img
-            class="h-[138px] z-10 relative"
+            class="col-span-5 md:col-span-2 lg:col-span-5 w-full items-center lg:w-auto lg:h-[138px] z-10 relative"
             src="src/assets/bookingwithus-1.png"
             alt=""
           />
           <div
-            class="absolute z-0 text-[88px] text-black/10 left-[11.2rem] top-[2rem]"
+            class="col-span-5 md:col-span-3 lg:col-span-5 md:relative lg:static p-10 md:p-0"
           >
-            01
+            <div
+              class="absolute z-0 text-[88px] text-black/10 right-0 bottom-0 md:-left-2 md:-top-2 lg:left-[12.5rem] lg:top-[2rem]"
+            >
+              01
+            </div>
+            <div class="font-semibold md:mt-4 lg:mt-0">
+              Fill out the order form
+              <span class="block">and payment options</span>
+            </div>
+            <div class="text-black/90 mt-4">
+              Choose your desired pick-up date and time, payment method, and
+              other requirements. Once you have successfully placed your order,
+              a confirmation voucher will be sent to your email.
+            </div>
           </div>
-          <div class="font-semibold mt-8">Choose your route and car</div>
         </div>
-        <div class="col-span-1 relative">
+        <div class="col-span-1 grid grid-cols-5 gap-8 relative items-center">
           <img
-            class="h-[138px] z-10 relative"
+            class="col-span-5 md:col-span-2 lg:col-span-5 w-full items-center lg:w-auto lg:h-[138px] z-10 relative"
             src="src/assets/bookingwithus-2.png"
             alt=""
           />
+
           <div
-            class="absolute z-0 text-[88px] text-black/10 left-[10rem] top-[2rem]"
+            class="col-span-5 md:col-span-3 lg:col-span-5 md:relative lg:static p-0 md:p-10 lg:p-0"
           >
-            02
-          </div>
-          <div class="font-semibold mt-8">
-            Fill out the order form
-            <span class="block">and payment options</span>
-          </div>
-          <div class="text-black/90 mt-4">
-            Choose your desired pick-up date and time, payment method, and other
-            requirements. Once you have successfully placed your order, a
-            confirmation voucher will be sent to your email.
+            <div
+              class="absolute z-0 text-[88px] text-black/10 bottom-0 right-0 md:-left-2 md:-top-2 lg:left-[10rem] lg:top-[2rem]"
+            >
+              02
+            </div>
+            <div class="font-semibold md:mt-4 lg:mt-0">
+              Fill out the order form
+              <span class="block">and payment options</span>
+            </div>
+            <div class="text-black/90 mt-4">
+              Choose your desired pick-up date and time, payment method, and
+              other requirements. Once you have successfully placed your order,
+              a confirmation voucher will be sent to your email.
+            </div>
           </div>
         </div>
-        <div class="col-span-1 relative">
+        <div class="col-span-1 grid grid-cols-5 gap-8 relative items-center mt-8 md:mt-0">
           <img
-            class="h-[138px] z-10 relative"
+            class="col-span-5 md:col-span-2 lg:col-span-5 w-full items-center lg:w-auto lg:h-[138px] z-10 relative"
             src="src/assets/bookingwithus-3.png"
             alt=""
           />
           <div
-            class="absolute z-0 text-[88px] text-black/10 left-[12.5rem] top-[2rem]"
+            class="col-span-5 md:col-span-3 lg:col-span-5 md:relative lg:static p-0 lg:p-10 lg:p-0"
           >
-            02
-          </div>
-          <div class="font-semibold mt-8">Meet your driver</div>
-          <div class="text-black/90 mt-4">
-            Your driver will be waiting for you at the designated location at
-            the scheduled time. No need to worry about being late or missing
-            your ride. We guarantee timely and reliable transportation services
-            to ensure your convenience and peace of mind.
+            <div
+              class="absolute z-0 text-[88px] text-black/10 right-0 md:-left-2 md:-top-2 lg:left-[12rem] lg:top-[2rem]"
+            >
+              03
+            </div>
+            <div class="font-semibold md:mt-4 lg:mt-0">
+              Fill out the order form
+              <span class="block">and payment options</span>
+            </div>
+            <div class="text-black/90 mt-4">
+              Choose your desired pick-up date and time, payment method, and
+              other requirements. Once you have successfully placed your order,
+              a confirmation voucher will be sent to your email.
+            </div>
           </div>
         </div>
       </div>
@@ -479,7 +508,7 @@
           <span class="highlighted-text">OUR TRANSFER</span> FOR
           <span class="block">ANY KIND OF TRIP</span>
         </h2>
-        <p class="text-[18px] w-1/2 mt-8">
+        <p class="text-[18px] w-full md:w-1/2 mt-8 mb-8">
           With our modern fleet of vehicles and skilled drivers, you can be sure
           that your journey will be comfortable and stress-free.
         </p>
@@ -489,10 +518,10 @@
             id="tabs"
             class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
           >
-            <option>Profile</option>
-            <option>Canada</option>
-            <option>France</option>
-            <option>Germany</option>
+            <option>1-3 passengers</option>
+            <option>4-7 passengers</option>
+            <option>8-14 passengers</option>
+            <option>Shared</option>
           </select>
         </div>
         <ul
@@ -530,12 +559,14 @@
         </ul>
 
         <div
-          class="bg-white rounded-lg mt-8 p-8 grid grid-cols-2 gap-10 items-center"
+          class="bg-white rounded-lg mt-8 p-8 grid md:grid-cols-5 lg:grid-cols-2 gap-10 items-center"
         >
-          <div class="col-span-1">
+          <div class="md:col-span-2 lg:col-span-1">
             <img src="src/assets/car.png" alt="" />
           </div>
-          <div class="col-span-1 grid grid-cols-2 gap-4 items-center">
+          <div
+            class="md:col-span-3 lg:col-span-1 grid grid-cols-1 md:grid-cols-2 gap-4 items-center"
+          >
             <div class="col-span-1">
               <div class="text-[29px] font-semibold">Standart</div>
               <div class="font-medium text-black/40">
@@ -643,10 +674,12 @@
                 <div class="text-black/80">No waiting time limit</div>
               </div>
             </div>
-            <div class="col-span-1">
-              <div class="flex-1 flex items-center space-x-2">
+            <div class="col-span-1 mt-4 md:mt-0">
+              <div
+                class="flex-1 flex flex-row md:flex-col lg:flex-row md:items-end lg:items-center space-x-2"
+              >
                 <div
-                  class="w-auto flex items-center space-x-2 rounded-full border border-gray-300 py-2 px-4"
+                  class="w-auto flex items-center space-x-2 rounded-full border border-gray-300 py-2 px-4 md:mb-2 lg:mb-0"
                 >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -841,7 +874,7 @@
 
     <!-- slider area -->
     <div id="slider-area" class="py-10 relative">
-      <div class="your-class relative -mx-2">
+      <div class="your-class relative">
         <!-- slider item -->
         <div class="relative mx-2">
           <img class="w-full" src="src/assets/slider1.png" alt="" />
@@ -1032,8 +1065,8 @@
     <!-- blog -->
     <section class="py-20 bg-[#FBFAFF]">
       <div class="container mx-auto">
-        <div class="grid grid-cols-2 items-end">
-          <div class="col-span-1">
+        <div class="grid md:grid-cols-3 lg:grid-cols-2 items-end">
+          <div class="md:col-span-2 lg:col-span-1">
             <h2 class="text-[43px]">
               OUR <span class="highlighted-text">BLOG</span>
             </h2>
@@ -1043,15 +1076,15 @@
               recommendations from locals and much more.
             </p>
           </div>
-          <div class="col-span-1 flex justify-end">
-            <button class="primary">
+          <div class="col-span-1 flex justify-end mt-4 md:mt-0">
+            <button class="primary w-full md:w-auto">
               <div>See all articles</div>
               <img src="src/assets/button-right-arrow.svg" alt="" />
             </button>
           </div>
         </div>
         <hr class="my-4" />
-        <div class="grid grid-cols-3 gap-4">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
           <div class="col-span-1">
             <img class="w-full" src="src/assets/blog1.png" alt="" />
             <div class="font-semibold text-[18px] mt-4 mb-2">
@@ -1090,10 +1123,14 @@
     <div class="section py-20">
       <div class="container mx-auto">
         <h2 class="text-[43px]">FAQ</h2>
-        <div class="grid grid-cols-3 gap-4 mt-4">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mt-4">
           <!-- faq quests -->
-          <div class="col-span-2">
-            <div id="accordion-collapse" data-accordion="collapse" data-active-classes="bg-white">
+          <div class="md:col-span-3 lg:col-span-2">
+            <div
+              id="accordion-collapse"
+              data-accordion="collapse"
+              data-active-classes="bg-white"
+            >
               <h2 id="accordion-collapse-heading-1">
                 <button
                   type="button"
@@ -1182,9 +1219,7 @@
                   aria-expanded="false"
                   aria-controls="accordion-collapse-body-3"
                 >
-                  <span
-                    >FAQ Question?</span
-                  >
+                  <span>FAQ Question?</span>
                   <svg
                     data-accordion-icon
                     class="w-6 h-6 shrink-0"
@@ -1215,16 +1250,20 @@
               </div>
             </div>
           </div>
-          <div class="col-span-1">
-            <div class="primary-bg p-8 rounded-lg">
-              <div class="font-semibold text-[21px]">
-                Do you have any questions?
+          <div class="md:col-span-3 lg:col-span-1">
+            <div
+              class="md:border lg:border-0 border-[#D76C19] primary-bg grid grid-cols-2 p-8 rounded-lg"
+            >
+              <div class="col-span-2 md:col-span-1 lg:col-span-2">
+                <div class="font-semibold text-[21px]">
+                  Do you have any questions?
+                </div>
+                <div class="mt-2">
+                  Leave a request and our manager will answer you as soon as
+                  possible
+                </div>
               </div>
-              <div class="mt-2">
-                Leave a request and our manager will answer you as soon as
-                possible
-              </div>
-              <div class="space-y-2 mt-4">
+              <div class="hidden lg:block space-y-2 mt-4 col-span-2">
                 <input
                   type="text"
                   id="first_name"
@@ -1254,6 +1293,14 @@
                 ></textarea>
                 <button
                   class="flex items-center space-x-2 justify-center py-3 text-base rounded border border-[#FBFAFF]/70 w-full !mt-4 !bg-transparent"
+                >
+                  <div>Submit and inquiry</div>
+                  <img src="src/assets/button-right-arrow.svg" alt="" />
+                </button>
+              </div>
+              <div class="flex justify-end lg:hidden col-span-2 md:col-span-1">
+                <button
+                  class="w-full md:w-auto px-8 flex items-center space-x-2 justify-center py-3 text-base rounded border border-[#FBFAFF]/70 w-full !mt-4 primary-bg"
                 >
                   <div>Submit and inquiry</div>
                   <img src="src/assets/button-right-arrow.svg" alt="" />
@@ -1367,8 +1414,8 @@
           >
             +90 (242) 514-13-10
           </div>
-          <div class="flex flex-col space-y-2 text-white mt-4 lg:mt-0">
-            <div class="flex items-center space-x-2">
+          <div class="flex flex-col space-y-2 text-white mt-4 lg:mt-0 w-3/4 lg:w-1/4">
+            <div class="flex items-center grid grid-cols-2 gap-2">
               <button class="py-2 p-4 border border-white rounded-lg">
                 Services
               </button>
@@ -1376,7 +1423,7 @@
                 About us
               </button>
             </div>
-            <div class="flex items-center space-x-2">
+            <div class="flex items-center grid grid-cols-2 gap-2">
               <button class="py-2 p-4 border border-white rounded-lg">
                 Contact us
               </button>
@@ -1458,6 +1505,25 @@
             slidesToShow: 3.2,
             arrows: false,
             infinite: false,
+            responsive: [
+              {
+                breakpoint: 1024,
+                settings: {
+                  slidesToShow: 3,
+                  slidesToScroll: 3,
+                },
+              },
+              {
+                breakpoint: 640,
+                settings: {
+                  slidesToShow: 1.2,
+                  slidesToScroll: 1.2,
+                },
+              },
+              // You can unslick at a given breakpoint now by adding:
+              // settings: "unslick"
+              // instead of a settings object
+            ],
           });
         });
       });
