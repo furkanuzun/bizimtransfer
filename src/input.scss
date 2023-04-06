@@ -94,6 +94,31 @@ footer {
         }
 
     }
+    .select2.select2-container.select2-container--default {
+        @apply !w-full;
+    }
+    .select2-selection__rendered {
+        @apply !pl-0;
+    }
+    .select2-selection.select2-selection--single {
+        @apply !bg-transparent !outline-none !border-0;
+    }
+    .select2-dropdown.select2-dropdown--below {
+        @apply !shadow-xl border !border-gray-200;
+    }
+    .select2-search__field{
+        @apply !rounded;
+        &:focus {
+            @apply rounded;
+            outline: none !important;
+            box-shadow:none !important;
+            @apply focus:!shadow-none;
+        }
+    }
+}
+input {
+    outline: none !important;
+    box-shadow:none;
 }
 
 .highlighted-text {
