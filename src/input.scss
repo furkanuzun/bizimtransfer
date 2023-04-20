@@ -29,7 +29,7 @@ header {
 }
 
 body {
-    padding-top: 83px;
+    @apply pt-[132px] md:pt-[83px];
 }
 
 button {
@@ -133,7 +133,6 @@ input {
 .active-tab-btn {
     @apply  !text-white;
     background: linear-gradient(180deg, #F98F3D 0%, #D76C19 100%) !important;
-    border-radius: 10px 0px 0px 10px;
 }
 
 .slider-desc {
@@ -145,4 +144,23 @@ input {
 
 [data-accordion-icon] {
     @apply -rotate-90 bg-[#FBFAFF];
+}
+
+.tabcontent {
+    display: none;
+}
+.tablinks {
+    @apply cursor-pointer;
+}
+
+.slick-prev, .slick-next {
+    @apply !hidden;
+}
+
+.payment-btn {
+    @apply border border-[#696969] rounded text-[#696969] py-2 p-5;
+}
+
+.payment-btn-active {
+    @apply primary !py-2 !p-5;
 }
