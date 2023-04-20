@@ -25,7 +25,7 @@
 
   <body>
     <!-- Header start -->
-    <nav class="bg-[#FBFAFF] fixed w-full z-20 top-0 left-0 rounded-b-lg">
+    <nav class="bg-white fixed w-full z-20 top-0 left-0 rounded-b-lg">
       <div
         class="border-b border-gray-300 py-2 px-4 flex sm:hidden justify-between items-center"
       >
@@ -333,7 +333,7 @@
           id="navbar-sticky"
         >
           <ul
-            class="flex flex-col p-4 lg:p-0 mt-4 space-y-4 lg:!space-y-0 border border-gray-100 rounded-lg bg-gray-50 lg:flex-row lg:space-x-8 lg:mt-0 lg:border-0 lg:!bg-white"
+            class="flex flex-col p-4 lg:p-0 mt-4 space-y-4 lg:!space-y-0 border border-gray-100 rounded-lg lg:flex-row lg:space-x-8 lg:mt-0 lg:border-0"
           >
             <li>
               <a href="#" class="primary" aria-current="page">Home</a>
@@ -730,7 +730,9 @@
                 class="w-4 h-4 border-2 !border-[#F98F3D] rounded"
                 onchange="handleInvoice(this.checked, false)"
               />
-              <label for="invoicedetailmobile" class="ml-2 font-medium text-[#12121299]"
+              <label
+                for="invoicedetailmobile"
+                class="ml-2 font-medium text-[#12121299]"
                 >Invoice Detail</label
               >
             </div>
@@ -1992,10 +1994,9 @@
           ).toggleClass("hidden");
         }
         if (!val) {
-          $(`#invoicedetail-personal${isDesktop ? "-desktop" : "-mobile"}`).attr(
-            "class",
-            "hidden"
-          );
+          $(
+            `#invoicedetail-personal${isDesktop ? "-desktop" : "-mobile"}`
+          ).attr("class", "hidden");
           $(`#invoicedetail-company${isDesktop ? "-desktop" : "-mobile"}`).attr(
             "class",
             "hidden"
@@ -2006,19 +2007,17 @@
       function handleInvoicePersonal(val, isDesktop) {
         let isPersonal = val === "personal";
         if (isPersonal) {
-          $(`#invoicedetail-personal${isDesktop ? "-desktop" : "-mobile"}`).attr(
-            "class",
-            "block"
-          );
+          $(
+            `#invoicedetail-personal${isDesktop ? "-desktop" : "-mobile"}`
+          ).attr("class", "block");
           $(`#invoicedetail-company${isDesktop ? "-desktop" : "-mobile"}`).attr(
             "class",
             "hidden"
           );
         } else {
-          $(`#invoicedetail-personal${isDesktop ? "-desktop" : "-mobile"}`).attr(
-            "class",
-            "hidden"
-          );
+          $(
+            `#invoicedetail-personal${isDesktop ? "-desktop" : "-mobile"}`
+          ).attr("class", "hidden");
           $(`#invoicedetail-company${isDesktop ? "-desktop" : "-mobile"}`).attr(
             "class",
             "block"
