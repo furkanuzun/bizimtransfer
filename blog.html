@@ -1,0 +1,681 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="/dist/output.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.4/flowbite.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- Header start -->
+    <nav class="bg-white fixed w-full z-20 top-0 left-0 rounded-b-lg">
+      <div
+        class="border-b border-gray-300 py-2 px-4 flex sm:hidden justify-between items-center"
+      >
+        <div
+          class="bg-[#29A71A] rounded py-1 px-3 flex items-center space-x-1 text-white"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            width="24px"
+            height="24px"
+            fill="white"
+          >
+            <path
+              d="M 12.011719 2 C 6.5057187 2 2.0234844 6.478375 2.0214844 11.984375 C 2.0204844 13.744375 2.4814687 15.462563 3.3554688 16.976562 L 2 22 L 7.2324219 20.763672 C 8.6914219 21.559672 10.333859 21.977516 12.005859 21.978516 L 12.009766 21.978516 C 17.514766 21.978516 21.995047 17.499141 21.998047 11.994141 C 22.000047 9.3251406 20.962172 6.8157344 19.076172 4.9277344 C 17.190172 3.0407344 14.683719 2.001 12.011719 2 z M 12.009766 4 C 14.145766 4.001 16.153109 4.8337969 17.662109 6.3417969 C 19.171109 7.8517969 20.000047 9.8581875 19.998047 11.992188 C 19.996047 16.396187 16.413812 19.978516 12.007812 19.978516 C 10.674812 19.977516 9.3544062 19.642812 8.1914062 19.007812 L 7.5175781 18.640625 L 6.7734375 18.816406 L 4.8046875 19.28125 L 5.2851562 17.496094 L 5.5019531 16.695312 L 5.0878906 15.976562 C 4.3898906 14.768562 4.0204844 13.387375 4.0214844 11.984375 C 4.0234844 7.582375 7.6067656 4 12.009766 4 z M 8.4765625 7.375 C 8.3095625 7.375 8.0395469 7.4375 7.8105469 7.6875 C 7.5815469 7.9365 6.9355469 8.5395781 6.9355469 9.7675781 C 6.9355469 10.995578 7.8300781 12.182609 7.9550781 12.349609 C 8.0790781 12.515609 9.68175 15.115234 12.21875 16.115234 C 14.32675 16.946234 14.754891 16.782234 15.212891 16.740234 C 15.670891 16.699234 16.690438 16.137687 16.898438 15.554688 C 17.106437 14.971687 17.106922 14.470187 17.044922 14.367188 C 16.982922 14.263188 16.816406 14.201172 16.566406 14.076172 C 16.317406 13.951172 15.090328 13.348625 14.861328 13.265625 C 14.632328 13.182625 14.464828 13.140625 14.298828 13.390625 C 14.132828 13.640625 13.655766 14.201187 13.509766 14.367188 C 13.363766 14.534188 13.21875 14.556641 12.96875 14.431641 C 12.71875 14.305641 11.914938 14.041406 10.960938 13.191406 C 10.218937 12.530406 9.7182656 11.714844 9.5722656 11.464844 C 9.4272656 11.215844 9.5585938 11.079078 9.6835938 10.955078 C 9.7955938 10.843078 9.9316406 10.663578 10.056641 10.517578 C 10.180641 10.371578 10.223641 10.267562 10.306641 10.101562 C 10.389641 9.9355625 10.347156 9.7890625 10.285156 9.6640625 C 10.223156 9.5390625 9.737625 8.3065 9.515625 7.8125 C 9.328625 7.3975 9.131125 7.3878594 8.953125 7.3808594 C 8.808125 7.3748594 8.6425625 7.375 8.4765625 7.375 z"
+            />
+          </svg>
+          <span>Call</span>
+        </div>
+        <!-- Lang, Currency, User -->
+        <div class="flex sm:hidden items-center space-x-2">
+          <!-- Lang -->
+          <button
+            id="langDropdownButton"
+            data-dropdown-toggle="langDropdown"
+            class="inline-flex items-center space-x-2 p-2 border border-gray-500 rounded"
+            type="button"
+          >
+            <img src="src/assets/english.svg" alt="" />
+            <svg
+              class="w-4 h-4 ml-2"
+              aria-hidden="true"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M19 9l-7 7-7-7"
+              ></path>
+            </svg>
+          </button>
+
+          <!-- Language dropdown menu -->
+          <div
+            id="langDropdown"
+            class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44"
+          >
+            <ul
+              class="py-2 text-sm text-gray-700"
+              aria-labelledby="langDropdownButton"
+            >
+              <li>
+                <a href="#" class="block px-4 py-2 hover:bg-gray-100">Türkçe</a>
+              </li>
+            </ul>
+          </div>
+          <!-- Currency -->
+          <button
+            id="currencyDropdownButton"
+            data-dropdown-toggle="currencyDropdown"
+            class="inline-flex items-center space-x-2 border border-gray-500 rounded p-2"
+            type="button"
+          >
+            <span>USD</span>
+            <svg
+              class="w-4 h-4 ml-2"
+              aria-hidden="true"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M19 9l-7 7-7-7"
+              ></path>
+            </svg>
+          </button>
+
+          <!-- Currency dropdown menu -->
+          <div
+            id="currencyDropdown"
+            class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44"
+          >
+            <ul
+              class="py-2 text-sm text-gray-700"
+              aria-labelledby="currencyDropdownButton"
+            >
+              <li>
+                <a href="#" class="block px-4 py-2 hover:bg-gray-100">EUR</a>
+              </li>
+            </ul>
+          </div>
+          <!-- User -->
+          <button
+            id="userDropdownButton"
+            data-dropdown-toggle="userDropdown"
+            class="inline-flex items-center space-x-2 border border-gray-500 rounded p-2"
+            type="button"
+          >
+            <img src="src/assets/user.svg" alt="" />
+            <svg
+              class="w-4 h-4 ml-2"
+              aria-hidden="true"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M19 9l-7 7-7-7"
+              ></path>
+            </svg>
+          </button>
+
+          <!-- User dropdown menu -->
+          <div
+            id="userDropdown"
+            class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44"
+          >
+            <ul
+              class="py-2 text-sm text-gray-700"
+              aria-labelledby="userDropdownButton"
+            >
+              <li>
+                <a href="#" class="block px-4 py-2 hover:bg-gray-100"
+                  >Profile settings</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div
+        class="max-w-screen-xl flex flex-wrap items-center justify-between !mx-auto p-4 border-b border-black/70 rounded-b-lg"
+      >
+        <a href="https://flowbite.com/" class="flex items-center">
+          <img src="src/assets/logo.svg" class="h-8 mr-3" alt="Flowbite Logo" />
+        </a>
+        <div class="flex space-x-4 md:order-2">
+          <!-- Lang, Currency, User -->
+          <div class="hidden md:flex items-center space-x-8">
+            <!-- Lang -->
+            <button
+              id="langDropdownButton"
+              data-dropdown-toggle="langDropdown"
+              class="inline-flex items-center space-x-2"
+              type="button"
+            >
+              <img src="src/assets/english.svg" alt="" />
+              <span>English</span>
+              <svg
+                class="w-4 h-4 ml-2"
+                aria-hidden="true"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M19 9l-7 7-7-7"
+                ></path>
+              </svg>
+            </button>
+
+            <!-- Language dropdown menu -->
+            <div
+              id="langDropdown"
+              class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44"
+            >
+              <ul
+                class="py-2 text-sm text-gray-700"
+                aria-labelledby="langDropdownButton"
+              >
+                <li>
+                  <a href="#" class="block px-4 py-2 hover:bg-gray-100"
+                    >Türkçe</a
+                  >
+                </li>
+              </ul>
+            </div>
+            <!-- Currency -->
+            <button
+              id="currencyDropdownButton"
+              data-dropdown-toggle="currencyDropdown"
+              class="inline-flex items-center space-x-2"
+              type="button"
+            >
+              <span>USD</span>
+              <svg
+                class="w-4 h-4 ml-2"
+                aria-hidden="true"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M19 9l-7 7-7-7"
+                ></path>
+              </svg>
+            </button>
+
+            <!-- Currency dropdown menu -->
+            <div
+              id="currencyDropdown"
+              class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44"
+            >
+              <ul
+                class="py-2 text-sm text-gray-700"
+                aria-labelledby="currencyDropdownButton"
+              >
+                <li>
+                  <a href="#" class="block px-4 py-2 hover:bg-gray-100">EUR</a>
+                </li>
+              </ul>
+            </div>
+            <!-- User -->
+            <button
+              id="userDropdownButton"
+              data-dropdown-toggle="userDropdown"
+              class="inline-flex items-center space-x-2"
+              type="button"
+            >
+              <img src="src/assets/user.svg" alt="" />
+              <svg
+                class="w-4 h-4 ml-2"
+                aria-hidden="true"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M19 9l-7 7-7-7"
+                ></path>
+              </svg>
+            </button>
+
+            <!-- User dropdown menu -->
+            <div
+              id="userDropdown"
+              class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44"
+            >
+              <ul
+                class="py-2 text-sm text-gray-700"
+                aria-labelledby="userDropdownButton"
+              >
+                <li>
+                  <a href="#" class="block px-4 py-2 hover:bg-gray-100"
+                    >Profile settings</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Contact us -->
+          <button class="!hidden md:!flex primary">
+            <img src="src/assets/call.svg" alt="" />
+            <span>+90 (242) 514-13-10</span>
+          </button>
+          <button
+            data-collapse-toggle="navbar-sticky"
+            type="button"
+            class="primary !inline-flex items-center !p-3 text-sm text-gray-500 rounded-lg lg:!hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200"
+            aria-controls="navbar-sticky"
+            aria-expanded="false"
+          >
+            <svg
+              class="w-6 h-6"
+              aria-hidden="true"
+              fill="currentColor"
+              viewBox="0 0 20 20"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
+                clip-rule="evenodd"
+              ></path>
+            </svg>
+          </button>
+        </div>
+        <div
+          class="items-center justify-between hidden w-full lg:flex lg:w-auto order-5 lg:order-1"
+          id="navbar-sticky"
+        >
+          <ul
+            class="flex flex-col p-4 lg:p-0 mt-4 space-y-4 lg:!space-y-0 border border-gray-100 rounded-lg lg:flex-row lg:space-x-8 lg:mt-0 lg:border-0"
+          >
+            <li>
+              <a href="#" class="primary" aria-current="page">Home</a>
+            </li>
+            <li>
+              <a href="#">About us</a>
+            </li>
+            <li>
+              <a href="#">Services</a>
+            </li>
+            <li>
+              <a href="#">Travel guide</a>
+            </li>
+            <li>
+              <a href="#">Contact us</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!-- Header end -->
+
+    <section class="container mx-auto">
+      <div class="mb-[33px]">
+        <h1
+          class="font-['Raleway'] text-[33px] sm:text-[43px] uppercase md:mt-[150px] mt-[93px]"
+        >
+          Our
+          <span class="font-['Raleway'] text-[#F98F3D]">BLOG</span>
+        </h1>
+      </div>
+      <div class="md:w-1/2 sm:w-2/3">
+        <p class="leading-[18.78px] pr-[44px]">
+          Are you preparing for your trip to Turkey? In our blog you will find
+          the best routes, interesting sights, secret places, recommendations
+          from locals and much more.
+        </p>
+      </div>
+    </section>
+
+    <section
+      class="container mx-auto grid grid-cols-4 gap-4 border-t border-gray-200 mt-4"
+    >
+      <div class="col-span-3 border-r border-gray-200 grid grid-cols-1">
+        <!-- blog item -->
+        <div
+          class="col-span-1 grid grid-cols-3 gap-4 border-b border-gray-200 items-stretch p-4 pl-0"
+        >
+          <div class="col-span-2">
+            <img
+              class="w-full"
+              src="https://via.placeholder.com/1600x900"
+              alt=""
+            />
+          </div>
+          <div class="col-span-1 flex flex-col justify-between">
+            <div class="block">
+              <div class="font-semibold text-[18px]">
+                Discovering the Wonders of Istanbul
+              </div>
+              <div class="text-gray-600 mt-2">
+                Discover insider tips and tricks for making the most of your
+                trip
+              </div>
+            </div>
+            <div class="flex items-center text-sm text-gray-700">
+              <div class="border-r-2 border-gray-200 pr-2">Instanbul</div>
+              <div class="pl-2">27 February, 2023</div>
+            </div>
+          </div>
+        </div>
+        <!-- blog item -->
+        <div
+          class="col-span-1 grid grid-cols-3 gap-4 border-b border-gray-200 items-stretch p-4 pl-0"
+        >
+          <div class="col-span-2">
+            <img
+              class="w-full"
+              src="https://via.placeholder.com/1600x900"
+              alt=""
+            />
+          </div>
+          <div class="col-span-1 flex flex-col justify-between">
+            <div class="block">
+              <div class="font-semibold text-[18px]">
+                Discovering the Wonders of Istanbul
+              </div>
+              <div class="text-gray-600 mt-2">
+                Discover insider tips and tricks for making the most of your
+                trip
+              </div>
+            </div>
+            <div class="flex items-center text-sm text-gray-700">
+              <div class="border-r-2 border-gray-200 pr-2">Instanbul</div>
+              <div class="pl-2">27 February, 2023</div>
+            </div>
+          </div>
+        </div>
+        <!-- blog item -->
+        <div
+          class="col-span-1 grid grid-cols-3 gap-4 border-b border-gray-200 items-stretch p-4 pl-0"
+        >
+          <div class="col-span-2">
+            <img
+              class="w-full"
+              src="https://via.placeholder.com/1600x900"
+              alt=""
+            />
+          </div>
+          <div class="col-span-1 flex flex-col justify-between">
+            <div class="block">
+              <div class="font-semibold text-[18px]">
+                Discovering the Wonders of Istanbul
+              </div>
+              <div class="text-gray-600 mt-2">
+                Discover insider tips and tricks for making the most of your
+                trip
+              </div>
+            </div>
+            <div class="flex items-center text-sm text-gray-700">
+              <div class="border-r-2 border-gray-200 pr-2">Instanbul</div>
+              <div class="pl-2">27 February, 2023</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-span-1">
+          <div
+            class="border border-gray-200 rounded-lg px-4 py-3 mr-4 mt-4 flex justify-between items-center"
+          >
+            <!-- previous button -->
+            <button
+              class="flex items-center space-x-2 rounded border border-gray-200 px-4 py-2"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                fill="none"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  stroke="#696969"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M13.5 8h-11M7 3.5 2.5 8 7 12.5"
+                />
+              </svg>
+              <div>Previous</div>
+            </button>
+            <!-- pages -->
+            <div class="flex items-center space-x-2 font-semibold text-gray-700">
+                <div>1</div>
+                <div>2</div>
+                <div>3</div>
+                <div class="pagination-active">1</div>
+                <div>4</div>
+                <div>5</div>
+                <div>6</div>
+                <div>7</div>
+            </div>
+            <!-- next button -->
+            <button
+              class="flex items-center space-x-2 rounded border border-gray-200 px-4 py-2"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                fill="none"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  stroke="#696969"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M2.5 8h11m0 0L9 3.5M13.5 8 9 12.5"
+                />
+              </svg>
+              <div>Next</div>
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="col-span-1 p-4"></div>
+    </section>
+
+    <!-- Footer start -->
+    <footer>
+      <div class="container mx-auto">
+        <div
+          class="flex flex-col lg:flex-row items-center justify-between py-10"
+        >
+          <img src="src/assets/logo-white.svg" alt="" />
+          <div class="flex items-center space-x-2 mt-4 lg:mt-0">
+            <!-- Lang -->
+            <button
+              id="footer_langDropdownButton"
+              data-dropdown-toggle="footer_langDropdown"
+              class="inline-flex items-center space-x-2 border border-white rounded p-2 text-white"
+              type="button"
+            >
+              <img src="src/assets/english.svg" alt="" />
+              <span>English</span>
+              <svg
+                class="w-4 h-4 ml-2"
+                aria-hidden="true"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M19 9l-7 7-7-7"
+                ></path>
+              </svg>
+            </button>
+
+            <!-- Language dropdown menu -->
+            <div
+              id="footer_langDropdown"
+              class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44"
+            >
+              <ul
+                class="py-2 text-sm text-gray-700"
+                aria-labelledby="footer_langDropdownButton"
+              >
+                <li>
+                  <a href="#" class="block px-4 py-2 hover:bg-gray-100"
+                    >Türkçe</a
+                  >
+                </li>
+              </ul>
+            </div>
+            <!-- Currency -->
+            <button
+              id="footer_currencyDropdownButton"
+              data-dropdown-toggle="footer_currencyDropdown"
+              class="inline-flex items-center space-x-2 border border-white rounded p-2 text-white"
+              type="button"
+            >
+              <span>USD</span>
+              <svg
+                class="w-4 h-4 ml-2"
+                aria-hidden="true"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M19 9l-7 7-7-7"
+                ></path>
+              </svg>
+            </button>
+
+            <!-- Language dropdown menu -->
+            <div
+              id="footer_currencyDropdown"
+              class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44"
+            >
+              <ul
+                class="py-2 text-sm text-gray-700"
+                aria-labelledby="footer_currencyDropdownButton"
+              >
+                <li>
+                  <a href="#" class="block px-4 py-2 hover:bg-gray-100">EUR</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="flex flex-col lg:flex-row items-center justify-between">
+          <div
+            class="border border-dashed border-white text-4xl text-white p-4 rounded-xl order-2 lg:order-1 w-full md:w-auto mt-4 lg:mt-0"
+          >
+            +90 (242) 514-13-10
+          </div>
+          <div
+            class="flex flex-col space-y-2 text-white mt-4 lg:mt-0 w-full md:!w-1/2 lg:!w-1/4 order-1 lg:order-2"
+          >
+            <div class="flex items-center grid grid-cols-2 gap-2">
+              <button class="py-2 p-4 border border-white rounded-lg">
+                Services
+              </button>
+              <button class="py-2 p-4 border border-white rounded-lg">
+                About us
+              </button>
+            </div>
+            <div class="flex items-center grid grid-cols-2 gap-2">
+              <button class="py-2 p-4 border border-white rounded-lg">
+                Contact us
+              </button>
+              <button class="py-2 p-4 border border-white rounded-lg">
+                Travel guide
+              </button>
+            </div>
+          </div>
+        </div>
+        <div
+          class="flex justify-center lg:!justify-start items-center space-x-2 mt-4 lg:mt-0"
+        >
+          <a
+            href="#"
+            class="flex items-center justify-center w-12 h-12 rounded-lg p-3 border border-white"
+          >
+            <img src="src/assets/social/facebook.svg" alt="" />
+          </a>
+          <a
+            href="#"
+            class="flex items-center justify-center w-12 h-12 rounded-lg p-3 border border-white"
+          >
+            <img src="src/assets/social/instagram.svg" alt="" />
+          </a>
+          <a
+            href="#"
+            class="flex items-center justify-center w-12 h-12 rounded-lg p-3 border border-white"
+          >
+            <img src="src/assets/social/youtube.svg" alt="" />
+          </a>
+          <a
+            href="#"
+            class="flex items-center justify-center w-12 h-12 rounded-lg p-3 border border-white"
+          >
+            <img src="src/assets/social/twitter.svg" alt="" />
+          </a>
+          <a
+            href="#"
+            class="flex items-center justify-center w-12 h-12 rounded-lg p-3 border border-white"
+          >
+            <img src="src/assets/social/linkedin.svg" alt="" />
+          </a>
+        </div>
+        <div
+          class="border-t border-white/55 py-4 mt-10 flex justify-between items-center px-2 md:px-0"
+        >
+          <img class="h-6" src="src/assets/footer/footer.svg" alt="" />
+          <div class="text-white/70 text-xs pl-4">
+            © Copyright Bizim Transfer. All Rights Reserved
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- Footer end -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.4/flowbite.min.js"></script>
+  </body>
+</html>

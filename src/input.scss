@@ -164,3 +164,7 @@ input {
 .payment-btn-active {
     @apply primary !py-2 !p-5;
 }
+
+.pagination-active {
+    @apply bg-[#696969] text-white px-3 py-1 rounded-lg;
+}

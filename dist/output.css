@@ -564,10 +564,6 @@ video {
   left: 0px;
   right: 0px;
 }
-.inset-x-4 {
-  left: 1rem;
-  right: 1rem;
-}
 .bottom-0 {
   bottom: 0px;
 }
@@ -580,6 +576,12 @@ video {
 .right-0 {
   right: 0px;
 }
+.right-2 {
+  right: 0.5rem;
+}
+.right-2\.5 {
+  right: 0.625rem;
+}
 .right-4 {
   right: 1rem;
 }
@@ -589,26 +591,14 @@ video {
 .top-14 {
   top: 3.5rem;
 }
-.top-\[4\.5rem\] {
-  top: 4.5rem;
-}
-.top-4 {
-  top: 1rem;
-}
 .top-2 {
   top: 0.5rem;
-}
-.top-3 {
-  top: 0.75rem;
 }
 .top-2\.5 {
   top: 0.625rem;
 }
-.right-2 {
-  right: 0.5rem;
-}
-.right-2\.5 {
-  right: 0.625rem;
+.top-\[4\.5rem\] {
+  top: 4.5rem;
 }
 .isolate {
   isolation: isolate;
@@ -624,9 +614,6 @@ video {
 }
 .z-20 {
   z-index: 20;
-}
-.z-50 {
-  z-index: 50;
 }
 .z-\[1\] {
   z-index: 1;
@@ -807,6 +794,9 @@ video {
 .mr-3 {
   margin-right: 0.75rem;
 }
+.mr-4 {
+  margin-right: 1rem;
+}
 .mr-6 {
   margin-right: 1.5rem;
 }
@@ -837,9 +827,6 @@ video {
 .mt-9 {
   margin-top: 2.25rem;
 }
-.mt-\[100px\] {
-  margin-top: 100px;
-}
 .mt-\[15px\] {
   margin-top: 15px;
 }
@@ -866,9 +853,6 @@ video {
 }
 .mt-\[93px\] {
   margin-top: 93px;
-}
-.mt-12 {
-  margin-top: 3rem;
 }
 .box-border {
   box-sizing: border-box;
@@ -1300,6 +1284,9 @@ video {
 }
 .grid-cols-3 {
   grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+.grid-cols-4 {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
 }
 .grid-cols-5 {
   grid-template-columns: repeat(5, minmax(0, 1fr));
@@ -1855,6 +1842,9 @@ video {
 .border-r {
   border-right-width: 1px;
 }
+.border-r-2 {
+  border-right-width: 2px;
+}
 .border-s {
   border-inline-start-width: 1px;
 }
@@ -2189,6 +2179,9 @@ video {
 .pb-10 {
   padding-bottom: 2.5rem;
 }
+.pb-14 {
+  padding-bottom: 3.5rem;
+}
 .pb-2 {
   padding-bottom: 0.5rem;
 }
@@ -2201,6 +2194,9 @@ video {
 .pl-10 {
   padding-left: 2.5rem;
 }
+.pl-2 {
+  padding-left: 0.5rem;
+}
 .pl-3 {
   padding-left: 0.75rem;
 }
@@ -2210,6 +2206,9 @@ video {
 .pl-\[25px\] {
   padding-left: 25px;
 }
+.pr-2 {
+  padding-right: 0.5rem;
+}
 .pr-\[44px\] {
   padding-right: 44px;
 }
@@ -2218,9 +2217,6 @@ video {
 }
 .pt-24 {
   padding-top: 6rem;
-}
-.pb-14 {
-  padding-bottom: 3.5rem;
 }
 .text-left {
   text-align: left;
@@ -2471,6 +2467,10 @@ video {
 .text-gray-500 {
   --tw-text-opacity: 1;
   color: rgb(107 114 128 / var(--tw-text-opacity));
+}
+.text-gray-600 {
+  --tw-text-opacity: 1;
+  color: rgb(75 85 99 / var(--tw-text-opacity));
 }
 .text-gray-700 {
   --tw-text-opacity: 1;
@@ -3012,6 +3012,17 @@ button.payment-btn-active * {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
 }
+.pagination-active {
+  border-radius: 0.5rem;
+  --tw-bg-opacity: 1;
+  background-color: rgb(105 105 105 / var(--tw-bg-opacity));
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+}
 @media (min-width: 640px) {
 
   .sm\:container {
@@ -3089,9 +3100,6 @@ button.payment-btn-active * {
 .focus\:border-0:focus {
   border-width: 0px;
 }
-.focus\:border-none:focus {
-  border-style: none;
-}
 .focus\:border-blue-500:focus {
   --tw-border-opacity: 1;
   border-color: rgb(59 130 246 / var(--tw-border-opacity));
@@ -3143,11 +3151,6 @@ button.payment-btn-active * {
 }
 @media (prefers-color-scheme: dark) {
 
-  .dark\:divide-gray-600 > :not([hidden]) ~ :not([hidden]) {
-    --tw-divide-opacity: 1;
-    border-color: rgb(75 85 99 / var(--tw-divide-opacity));
-  }
-
   .dark\:border-gray-600 {
     --tw-border-opacity: 1;
     border-color: rgb(75 85 99 / var(--tw-border-opacity));
@@ -3176,11 +3179,6 @@ button.payment-btn-active * {
   .dark\:text-gray-200 {
     --tw-text-opacity: 1;
     color: rgb(229 231 235 / var(--tw-text-opacity));
-  }
-
-  .dark\:text-gray-400 {
-    --tw-text-opacity: 1;
-    color: rgb(156 163 175 / var(--tw-text-opacity));
   }
 
   .dark\:text-white {
@@ -3216,11 +3214,6 @@ button.payment-btn-active * {
   .dark\:focus\:ring-blue-500:focus {
     --tw-ring-opacity: 1;
     --tw-ring-color: rgb(59 130 246 / var(--tw-ring-opacity));
-  }
-
-  .dark\:focus\:ring-gray-600:focus {
-    --tw-ring-opacity: 1;
-    --tw-ring-color: rgb(75 85 99 / var(--tw-ring-opacity));
   }
 
   .dark\:focus\:ring-gray-700:focus {
@@ -3281,10 +3274,6 @@ button.payment-btn-active * {
 
   .sm\:mb-\[60px\] {
     margin-bottom: 60px;
-  }
-
-  .sm\:mb-\[72px\] {
-    margin-bottom: 72px;
   }
 
   .sm\:ml-\[19px\] {
@@ -3514,10 +3503,6 @@ button.payment-btn-active * {
     grid-column: span 3 / span 3;
   }
 
-  .md\:col-span-6 {
-    grid-column: span 6 / span 6;
-  }
-
   .md\:my-0 {
     margin-top: 0px;
     margin-bottom: 0px;
@@ -3567,12 +3552,12 @@ button.payment-btn-active * {
     margin-top: 150px;
   }
 
-  .md\:block {
-    display: block;
-  }
-
   .md\:\!block {
     display: block !important;
+  }
+
+  .md\:block {
+    display: block;
   }
 
   .md\:\!flex {
@@ -3628,6 +3613,10 @@ button.payment-btn-active * {
     grid-template-columns: repeat(5, minmax(0, 1fr)) !important;
   }
 
+  .md\:\!grid-cols-6 {
+    grid-template-columns: repeat(6, minmax(0, 1fr)) !important;
+  }
+
   .md\:grid-cols-1 {
     grid-template-columns: repeat(1, minmax(0, 1fr));
   }
@@ -3642,14 +3631,6 @@ button.payment-btn-active * {
 
   .md\:grid-cols-5 {
     grid-template-columns: repeat(5, minmax(0, 1fr));
-  }
-
-  .md\:grid-cols-6 {
-    grid-template-columns: repeat(6, minmax(0, 1fr));
-  }
-
-  .md\:\!grid-cols-6 {
-    grid-template-columns: repeat(6, minmax(0, 1fr)) !important;
   }
 
   .md\:flex-row {
@@ -3870,11 +3851,6 @@ button.payment-btn-active * {
     border-width: 0px;
   }
 
-  .lg\:\!bg-white {
-    --tw-bg-opacity: 1 !important;
-    background-color: rgb(255 255 255 / var(--tw-bg-opacity)) !important;
-  }
-
   .lg\:p-0 {
     padding: 0px;
   }
@@ -3897,14 +3873,6 @@ button.payment-btn-active * {
 
   .lg\:text-\[30px\] {
     font-size: 30px;
-  }
-
-  @media (prefers-color-scheme: dark) {
-
-    .lg\:dark\:bg-gray-900 {
-      --tw-bg-opacity: 1;
-      background-color: rgb(17 24 39 / var(--tw-bg-opacity));
-    }
   }
 }
 @media (prefers-color-scheme: dark) {
